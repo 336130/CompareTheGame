@@ -36,8 +36,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _game_game_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./game/game.component */ "./src/app/game/game.component.ts");
+/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
+/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
+/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
+/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
+
+
 
 
 
@@ -47,11 +51,19 @@ const routes = [
     {
         path: '',
         pathMatch: 'full',
-        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
     },
     {
         path: 'game',
-        component: _game_game_component__WEBPACK_IMPORTED_MODULE_4__["GameComponent"]
+        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_4__["GameComponent"]
+    },
+    {
+        path: 'about',
+        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_5__["AboutUsComponent"]
+    },
+    {
+        path: 'search',
+        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_6__["SearchComponent"]
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -59,9 +71,13 @@ let AppRoutingModule = class AppRoutingModule {
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
-            _game_game_component__WEBPACK_IMPORTED_MODULE_4__["GameComponent"]
+            _views_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
+            _views_game_game_component__WEBPACK_IMPORTED_MODULE_4__["GameComponent"],
+            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_5__["AboutUsComponent"],
+            _views_search_search_component__WEBPACK_IMPORTED_MODULE_6__["SearchComponent"]
         ],
+        providers: [],
+        entryComponents: [],
         imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
         exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
     })
@@ -86,15 +102,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AppComponent = class AppComponent {
-    constructor() {
-        this.title = 'main';
-    }
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'main-app',
         template: `
-    <router-outlet></router-outlet>
+  <main-menu></main-menu>
+    <div class="container body-content">
+      <router-outlet></router-outlet>
+    </div>
+  <custom-footer></custom-footer>
   `
     })
 ], AppComponent);
@@ -116,8 +133,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu/main-menu.component */ "./src/app/components/menu/main-menu.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+
+
 
 
 
@@ -128,14 +149,23 @@ let AppModule = class AppModule {
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_3__["MainMenu"],
+            _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["Footer"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]
         ],
-        providers: [],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+        providers: [
+            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_3__["MainMenu"],
+            _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["Footer"]
+        ],
+        entryComponents: [
+            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_3__["MainMenu"],
+            _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["Footer"]
+        ],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
     })
 ], AppModule);
 
@@ -143,10 +173,144 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/game/game.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/game/game.component.ts ***!
-  \****************************************/
+/***/ "./src/app/components/menu/main-menu.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/components/menu/main-menu.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n      <a class=\"navbar-brand\" routerLink=\"/\">CompareTheGame</a>\r\n    </div>\r\n    <div class=\"navbar-collapse collapse navbar-right\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a routerLink=\"/search\">Advanced Search</a></li>\r\n        <li><a routerLink=\"/about\">About</a></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/menu/main-menu.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/components/menu/main-menu.component.ts ***!
+  \********************************************************/
+/*! exports provided: MainMenu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainMenu", function() { return MainMenu; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let MainMenu = class MainMenu {
+    constructor() {
+    }
+};
+MainMenu = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'main-menu',
+        template: __webpack_require__(/*! ./main-menu.component.html */ "./src/app/components/menu/main-menu.component.html")
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], MainMenu);
+
+
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/footer/footer.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<hr />\r\n<footer>\r\n  <p>&copy;{{date}} - CompareTheGame</p>\r\n</footer>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/footer/footer.component.ts ***!
+  \********************************************/
+/*! exports provided: Footer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let Footer = class Footer {
+    constructor() {
+        this.date = new Date().getFullYear().toString();
+    }
+};
+Footer = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'custom-footer',
+        template: __webpack_require__(/*! ./footer.component.html */ "./src/app/footer/footer.component.html")
+    })
+], Footer);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/about/about-us.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/views/about/about-us.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>{{title}}</p>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/views/about/about-us.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/views/about/about-us.component.ts ***!
+  \***************************************************/
+/*! exports provided: AboutUsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsComponent", function() { return AboutUsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let AboutUsComponent = class AboutUsComponent {
+    constructor() {
+        this.title = "About Us";
+    }
+};
+AboutUsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: '',
+        template: __webpack_require__(/*! ./about-us.component.html */ "./src/app/views/about/about-us.component.html")
+    })
+], AboutUsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/game/game.component.html":
+/*!************************************************!*\
+  !*** ./src/app/views/game/game.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>{{title}}</p>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/views/game/game.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/views/game/game.component.ts ***!
+  \**********************************************/
 /*! exports provided: GameComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -165,7 +329,7 @@ let GameComponent = class GameComponent {
 GameComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: '',
-        template: '<p>{{title}}</p>'
+        template: __webpack_require__(/*! ./game.component.html */ "./src/app/views/game/game.component.html")
     })
 ], GameComponent);
 
@@ -173,10 +337,21 @@ GameComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/home/home.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/home/home.component.ts ***!
-  \****************************************/
+/***/ "./src/app/views/home/home.component.html":
+/*!************************************************!*\
+  !*** ./src/app/views/home/home.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>{{title}}</p>\r\n<a routerLink=\"/game\">Game</a>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/views/home/home.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/views/home/home.component.ts ***!
+  \**********************************************/
 /*! exports provided: HomeComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -185,30 +360,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-
 
 
 let HomeComponent = class HomeComponent {
-    constructor(router) {
-        this.router = router;
+    constructor() {
         this.title = "Home page";
     }
     ;
-    GoToGame() {
-        this.router.navigateByUrl("game");
-    }
 };
 HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: '',
-        template: `
-    <p>{{title}}</p>
-    <a (click)="GoToGame()">Game</a>
-  `
+        template: __webpack_require__(/*! ./home.component.html */ "./src/app/views/home/home.component.html")
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
 ], HomeComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/search/search.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/views/search/search.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>{{title}}</p>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/views/search/search.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/views/search/search.component.ts ***!
+  \**************************************************/
+/*! exports provided: SearchComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchComponent", function() { return SearchComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let SearchComponent = class SearchComponent {
+    constructor() {
+        this.title = "Search page";
+    }
+};
+SearchComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: '',
+        template: __webpack_require__(/*! ./search.component.html */ "./src/app/views/search/search.component.html")
+    })
+], SearchComponent);
 
 
 

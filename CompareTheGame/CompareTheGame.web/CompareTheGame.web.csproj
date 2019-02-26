@@ -162,6 +162,12 @@
     <Content Include="Scripts\Angular\Build\runtime.js" />
     <Content Include="Scripts\Angular\Build\styles.js" />
     <Content Include="Scripts\Angular\Build\vendor.js" />
+    <Content Include="Scripts\Angular\src\app\components\menu\main-menu.component.html" />
+    <Content Include="Scripts\Angular\src\app\footer\footer.component.html" />
+    <Content Include="Scripts\Angular\src\app\views\about\about-us.component.html" />
+    <Content Include="Scripts\Angular\src\app\views\game\game.component.html" />
+    <Content Include="Scripts\Angular\src\app\views\home\home.component.html" />
+    <Content Include="Scripts\Angular\src\app\views\search\search.component.html" />
     <Content Include="Scripts\Angular\src\favicon.ico" />
     <Content Include="Scripts\Angular\src\index.html" />
     <Content Include="Scripts\Angular\src\karma.conf.js" />
@@ -235,8 +241,12 @@
     <TypeScriptCompile Include="Scripts\Angular\src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\app.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\app.module.ts" />
-    <TypeScriptCompile Include="Scripts\Angular\src\app\game\game.component.ts" />
-    <TypeScriptCompile Include="Scripts\Angular\src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\components\menu\main-menu.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\footer\footer.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\views\about\about-us.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\views\game\game.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\views\home\home.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\views\search\search.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\environments\environment.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\main.ts" />

@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { GameComponent } from './game/game.component';
+import { MainMenu } from './components/menu/main-menu.component';
+
+import { HomeComponent } from './views/home/home.component';
+import { GameComponent } from './views/game/game.component';
+import { AboutUsComponent } from './views/about/about-us.component';
+import { SearchComponent } from './views/search/search.component';
 
 const routes: Routes = [
   {
@@ -13,14 +17,26 @@ const routes: Routes = [
   {
     path: 'game',
     component: GameComponent
+  },
+  {
+    path: 'about',
+    component: AboutUsComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
   }
 ];
 
 @NgModule({
   declarations: [
     HomeComponent,
-    GameComponent
+    GameComponent,
+    AboutUsComponent,
+    SearchComponent
   ],
+  providers: [],
+  entryComponents: [],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
