@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-
-import { MainMenu } from './components/menu/main-menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { HomeComponent } from './views/home/home.component';
 import { GameComponent } from './views/game/game.component';
 import { AboutUsComponent } from './views/about/about-us.component';
 import { SearchComponent } from './views/search/search.component';
+
+import { DataFactory } from './services/DataFactory.service';
 
 const routes: Routes = [
   {
@@ -35,9 +38,14 @@ const routes: Routes = [
     AboutUsComponent,
     SearchComponent
   ],
-  providers: [],
+  providers: [DataFactory],
   entryComponents: [],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

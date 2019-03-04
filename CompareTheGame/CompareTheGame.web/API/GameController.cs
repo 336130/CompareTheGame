@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompareTheGame.dal;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ namespace CompareTheGame.web.API
     public class GameController : ApiController
     {
         [HttpGet]
-        public string GetGame()
+        public List<Game> GetAllGames()
         {
-            return "game name";
+            return new DatabaseAccessManager().GetAllGames();
         }
     }
 }

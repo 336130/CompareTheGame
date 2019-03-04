@@ -47,6 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -163,7 +169,7 @@
     <Content Include="Scripts\Angular\Build\styles.js" />
     <Content Include="Scripts\Angular\Build\vendor.js" />
     <Content Include="Scripts\Angular\src\app\components\menu\main-menu.component.html" />
-    <Content Include="Scripts\Angular\src\app\footer\footer.component.html" />
+    <Content Include="Scripts\Angular\src\app\components\footer\footer.component.html" />
     <Content Include="Scripts\Angular\src\app\views\about\about-us.component.html" />
     <Content Include="Scripts\Angular\src\app\views\game\game.component.html" />
     <Content Include="Scripts\Angular\src\app\views\home\home.component.html" />
@@ -242,7 +248,8 @@
     <TypeScriptCompile Include="Scripts\Angular\src\app\app.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\app.module.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\menu\main-menu.component.ts" />
-    <TypeScriptCompile Include="Scripts\Angular\src\app\footer\footer.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\components\footer\footer.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\services\DataFactory.service.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\about\about-us.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\game\game.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\home\home.component.ts" />
@@ -252,6 +259,12 @@
     <TypeScriptCompile Include="Scripts\Angular\src\main.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\polyfills.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\test.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompareTheGame.dal\CompareTheGame.dal.csproj">
+      <Project>{BBD2D55B-9BC4-435D-8095-AC0F490F07D8}</Project>
+      <Name>CompareTheGame.dal</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

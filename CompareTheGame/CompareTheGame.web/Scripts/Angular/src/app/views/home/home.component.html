@@ -1,2 +1,10 @@
-<p>{{title}}</p>
+<p>games:</p>
+<div *ngIf="games.length">
+  <div *ngFor="let game of games">
+    <p>{{game.gameName}}</p>
+    <img [src]="game.coverImageURL" />
+  </div>
+</div>
+<hr />
+<p>{{gameString}}</p>
 <a routerLink="/game">Game</a>

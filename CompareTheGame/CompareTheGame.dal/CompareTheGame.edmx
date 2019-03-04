@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CompareTheGameModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameID" />
+          </Key>
+          <Property Name="GameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGDBID" Type="int" Nullable="false" />
+          <Property Name="GameName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="URL" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="CoverImageURL" Type="varchar" MaxLength="256" />
+          <Property Name="StoreLine" Type="varchar(max)" />
+          <Property Name="Summary" Type="varchar(max)" />
+          <Property Name="FirstReleaseDate" Type="date" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="Published" Type="bit" />
+          <Property Name="PublishModifiedDate" Type="date" />
+          <Property Name="PublishModifiedBy" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="GameGenre">
+          <Key>
+            <PropertyRef Name="GameGenreID" />
+          </Key>
+          <Property Name="GameGenreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="GenreID" Type="int" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GameMode">
+          <Key>
+            <PropertyRef Name="GameModeID" />
+          </Key>
+          <Property Name="GameModeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="ModeID" Type="int" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GamePerspective">
+          <Key>
+            <PropertyRef Name="GamePerspective" />
+          </Key>
+          <Property Name="GamePerspective" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="PerspectiveID" Type="int" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GamePlatform">
+          <Key>
+            <PropertyRef Name="GamePlatformID" />
+          </Key>
+          <Property Name="GamePlatformID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="PlatformID" Type="int" />
+          <Property Name="ReleaseDate" Type="date" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GameScreenshot">
+          <Key>
+            <PropertyRef Name="GameScreenshotID" />
+          </Key>
+          <Property Name="GameScreenshotID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="ScreenshotID" Type="int" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GameTheme">
+          <Key>
+            <PropertyRef Name="GameThemeID" />
+          </Key>
+          <Property Name="GameThemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="ThemeID" Type="int" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="GenreID" />
+          </Key>
+          <Property Name="GenreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGDBID" Type="int" Nullable="false" />
+          <Property Name="GenreName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="FirstSeen" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mode">
+          <Key>
+            <PropertyRef Name="ModeID" />
+          </Key>
+          <Property Name="ModeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGDBID" Type="int" Nullable="false" />
+          <Property Name="ModeName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="FirstSeen" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Perspective">
+          <Key>
+            <PropertyRef Name="PerspectiveID" />
+          </Key>
+          <Property Name="PerspectiveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGDBID" Type="int" Nullable="false" />
+          <Property Name="PerspectiveName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="FirstSeen" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Platform">
+          <Key>
+            <PropertyRef Name="PlatformID" />
+          </Key>
+          <Property Name="PlatformID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGDBID" Type="int" Nullable="false" />
+          <Property Name="Abbreviation" Type="varchar" MaxLength="10" />
+          <Property Name="PlatformName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="FirstSeen" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Screenshot">
+          <Key>
+            <PropertyRef Name="ScreenshotID" />
+          </Key>
+          <Property Name="ScreenshotID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGDBID" Type="int" Nullable="false" />
+          <Property Name="ScreenshotURL" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="FirstSeen" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Theme">
+          <Key>
+            <PropertyRef Name="ThemeID" />
+          </Key>
+          <Property Name="ThemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IGDBID" Type="int" Nullable="false" />
+          <Property Name="ThemeName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="FirstSeen" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Abbreviation" Type="varchar" MaxLength="10" />
+          <Property Name="VendorName" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="HomePageURL" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="LogoURL" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="XcodePrice" Type="varchar" MaxLength="10" />
+          <Property Name="XcodeSalePrice" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VendorGameHistory">
+          <Key>
+            <PropertyRef Name="VendorGameHistoryID" />
+          </Key>
+          <Property Name="VendorGameHistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlatformID" Type="int" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="VendorID" Type="int" />
+          <Property Name="Price" Type="varchar" MaxLength="10" />
+          <Property Name="SalePrice" Type="varchar" MaxLength="10" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VendorGameSettings">
+          <Key>
+            <PropertyRef Name="VendorGameSettingsID" />
+          </Key>
+          <Property Name="VendorGameSettingsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlatformID" Type="int" />
+          <Property Name="GameID" Type="int" />
+          <Property Name="VendorID" Type="int" />
+          <Property Name="Automated" Type="bit" />
+          <Property Name="XcodePrice" Type="varchar" MaxLength="10" />
+          <Property Name="XcodeSalePrice" Type="varchar" MaxLength="10" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__GameGenre__GameI__475C8B58">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GameGenre" Type="Self.GameGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GameGenre">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameGenre__Genre__4850AF91">
+          <End Role="Genre" Type="Self.Genre" Multiplicity="0..1" />
+          <End Role="GameGenre" Type="Self.GameGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="GenreID" />
+            </Principal>
+            <Dependent Role="GameGenre">
+              <PropertyRef Name="GenreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameMode__GameID__5E3FF0B0">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GameMode" Type="Self.GameMode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GameMode">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameMode__ModeID__5F3414E9">
+          <End Role="Mode" Type="Self.Mode" Multiplicity="0..1" />
+          <End Role="GameMode" Type="Self.GameMode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mode">
+              <PropertyRef Name="ModeID" />
+            </Principal>
+            <Dependent Role="GameMode">
+              <PropertyRef Name="ModeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePersp__GameI__52CE3E04">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GamePerspective" Type="Self.GamePerspective" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GamePerspective">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePersp__Persp__53C2623D">
+          <End Role="Perspective" Type="Self.Perspective" Multiplicity="0..1" />
+          <End Role="GamePerspective" Type="Self.GamePerspective" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perspective">
+              <PropertyRef Name="PerspectiveID" />
+            </Principal>
+            <Dependent Role="GamePerspective">
+              <PropertyRef Name="PerspectiveID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePlatf__GameI__63F8CA06">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GamePlatform" Type="Self.GamePlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GamePlatform">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePlatf__Platf__64ECEE3F">
+          <End Role="Platform" Type="Self.Platform" Multiplicity="0..1" />
+          <End Role="GamePlatform" Type="Self.GamePlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="PlatformID" />
+            </Principal>
+            <Dependent Role="GamePlatform">
+              <PropertyRef Name="PlatformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameScree__GameI__5887175A">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GameScreenshot" Type="Self.GameScreenshot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GameScreenshot">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameScree__Scree__597B3B93">
+          <End Role="Screenshot" Type="Self.Screenshot" Multiplicity="0..1" />
+          <End Role="GameScreenshot" Type="Self.GameScreenshot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Screenshot">
+              <PropertyRef Name="ScreenshotID" />
+            </Principal>
+            <Dependent Role="GameScreenshot">
+              <PropertyRef Name="ScreenshotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameTheme__GameI__4D1564AE">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GameTheme" Type="Self.GameTheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GameTheme">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameTheme__Theme__4E0988E7">
+          <End Role="Theme" Type="Self.Theme" Multiplicity="0..1" />
+          <End Role="GameTheme" Type="Self.GameTheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Theme">
+              <PropertyRef Name="ThemeID" />
+            </Principal>
+            <Dependent Role="GameTheme">
+              <PropertyRef Name="ThemeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__GameI__6AA5C795">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="VendorGameHistory" Type="Self.VendorGameHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="VendorGameHistory">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__GameI__6F6A7CB2">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="VendorGameSettings" Type="Self.VendorGameSettings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="VendorGameSettings">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__Platf__69B1A35C">
+          <End Role="Platform" Type="Self.Platform" Multiplicity="0..1" />
+          <End Role="VendorGameHistory" Type="Self.VendorGameHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="PlatformID" />
+            </Principal>
+            <Dependent Role="VendorGameHistory">
+              <PropertyRef Name="PlatformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__Platf__6E765879">
+          <End Role="Platform" Type="Self.Platform" Multiplicity="0..1" />
+          <End Role="VendorGameSettings" Type="Self.VendorGameSettings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="PlatformID" />
+            </Principal>
+            <Dependent Role="VendorGameSettings">
+              <PropertyRef Name="PlatformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__Vendo__6B99EBCE">
+          <End Role="Vendor" Type="Self.Vendor" Multiplicity="0..1" />
+          <End Role="VendorGameHistory" Type="Self.VendorGameHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="VendorGameHistory">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__Vendo__705EA0EB">
+          <End Role="Vendor" Type="Self.Vendor" Multiplicity="0..1" />
+          <End Role="VendorGameSettings" Type="Self.VendorGameSettings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="VendorGameSettings">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CompareTheGameModelStoreContainer">
+          <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameGenre" EntityType="Self.GameGenre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameMode" EntityType="Self.GameMode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GamePerspective" EntityType="Self.GamePerspective" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GamePlatform" EntityType="Self.GamePlatform" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameScreenshot" EntityType="Self.GameScreenshot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameTheme" EntityType="Self.GameTheme" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mode" EntityType="Self.Mode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Perspective" EntityType="Self.Perspective" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Platform" EntityType="Self.Platform" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Screenshot" EntityType="Self.Screenshot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Theme" EntityType="Self.Theme" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vendor" EntityType="Self.Vendor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VendorGameHistory" EntityType="Self.VendorGameHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VendorGameSettings" EntityType="Self.VendorGameSettings" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__GameGenre__GameI__475C8B58" Association="Self.FK__GameGenre__GameI__475C8B58">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GameGenre" EntitySet="GameGenre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameGenre__Genre__4850AF91" Association="Self.FK__GameGenre__Genre__4850AF91">
+            <End Role="Genre" EntitySet="Genre" />
+            <End Role="GameGenre" EntitySet="GameGenre" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameMode__GameID__5E3FF0B0" Association="Self.FK__GameMode__GameID__5E3FF0B0">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GameMode" EntitySet="GameMode" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameMode__ModeID__5F3414E9" Association="Self.FK__GameMode__ModeID__5F3414E9">
+            <End Role="Mode" EntitySet="Mode" />
+            <End Role="GameMode" EntitySet="GameMode" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePersp__GameI__52CE3E04" Association="Self.FK__GamePersp__GameI__52CE3E04">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GamePerspective" EntitySet="GamePerspective" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePersp__Persp__53C2623D" Association="Self.FK__GamePersp__Persp__53C2623D">
+            <End Role="Perspective" EntitySet="Perspective" />
+            <End Role="GamePerspective" EntitySet="GamePerspective" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePlatf__GameI__63F8CA06" Association="Self.FK__GamePlatf__GameI__63F8CA06">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GamePlatform" EntitySet="GamePlatform" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePlatf__Platf__64ECEE3F" Association="Self.FK__GamePlatf__Platf__64ECEE3F">
+            <End Role="Platform" EntitySet="Platform" />
+            <End Role="GamePlatform" EntitySet="GamePlatform" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameScree__GameI__5887175A" Association="Self.FK__GameScree__GameI__5887175A">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GameScreenshot" EntitySet="GameScreenshot" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameScree__Scree__597B3B93" Association="Self.FK__GameScree__Scree__597B3B93">
+            <End Role="Screenshot" EntitySet="Screenshot" />
+            <End Role="GameScreenshot" EntitySet="GameScreenshot" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameTheme__GameI__4D1564AE" Association="Self.FK__GameTheme__GameI__4D1564AE">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GameTheme" EntitySet="GameTheme" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameTheme__Theme__4E0988E7" Association="Self.FK__GameTheme__Theme__4E0988E7">
+            <End Role="Theme" EntitySet="Theme" />
+            <End Role="GameTheme" EntitySet="GameTheme" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__GameI__6AA5C795" Association="Self.FK__VendorGam__GameI__6AA5C795">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="VendorGameHistory" EntitySet="VendorGameHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__GameI__6F6A7CB2" Association="Self.FK__VendorGam__GameI__6F6A7CB2">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="VendorGameSettings" EntitySet="VendorGameSettings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__Platf__69B1A35C" Association="Self.FK__VendorGam__Platf__69B1A35C">
+            <End Role="Platform" EntitySet="Platform" />
+            <End Role="VendorGameHistory" EntitySet="VendorGameHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__Platf__6E765879" Association="Self.FK__VendorGam__Platf__6E765879">
+            <End Role="Platform" EntitySet="Platform" />
+            <End Role="VendorGameSettings" EntitySet="VendorGameSettings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__Vendo__6B99EBCE" Association="Self.FK__VendorGam__Vendo__6B99EBCE">
+            <End Role="Vendor" EntitySet="Vendor" />
+            <End Role="VendorGameHistory" EntitySet="VendorGameHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__Vendo__705EA0EB" Association="Self.FK__VendorGam__Vendo__705EA0EB">
+            <End Role="Vendor" EntitySet="Vendor" />
+            <End Role="VendorGameSettings" EntitySet="VendorGameSettings" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CompareTheGameModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameID" />
+          </Key>
+          <Property Name="GameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGDBID" Type="Int32" Nullable="false" />
+          <Property Name="GameName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="URL" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CoverImageURL" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="StoreLine" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Summary" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FirstReleaseDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Published" Type="Boolean" />
+          <Property Name="PublishModifiedDate" Type="DateTime" Precision="0" />
+          <Property Name="PublishModifiedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="GameGenres" Relationship="Self.FK__GameGenre__GameI__605D434C" FromRole="Game" ToRole="GameGenre" />
+          <NavigationProperty Name="GameModes" Relationship="Self.FK__GameMode__GameID__7740A8A4" FromRole="Game" ToRole="GameMode" />
+          <NavigationProperty Name="GamePerspectives" Relationship="Self.FK__GamePersp__GameI__6BCEF5F8" FromRole="Game" ToRole="GamePerspective" />
+          <NavigationProperty Name="GamePlatforms" Relationship="Self.FK__GamePlatf__GameI__7CF981FA" FromRole="Game" ToRole="GamePlatform" />
+          <NavigationProperty Name="GameScreenshots" Relationship="Self.FK__GameScree__GameI__7187CF4E" FromRole="Game" ToRole="GameScreenshot" />
+          <NavigationProperty Name="GameThemes" Relationship="Self.FK__GameTheme__GameI__66161CA2" FromRole="Game" ToRole="GameTheme" />
+          <NavigationProperty Name="VendorGameHistories" Relationship="Self.FK__VendorGam__GameI__03A67F89" FromRole="Game" ToRole="VendorGameHistory" />
+          <NavigationProperty Name="VendorGameSettings" Relationship="Self.FK__VendorGam__GameI__086B34A6" FromRole="Game" ToRole="VendorGameSettings" />
+        </EntityType>
+        <EntityType Name="GameGenre">
+          <Key>
+            <PropertyRef Name="GameGenreID" />
+          </Key>
+          <Property Name="GameGenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="GenreID" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__GameGenre__GameI__605D434C" FromRole="GameGenre" ToRole="Game" />
+          <NavigationProperty Name="Genre" Relationship="Self.FK__GameGenre__Genre__61516785" FromRole="GameGenre" ToRole="Genre" />
+        </EntityType>
+        <EntityType Name="GameMode">
+          <Key>
+            <PropertyRef Name="GameModeID" />
+          </Key>
+          <Property Name="GameModeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="ModeID" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__GameMode__GameID__7740A8A4" FromRole="GameMode" ToRole="Game" />
+          <NavigationProperty Name="Mode" Relationship="Self.FK__GameMode__ModeID__7834CCDD" FromRole="GameMode" ToRole="Mode" />
+        </EntityType>
+        <EntityType Name="GamePerspective">
+          <Key>
+            <PropertyRef Name="GamePerspective1" />
+          </Key>
+          <Property Name="GamePerspective1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="PerspectiveID" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__GamePersp__GameI__6BCEF5F8" FromRole="GamePerspective" ToRole="Game" />
+          <NavigationProperty Name="Perspective" Relationship="Self.FK__GamePersp__Persp__6CC31A31" FromRole="GamePerspective" ToRole="Perspective" />
+        </EntityType>
+        <EntityType Name="GamePlatform">
+          <Key>
+            <PropertyRef Name="GamePlatformID" />
+          </Key>
+          <Property Name="GamePlatformID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="PlatformID" Type="Int32" />
+          <Property Name="ReleaseDate" Type="DateTime" Precision="0" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__GamePlatf__GameI__7CF981FA" FromRole="GamePlatform" ToRole="Game" />
+          <NavigationProperty Name="Platform" Relationship="Self.FK__GamePlatf__Platf__7DEDA633" FromRole="GamePlatform" ToRole="Platform" />
+        </EntityType>
+        <EntityType Name="GameScreenshot">
+          <Key>
+            <PropertyRef Name="GameScreenshotID" />
+          </Key>
+          <Property Name="GameScreenshotID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="ScreenshotID" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__GameScree__GameI__7187CF4E" FromRole="GameScreenshot" ToRole="Game" />
+          <NavigationProperty Name="Screenshot" Relationship="Self.FK__GameScree__Scree__727BF387" FromRole="GameScreenshot" ToRole="Screenshot" />
+        </EntityType>
+        <EntityType Name="GameTheme">
+          <Key>
+            <PropertyRef Name="GameThemeID" />
+          </Key>
+          <Property Name="GameThemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="ThemeID" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__GameTheme__GameI__66161CA2" FromRole="GameTheme" ToRole="Game" />
+          <NavigationProperty Name="Theme" Relationship="Self.FK__GameTheme__Theme__670A40DB" FromRole="GameTheme" ToRole="Theme" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="GenreID" />
+          </Key>
+          <Property Name="GenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGDBID" Type="Int32" Nullable="false" />
+          <Property Name="GenreName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstSeen" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="GameGenres" Relationship="Self.FK__GameGenre__Genre__61516785" FromRole="Genre" ToRole="GameGenre" />
+        </EntityType>
+        <EntityType Name="Mode">
+          <Key>
+            <PropertyRef Name="ModeID" />
+          </Key>
+          <Property Name="ModeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGDBID" Type="Int32" Nullable="false" />
+          <Property Name="ModeName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstSeen" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="GameModes" Relationship="Self.FK__GameMode__ModeID__7834CCDD" FromRole="Mode" ToRole="GameMode" />
+        </EntityType>
+        <EntityType Name="Perspective">
+          <Key>
+            <PropertyRef Name="PerspectiveID" />
+          </Key>
+          <Property Name="PerspectiveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGDBID" Type="Int32" Nullable="false" />
+          <Property Name="PerspectiveName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstSeen" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="GamePerspectives" Relationship="Self.FK__GamePersp__Persp__6CC31A31" FromRole="Perspective" ToRole="GamePerspective" />
+        </EntityType>
+        <EntityType Name="Platform">
+          <Key>
+            <PropertyRef Name="PlatformID" />
+          </Key>
+          <Property Name="PlatformID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGDBID" Type="Int32" Nullable="false" />
+          <Property Name="Abbreviation" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PlatformName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstSeen" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="GamePlatforms" Relationship="Self.FK__GamePlatf__Platf__7DEDA633" FromRole="Platform" ToRole="GamePlatform" />
+          <NavigationProperty Name="VendorGameHistories" Relationship="Self.FK__VendorGam__Platf__02B25B50" FromRole="Platform" ToRole="VendorGameHistory" />
+          <NavigationProperty Name="VendorGameSettings" Relationship="Self.FK__VendorGam__Platf__0777106D" FromRole="Platform" ToRole="VendorGameSettings" />
+        </EntityType>
+        <EntityType Name="Screenshot">
+          <Key>
+            <PropertyRef Name="ScreenshotID" />
+          </Key>
+          <Property Name="ScreenshotID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGDBID" Type="Int32" Nullable="false" />
+          <Property Name="ScreenshotURL" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstSeen" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="GameScreenshots" Relationship="Self.FK__GameScree__Scree__727BF387" FromRole="Screenshot" ToRole="GameScreenshot" />
+        </EntityType>
+        <EntityType Name="Theme">
+          <Key>
+            <PropertyRef Name="ThemeID" />
+          </Key>
+          <Property Name="ThemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IGDBID" Type="Int32" Nullable="false" />
+          <Property Name="ThemeName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstSeen" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="GameThemes" Relationship="Self.FK__GameTheme__Theme__670A40DB" FromRole="Theme" ToRole="GameTheme" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="VendorID" />
+          </Key>
+          <Property Name="VendorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Abbreviation" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VendorName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomePageURL" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LogoURL" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="VendorGameHistories" Relationship="Self.FK__VendorGam__Vendo__049AA3C2" FromRole="Vendor" ToRole="VendorGameHistory" />
+          <NavigationProperty Name="VendorGameSettings" Relationship="Self.FK__VendorGam__Vendo__095F58DF" FromRole="Vendor" ToRole="VendorGameSettings" />
+          <Property Name="XcodePrice" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="XcodeSalePrice" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VendorGameHistory">
+          <Key>
+            <PropertyRef Name="VendorGameHistoryID" />
+          </Key>
+          <Property Name="VendorGameHistoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlatformID" Type="Int32" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="VendorID" Type="Int32" />
+          <Property Name="Price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SalePrice" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__VendorGam__GameI__03A67F89" FromRole="VendorGameHistory" ToRole="Game" />
+          <NavigationProperty Name="Platform" Relationship="Self.FK__VendorGam__Platf__02B25B50" FromRole="VendorGameHistory" ToRole="Platform" />
+          <NavigationProperty Name="Vendor" Relationship="Self.FK__VendorGam__Vendo__049AA3C2" FromRole="VendorGameHistory" ToRole="Vendor" />
+        </EntityType>
+        <EntityType Name="VendorGameSetting">
+          <Key>
+            <PropertyRef Name="VendorGameSettingsID" />
+          </Key>
+          <Property Name="VendorGameSettingsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlatformID" Type="Int32" />
+          <Property Name="GameID" Type="Int32" />
+          <Property Name="VendorID" Type="Int32" />
+          <Property Name="Automated" Type="Boolean" />
+          <Property Name="XcodePrice" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="XcodeSalePrice" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__VendorGam__GameI__086B34A6" FromRole="VendorGameSettings" ToRole="Game" />
+          <NavigationProperty Name="Platform" Relationship="Self.FK__VendorGam__Platf__0777106D" FromRole="VendorGameSettings" ToRole="Platform" />
+          <NavigationProperty Name="Vendor" Relationship="Self.FK__VendorGam__Vendo__095F58DF" FromRole="VendorGameSettings" ToRole="Vendor" />
+        </EntityType>
+        <Association Name="FK__GameGenre__GameI__605D434C">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GameGenre" Type="Self.GameGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GameGenre">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameMode__GameID__7740A8A4">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GameMode" Type="Self.GameMode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GameMode">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePersp__GameI__6BCEF5F8">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GamePerspective" Type="Self.GamePerspective" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GamePerspective">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePlatf__GameI__7CF981FA">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GamePlatform" Type="Self.GamePlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GamePlatform">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameScree__GameI__7187CF4E">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GameScreenshot" Type="Self.GameScreenshot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GameScreenshot">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameTheme__GameI__66161CA2">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="GameTheme" Type="Self.GameTheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="GameTheme">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__GameI__03A67F89">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="VendorGameHistory" Type="Self.VendorGameHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="VendorGameHistory">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__GameI__086B34A6">
+          <End Role="Game" Type="Self.Game" Multiplicity="0..1" />
+          <End Role="VendorGameSettings" Type="Self.VendorGameSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameID" />
+            </Principal>
+            <Dependent Role="VendorGameSettings">
+              <PropertyRef Name="GameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameGenre__Genre__61516785">
+          <End Role="Genre" Type="Self.Genre" Multiplicity="0..1" />
+          <End Role="GameGenre" Type="Self.GameGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="GenreID" />
+            </Principal>
+            <Dependent Role="GameGenre">
+              <PropertyRef Name="GenreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameMode__ModeID__7834CCDD">
+          <End Role="Mode" Type="Self.Mode" Multiplicity="0..1" />
+          <End Role="GameMode" Type="Self.GameMode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mode">
+              <PropertyRef Name="ModeID" />
+            </Principal>
+            <Dependent Role="GameMode">
+              <PropertyRef Name="ModeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePersp__Persp__6CC31A31">
+          <End Role="Perspective" Type="Self.Perspective" Multiplicity="0..1" />
+          <End Role="GamePerspective" Type="Self.GamePerspective" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perspective">
+              <PropertyRef Name="PerspectiveID" />
+            </Principal>
+            <Dependent Role="GamePerspective">
+              <PropertyRef Name="PerspectiveID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GamePlatf__Platf__7DEDA633">
+          <End Role="Platform" Type="Self.Platform" Multiplicity="0..1" />
+          <End Role="GamePlatform" Type="Self.GamePlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="PlatformID" />
+            </Principal>
+            <Dependent Role="GamePlatform">
+              <PropertyRef Name="PlatformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameScree__Scree__727BF387">
+          <End Role="Screenshot" Type="Self.Screenshot" Multiplicity="0..1" />
+          <End Role="GameScreenshot" Type="Self.GameScreenshot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Screenshot">
+              <PropertyRef Name="ScreenshotID" />
+            </Principal>
+            <Dependent Role="GameScreenshot">
+              <PropertyRef Name="ScreenshotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GameTheme__Theme__670A40DB">
+          <End Role="Theme" Type="Self.Theme" Multiplicity="0..1" />
+          <End Role="GameTheme" Type="Self.GameTheme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Theme">
+              <PropertyRef Name="ThemeID" />
+            </Principal>
+            <Dependent Role="GameTheme">
+              <PropertyRef Name="ThemeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__Platf__02B25B50">
+          <End Role="Platform" Type="Self.Platform" Multiplicity="0..1" />
+          <End Role="VendorGameHistory" Type="Self.VendorGameHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="PlatformID" />
+            </Principal>
+            <Dependent Role="VendorGameHistory">
+              <PropertyRef Name="PlatformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__Platf__0777106D">
+          <End Role="Platform" Type="Self.Platform" Multiplicity="0..1" />
+          <End Role="VendorGameSettings" Type="Self.VendorGameSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="PlatformID" />
+            </Principal>
+            <Dependent Role="VendorGameSettings">
+              <PropertyRef Name="PlatformID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__Vendo__049AA3C2">
+          <End Role="Vendor" Type="Self.Vendor" Multiplicity="0..1" />
+          <End Role="VendorGameHistory" Type="Self.VendorGameHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="VendorGameHistory">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VendorGam__Vendo__095F58DF">
+          <End Role="Vendor" Type="Self.Vendor" Multiplicity="0..1" />
+          <End Role="VendorGameSettings" Type="Self.VendorGameSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vendor">
+              <PropertyRef Name="VendorID" />
+            </Principal>
+            <Dependent Role="VendorGameSettings">
+              <PropertyRef Name="VendorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CompareTheGameEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Games" EntityType="Self.Game" />
+          <EntitySet Name="GameGenres" EntityType="Self.GameGenre" />
+          <EntitySet Name="GameModes" EntityType="Self.GameMode" />
+          <EntitySet Name="GamePerspectives" EntityType="Self.GamePerspective" />
+          <EntitySet Name="GamePlatforms" EntityType="Self.GamePlatform" />
+          <EntitySet Name="GameScreenshots" EntityType="Self.GameScreenshot" />
+          <EntitySet Name="GameThemes" EntityType="Self.GameTheme" />
+          <EntitySet Name="Genres" EntityType="Self.Genre" />
+          <EntitySet Name="Modes" EntityType="Self.Mode" />
+          <EntitySet Name="Perspectives" EntityType="Self.Perspective" />
+          <EntitySet Name="Platforms" EntityType="Self.Platform" />
+          <EntitySet Name="Screenshots" EntityType="Self.Screenshot" />
+          <EntitySet Name="Themes" EntityType="Self.Theme" />
+          <EntitySet Name="Vendors" EntityType="Self.Vendor" />
+          <EntitySet Name="VendorGameHistories" EntityType="Self.VendorGameHistory" />
+          <EntitySet Name="VendorGameSettings" EntityType="Self.VendorGameSetting" />
+          <AssociationSet Name="FK__GameGenre__GameI__605D434C" Association="Self.FK__GameGenre__GameI__605D434C">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GameGenre" EntitySet="GameGenres" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameMode__GameID__7740A8A4" Association="Self.FK__GameMode__GameID__7740A8A4">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GameMode" EntitySet="GameModes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePersp__GameI__6BCEF5F8" Association="Self.FK__GamePersp__GameI__6BCEF5F8">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GamePerspective" EntitySet="GamePerspectives" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePlatf__GameI__7CF981FA" Association="Self.FK__GamePlatf__GameI__7CF981FA">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GamePlatform" EntitySet="GamePlatforms" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameScree__GameI__7187CF4E" Association="Self.FK__GameScree__GameI__7187CF4E">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GameScreenshot" EntitySet="GameScreenshots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameTheme__GameI__66161CA2" Association="Self.FK__GameTheme__GameI__66161CA2">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GameTheme" EntitySet="GameThemes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__GameI__03A67F89" Association="Self.FK__VendorGam__GameI__03A67F89">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="VendorGameHistory" EntitySet="VendorGameHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__GameI__086B34A6" Association="Self.FK__VendorGam__GameI__086B34A6">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="VendorGameSettings" EntitySet="VendorGameSettings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameGenre__Genre__61516785" Association="Self.FK__GameGenre__Genre__61516785">
+            <End Role="Genre" EntitySet="Genres" />
+            <End Role="GameGenre" EntitySet="GameGenres" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameMode__ModeID__7834CCDD" Association="Self.FK__GameMode__ModeID__7834CCDD">
+            <End Role="Mode" EntitySet="Modes" />
+            <End Role="GameMode" EntitySet="GameModes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePersp__Persp__6CC31A31" Association="Self.FK__GamePersp__Persp__6CC31A31">
+            <End Role="Perspective" EntitySet="Perspectives" />
+            <End Role="GamePerspective" EntitySet="GamePerspectives" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GamePlatf__Platf__7DEDA633" Association="Self.FK__GamePlatf__Platf__7DEDA633">
+            <End Role="Platform" EntitySet="Platforms" />
+            <End Role="GamePlatform" EntitySet="GamePlatforms" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameScree__Scree__727BF387" Association="Self.FK__GameScree__Scree__727BF387">
+            <End Role="Screenshot" EntitySet="Screenshots" />
+            <End Role="GameScreenshot" EntitySet="GameScreenshots" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GameTheme__Theme__670A40DB" Association="Self.FK__GameTheme__Theme__670A40DB">
+            <End Role="Theme" EntitySet="Themes" />
+            <End Role="GameTheme" EntitySet="GameThemes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__Platf__02B25B50" Association="Self.FK__VendorGam__Platf__02B25B50">
+            <End Role="Platform" EntitySet="Platforms" />
+            <End Role="VendorGameHistory" EntitySet="VendorGameHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__Platf__0777106D" Association="Self.FK__VendorGam__Platf__0777106D">
+            <End Role="Platform" EntitySet="Platforms" />
+            <End Role="VendorGameSettings" EntitySet="VendorGameSettings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__Vendo__049AA3C2" Association="Self.FK__VendorGam__Vendo__049AA3C2">
+            <End Role="Vendor" EntitySet="Vendors" />
+            <End Role="VendorGameHistory" EntitySet="VendorGameHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VendorGam__Vendo__095F58DF" Association="Self.FK__VendorGam__Vendo__095F58DF">
+            <End Role="Vendor" EntitySet="Vendors" />
+            <End Role="VendorGameSettings" EntitySet="VendorGameSettings" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CompareTheGameModelStoreContainer" CdmEntityContainer="CompareTheGameEntities">
+          <EntitySetMapping Name="Games">
+            <EntityTypeMapping TypeName="CompareTheGameModel.Game">
+              <MappingFragment StoreEntitySet="Game">
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="IGDBID" ColumnName="IGDBID" />
+                <ScalarProperty Name="GameName" ColumnName="GameName" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="CoverImageURL" ColumnName="CoverImageURL" />
+                <ScalarProperty Name="StoreLine" ColumnName="StoreLine" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="FirstReleaseDate" ColumnName="FirstReleaseDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Published" ColumnName="Published" />
+                <ScalarProperty Name="PublishModifiedDate" ColumnName="PublishModifiedDate" />
+                <ScalarProperty Name="PublishModifiedBy" ColumnName="PublishModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameGenres">
+            <EntityTypeMapping TypeName="CompareTheGameModel.GameGenre">
+              <MappingFragment StoreEntitySet="GameGenre">
+                <ScalarProperty Name="GameGenreID" ColumnName="GameGenreID" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameModes">
+            <EntityTypeMapping TypeName="CompareTheGameModel.GameMode">
+              <MappingFragment StoreEntitySet="GameMode">
+                <ScalarProperty Name="GameModeID" ColumnName="GameModeID" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="ModeID" ColumnName="ModeID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GamePerspectives">
+            <EntityTypeMapping TypeName="CompareTheGameModel.GamePerspective">
+              <MappingFragment StoreEntitySet="GamePerspective">
+                <ScalarProperty Name="GamePerspective1" ColumnName="GamePerspective" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="PerspectiveID" ColumnName="PerspectiveID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GamePlatforms">
+            <EntityTypeMapping TypeName="CompareTheGameModel.GamePlatform">
+              <MappingFragment StoreEntitySet="GamePlatform">
+                <ScalarProperty Name="GamePlatformID" ColumnName="GamePlatformID" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameScreenshots">
+            <EntityTypeMapping TypeName="CompareTheGameModel.GameScreenshot">
+              <MappingFragment StoreEntitySet="GameScreenshot">
+                <ScalarProperty Name="GameScreenshotID" ColumnName="GameScreenshotID" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="ScreenshotID" ColumnName="ScreenshotID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameThemes">
+            <EntityTypeMapping TypeName="CompareTheGameModel.GameTheme">
+              <MappingFragment StoreEntitySet="GameTheme">
+                <ScalarProperty Name="GameThemeID" ColumnName="GameThemeID" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="ThemeID" ColumnName="ThemeID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Genres">
+            <EntityTypeMapping TypeName="CompareTheGameModel.Genre">
+              <MappingFragment StoreEntitySet="Genre">
+                <ScalarProperty Name="GenreID" ColumnName="GenreID" />
+                <ScalarProperty Name="IGDBID" ColumnName="IGDBID" />
+                <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+                <ScalarProperty Name="FirstSeen" ColumnName="FirstSeen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modes">
+            <EntityTypeMapping TypeName="CompareTheGameModel.Mode">
+              <MappingFragment StoreEntitySet="Mode">
+                <ScalarProperty Name="ModeID" ColumnName="ModeID" />
+                <ScalarProperty Name="IGDBID" ColumnName="IGDBID" />
+                <ScalarProperty Name="ModeName" ColumnName="ModeName" />
+                <ScalarProperty Name="FirstSeen" ColumnName="FirstSeen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Perspectives">
+            <EntityTypeMapping TypeName="CompareTheGameModel.Perspective">
+              <MappingFragment StoreEntitySet="Perspective">
+                <ScalarProperty Name="PerspectiveID" ColumnName="PerspectiveID" />
+                <ScalarProperty Name="IGDBID" ColumnName="IGDBID" />
+                <ScalarProperty Name="PerspectiveName" ColumnName="PerspectiveName" />
+                <ScalarProperty Name="FirstSeen" ColumnName="FirstSeen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Platforms">
+            <EntityTypeMapping TypeName="CompareTheGameModel.Platform">
+              <MappingFragment StoreEntitySet="Platform">
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="IGDBID" ColumnName="IGDBID" />
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
+                <ScalarProperty Name="FirstSeen" ColumnName="FirstSeen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Screenshots">
+            <EntityTypeMapping TypeName="CompareTheGameModel.Screenshot">
+              <MappingFragment StoreEntitySet="Screenshot">
+                <ScalarProperty Name="ScreenshotID" ColumnName="ScreenshotID" />
+                <ScalarProperty Name="IGDBID" ColumnName="IGDBID" />
+                <ScalarProperty Name="ScreenshotURL" ColumnName="ScreenshotURL" />
+                <ScalarProperty Name="FirstSeen" ColumnName="FirstSeen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Themes">
+            <EntityTypeMapping TypeName="CompareTheGameModel.Theme">
+              <MappingFragment StoreEntitySet="Theme">
+                <ScalarProperty Name="ThemeID" ColumnName="ThemeID" />
+                <ScalarProperty Name="IGDBID" ColumnName="IGDBID" />
+                <ScalarProperty Name="ThemeName" ColumnName="ThemeName" />
+                <ScalarProperty Name="FirstSeen" ColumnName="FirstSeen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="CompareTheGameModel.Vendor">
+              <MappingFragment StoreEntitySet="Vendor">
+                <ScalarProperty Name="XcodeSalePrice" ColumnName="XcodeSalePrice" />
+                <ScalarProperty Name="XcodePrice" ColumnName="XcodePrice" />
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+                <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+                <ScalarProperty Name="HomePageURL" ColumnName="HomePageURL" />
+                <ScalarProperty Name="LogoURL" ColumnName="LogoURL" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VendorGameHistories">
+            <EntityTypeMapping TypeName="CompareTheGameModel.VendorGameHistory">
+              <MappingFragment StoreEntitySet="VendorGameHistory">
+                <ScalarProperty Name="VendorGameHistoryID" ColumnName="VendorGameHistoryID" />
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VendorGameSettings">
+            <EntityTypeMapping TypeName="CompareTheGameModel.VendorGameSetting">
+              <MappingFragment StoreEntitySet="VendorGameSettings">
+                <ScalarProperty Name="VendorGameSettingsID" ColumnName="VendorGameSettingsID" />
+                <ScalarProperty Name="PlatformID" ColumnName="PlatformID" />
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+                <ScalarProperty Name="Automated" ColumnName="Automated" />
+                <ScalarProperty Name="XcodePrice" ColumnName="XcodePrice" />
+                <ScalarProperty Name="XcodeSalePrice" ColumnName="XcodeSalePrice" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

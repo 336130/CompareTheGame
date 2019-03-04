@@ -35,11 +35,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
-/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
-/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
-/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
+/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
+/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
+/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
+/* harmony import */ var _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+
+
+
+
 
 
 
@@ -51,19 +59,19 @@ const routes = [
     {
         path: '',
         pathMatch: 'full',
-        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"]
+        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"]
     },
     {
         path: 'game',
-        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_4__["GameComponent"]
+        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_7__["GameComponent"]
     },
     {
         path: 'about',
-        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_5__["AboutUsComponent"]
+        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_8__["AboutUsComponent"]
     },
     {
         path: 'search',
-        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_6__["SearchComponent"]
+        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_9__["SearchComponent"]
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -71,15 +79,20 @@ let AppRoutingModule = class AppRoutingModule {
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _views_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
-            _views_game_game_component__WEBPACK_IMPORTED_MODULE_4__["GameComponent"],
-            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_5__["AboutUsComponent"],
-            _views_search_search_component__WEBPACK_IMPORTED_MODULE_6__["SearchComponent"]
+            _views_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"],
+            _views_game_game_component__WEBPACK_IMPORTED_MODULE_7__["GameComponent"],
+            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_8__["AboutUsComponent"],
+            _views_search_search_component__WEBPACK_IMPORTED_MODULE_9__["SearchComponent"]
         ],
-        providers: [],
+        providers: [_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_10__["DataFactory"]],
         entryComponents: [],
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        imports: [
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes)
+        ],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]]
     })
 ], AppRoutingModule);
 
@@ -133,10 +146,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu/main-menu.component */ "./src/app/components/menu/main-menu.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/menu/main-menu.component */ "./src/app/components/menu/main-menu.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+
 
 
 
@@ -150,24 +165,66 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_3__["MainMenu"],
-            _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["Footer"]
+            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_6__["MainMenu"],
+            _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["Footer"]
         ],
         imports: [
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"]
+            _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"]
         ],
         providers: [
-            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_3__["MainMenu"],
-            _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["Footer"]
+            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_6__["MainMenu"],
+            _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["Footer"]
         ],
         entryComponents: [
-            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_3__["MainMenu"],
-            _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["Footer"]
+            _components_menu_main_menu_component__WEBPACK_IMPORTED_MODULE_6__["MainMenu"],
+            _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["Footer"]
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/footer/footer.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/components/footer/footer.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<hr />\r\n<footer>\r\n  <p>&copy;{{date}} - CompareTheGame</p>\r\n</footer>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/footer/footer.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/components/footer/footer.component.ts ***!
+  \*******************************************************/
+/*! exports provided: Footer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let Footer = class Footer {
+    constructor() {
+        this.date = new Date().getFullYear().toString();
+    }
+};
+Footer = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'custom-footer',
+        template: __webpack_require__(/*! ./footer.component.html */ "./src/app/components/footer/footer.component.html")
+    })
+], Footer);
 
 
 
@@ -214,43 +271,37 @@ MainMenu = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/footer/footer.component.html":
-/*!**********************************************!*\
-  !*** ./src/app/footer/footer.component.html ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<hr />\r\n<footer>\r\n  <p>&copy;{{date}} - CompareTheGame</p>\r\n</footer>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/footer/footer.component.ts":
-/*!********************************************!*\
-  !*** ./src/app/footer/footer.component.ts ***!
-  \********************************************/
-/*! exports provided: Footer */
+/***/ "./src/app/services/DataFactory.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/services/DataFactory.service.ts ***!
+  \*************************************************/
+/*! exports provided: DataFactory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataFactory", function() { return DataFactory; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 
 
-let Footer = class Footer {
-    constructor() {
-        this.date = new Date().getFullYear().toString();
+
+let DataFactory = class DataFactory {
+    constructor(http) {
+        this.http = http;
     }
+    GetRecentlyAdded() {
+        return this.http.get(apiUrl + "game/getallgames");
+    }
+    ;
 };
-Footer = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'custom-footer',
-        template: __webpack_require__(/*! ./footer.component.html */ "./src/app/footer/footer.component.html")
-    })
-], Footer);
+DataFactory = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+], DataFactory);
 
+const apiUrl = "api/";
 
 
 /***/ }),
@@ -344,7 +395,7 @@ GameComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>{{title}}</p>\r\n<a routerLink=\"/game\">Game</a>\r\n"
+module.exports = "<p>games:</p>\r\n<div *ngIf=\"games.length\">\r\n  <div *ngFor=\"let game of games\">\r\n    <p>{{game.gameName}}</p>\r\n    <img [src]=\"game.coverImageURL\" />\r\n  </div>\r\n</div>\r\n<hr />\r\n<p>{{gameString}}</p>\r\n<a routerLink=\"/game\">Game</a>\r\n"
 
 /***/ }),
 
@@ -360,20 +411,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+
 
 
 let HomeComponent = class HomeComponent {
-    constructor() {
-        this.title = "Home page";
+    constructor(dataFactory) {
+        this.dataFactory = dataFactory;
+        this.games = [];
+        this.gameString = "";
     }
     ;
+    ngOnInit() {
+        this.dataFactory.GetRecentlyAdded().subscribe((data) => {
+            this.games = data;
+            this.gameString = JSON.stringify(data);
+        }, (err) => {
+            console.log(err);
+        });
+    }
 };
 HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: '',
         template: __webpack_require__(/*! ./home.component.html */ "./src/app/views/home/home.component.html")
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__["DataFactory"]])
 ], HomeComponent);
 
 

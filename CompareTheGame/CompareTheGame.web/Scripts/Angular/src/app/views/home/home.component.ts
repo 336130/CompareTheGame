@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
+import { DataFactory } from 'src/app/services/DataFactory.service';
 
 
 @Component({
@@ -7,8 +8,22 @@ import { Router } from '@angular/router';
   templateUrl:'./home.component.html' 
 })
 
-export class HomeComponent {
-  constructor() { };
+export class HomeComponent implements OnInit {
+  constructor(public dataFactory: DataFactory) { };
 
-  title = "Home page"
+  games = [];
+  gameString = "";
+
+
+  ngOnInit(): void {
+    this.dataFactory.GetRecentlyAdded().subscribe(
+      (data) => {
+        this.games = data;
+        this.gameString = JSON.stringify(data);
+      },
+      (err) => {
+        console.log(err);
+      }
+      );
+    }
 }

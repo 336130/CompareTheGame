@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { MainMenu } from './components/menu/main-menu.component';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Footer } from './footer/footer.component';
+
+import { MainMenu } from './components/menu/main-menu.component';
+import { Footer } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,9 @@ import { Footer } from './footer/footer.component';
     Footer
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    CommonModule
   ],
   providers: [
     MainMenu,
