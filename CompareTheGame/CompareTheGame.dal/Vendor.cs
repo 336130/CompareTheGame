@@ -24,14 +24,15 @@ namespace CompareTheGame.dal
         public int VendorID { get; set; }
         public string Abbreviation { get; set; }
         public string VendorName { get; set; }
+        public string Font { get; set; }
         public string HomePageURL { get; set; }
         public string LogoURL { get; set; }
+        public string XcodePrice { get; set; }
+        public string XcodeSalePrice { get; set; }
         public System.DateTime CreatedDate { get; set; }
         public string CreatedBy { get; set; }
         public System.DateTime ModifiedDate { get; set; }
         public string ModifiedBy { get; set; }
-        public string XcodePrice { get; set; }
-        public string XcodeSalePrice { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VendorGameHistory> VendorGameHistories { get; set; }

@@ -1,9 +1,112 @@
 ﻿body {
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-top: 72px;
+    padding-bottom: 73px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding: 0 15px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    z-index: 2;
+}
+
+.carousel-gameTextOverflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carousel-gameSummary { /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative;
+    /* use this value to count block height */
+    line-height: 1.2em;
+    /* max-height = line-height (1.2) * lines max number (4) */
+    max-height: 4.8em;
+    /* fix problem when last visible word doesn't adjoin right side  */
+    text-align: justify;
+    /* place for '...' */
+    padding-right: 1em;
+}
+    /* create the ... */
+    .carousel-gameSummary:before {
+        /* points in the end */
+        content: '...';
+        /* absolute position */
+        position: absolute;
+        /* set position to right bottom corner of block */
+        right: 0;
+        bottom: 0;
+    }
+    /* hide ... if we have text, which is less than or equal to max lines */
+    .carousel-gameSummary:after {
+        /* points in the end */
+        content: '';
+        /* absolute position */
+        position: absolute;
+        /* set position to right bottom corner of text */
+        right: 0;
+        /* set width and height */
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        /* bg color = bg color under block */
+        background: #cccccc;
+    }
+
+.carousel-gameContainer {
+    width: 100%;
+    height: 400px;
+    background: #cccccc
+}
+
+.carousel-gameContainer hr {
+    margin: 0.5rem 0;
+}
+
+
+.carousel-gameInfo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0;
+}
+
+/*.carousel-gameInfo a {
+    color: #000000;
+}*/
+
+.carousel-control-next, .carousel-control-prev {
+    width: 10% !important;
+    background: #efefef;
+}
+
+.carousel-imageContainer {
+    position: relative;
+}
+
+.carousel-image {
+    max-height: 310px;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.carousel-cheapestContainer {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    width: 80%;
+    height: 66px;
+    border: 1px black solid;
+    border-radius: 5px;
 }

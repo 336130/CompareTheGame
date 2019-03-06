@@ -14,7 +14,7 @@ namespace CompareTheGame.dal
     
     public partial class GamePerspective
     {
-        public int GamePerspective1 { get; set; }
+        public int GamePerspectiveID { get; set; }
         public Nullable<int> GameID { get; set; }
         public Nullable<int> PerspectiveID { get; set; }
         public System.DateTime CreatedDate { get; set; }

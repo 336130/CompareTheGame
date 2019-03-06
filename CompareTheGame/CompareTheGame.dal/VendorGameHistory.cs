@@ -15,15 +15,13 @@ namespace CompareTheGame.dal
     public partial class VendorGameHistory
     {
         public int VendorGameHistoryID { get; set; }
-        public Nullable<int> PlatformID { get; set; }
-        public Nullable<int> GameID { get; set; }
+        public Nullable<int> GamePlatformID { get; set; }
         public Nullable<int> VendorID { get; set; }
         public string Price { get; set; }
         public string SalePrice { get; set; }
         public System.DateTime CreatedDate { get; set; }
     
-        public virtual Game Game { get; set; }
-        public virtual Platform Platform { get; set; }
+        public virtual GamePlatform GamePlatform { get; set; }
         public virtual Vendor Vendor { get; set; }
     }
 }

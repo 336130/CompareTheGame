@@ -14,6 +14,13 @@ namespace CompareTheGame.dal
     
     public partial class GamePlatform
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public GamePlatform()
+        {
+            this.VendorGameHistories = new HashSet<VendorGameHistory>();
+            this.VendorGameSettings = new HashSet<VendorGameSetting>();
+        }
+    
         public int GamePlatformID { get; set; }
         public Nullable<int> GameID { get; set; }
         public Nullable<int> PlatformID { get; set; }
@@ -22,5 +29,9 @@ namespace CompareTheGame.dal
     
         public virtual Game Game { get; set; }
         public virtual Platform Platform { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VendorGameHistory> VendorGameHistories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<VendorGameSetting> VendorGameSettings { get; set; }
     }
 }

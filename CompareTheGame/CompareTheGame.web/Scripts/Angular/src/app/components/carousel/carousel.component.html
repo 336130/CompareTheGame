@@ -1,0 +1,69 @@
+<h2>{{title}}</h2>
+<ngb-carousel *ngIf="gamesToDisplay && gamesToDisplay.length" [showNavigationArrows]="'true'" [showNavigationIndicators]="'true'" [interval]="100000">
+  <ng-template *ngFor="let game of gamesToDisplay" ngbSlide>
+    <div class="carousel-gameContainer" [title]="game.gameName">
+      <div class="col-12" style="padding: 0 10%">
+        <h2 class="text-center carousel-gameTextOverflow">{{game.gameName}}</h2>
+      </div>
+      <div class="row" style="height:330px; padding: 0 10%">
+        <div class="col-4 carousel-imageContainer">
+          <img class="carousel-image" [src]="game.coverImageURL" [alt]="game.gameName">
+        </div>
+        <div class="col-8">
+          <div style="width: 100%; overflow:hidden">
+            <p *ngIf="game.modes.length" class="carousel-gameInfo">
+              Modes:
+              <span *ngFor="let mode of game.modes; let last = last">
+                <a routerLink="/search" [queryParams]="{mode:mode.modeID}">
+                  {{mode.name}}
+                </a><span *ngIf="!last">, </span>
+              </span>
+            </p>
+            <p *ngIf="game.perspectives.length" class="carousel-gameInfo">
+              Perspectives:
+              <span *ngFor="let perspective of game.perspectives; let last = last">
+                <a routerLink="/search" [queryParams]="{perspective:perspective.perspectiveID}">
+                  {{perspective.name}}
+                </a><span *ngIf="!last">, </span>
+              </span>
+            </p>
+            <p *ngIf="game.genres.length" class="carousel-gameInfo">
+              Genres:
+              <span *ngFor="let genre of game.genres; let last = last">
+                <a routerLink="/search" [queryParams]="{genre:genre.genreID}">
+                  {{genre.name}}
+                </a><span *ngIf="!last">, </span>
+              </span>
+            </p>
+            <p *ngIf="game.themes.length" class="carousel-gameInfo">
+              Themes:
+              <span *ngFor="let theme of game.themes; let last = last">
+                <a routerLink="/search" [queryParams]="{theme:theme.themeID}">
+                  {{theme.name}}
+                </a><span *ngIf="!last">, </span>
+              </span>
+            </p>
+            <hr />
+          </div>
+          <div *ngIf="game.summary" style="width: 100%;max-height:100px;overflow:hidden">
+            <p class="carousel-gameSummary">Summmary: {{game.summary}}</p>
+            <hr />
+          </div>
+          <div class="carousel-cheapestContainer">
+            <div class="carousel-cheapestPlatforms" *ngIf="game.cheapest">
+              <span style="padding:15px; font-size:2rem">
+                Cheapest at £{{game.cheapestPrice}}
+              </span>
+              <span *ngFor="let price of game.cheapest; let last = last" class="float-right">
+                <span>
+                  <span *ngIf="price.platform.abbreviation" [title]="price.platform.name">| {{price.platform.abbreviation}} |</span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<div class="carousel-seperator"></div>

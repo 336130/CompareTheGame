@@ -15,8 +15,7 @@ namespace CompareTheGame.dal
     public partial class VendorGameSetting
     {
         public int VendorGameSettingsID { get; set; }
-        public Nullable<int> PlatformID { get; set; }
-        public Nullable<int> GameID { get; set; }
+        public Nullable<int> GamePlatformID { get; set; }
         public Nullable<int> VendorID { get; set; }
         public Nullable<bool> Automated { get; set; }
         public string XcodePrice { get; set; }
@@ -26,8 +25,7 @@ namespace CompareTheGame.dal
         public System.DateTime ModifiedDate { get; set; }
         public string ModifiedBy { get; set; }
     
-        public virtual Game Game { get; set; }
-        public virtual Platform Platform { get; set; }
+        public virtual GamePlatform GamePlatform { get; set; }
         public virtual Vendor Vendor { get; set; }
     }
 }

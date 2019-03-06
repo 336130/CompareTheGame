@@ -13,7 +13,15 @@ namespace CompareTheGame.dal
         {
             using (var dbContext = new CompareTheGameEntities())
             {
-                return dbContext.Games.Include(g => g.GameGenres).Where(g => g.CoverImageURL != null).ToList();
+                return dbContext.Games
+                    .Include(g => g.GameGenres.Select(gg => gg.Genre))
+                    .Include(g => g.GameModes.Select(gm => gm.Mode))
+                    .Include(g => g.GamePerspectives.Select(gp => gp.Perspective))
+                    .Include(g => g.GamePlatforms.Select(gp => gp.Platform))
+                    .Include(g => g.GameScreenshots.Select(gs => gs.Screenshot))
+                    .Include(g=> g.GameThemes.Select(gt => gt.Theme))
+                    .Include(g => g.GamePlatforms.Select(gp => gp.VendorGameHistories.Select(vfh => vfh.Vendor)))
+                    .Where(g => g.CoverImageURL != null).ToList();
             }
         }
     }

@@ -1,10 +1,9 @@
-<p>games:</p>
-<div *ngIf="games.length">
-  <div *ngFor="let game of games">
-    <p>{{game.gameName}}</p>
-    <img [src]="game.coverImageURL" />
-  </div>
+<div *ngIf="games">
+  <carousel *ngIf="games.recentlyReleased.length"
+            title="Recently Released"
+            [gamesToDisplay]="games.recentlyReleased"></carousel>
+  <hr/>
+  <carousel *ngIf="games.soonToBeReleased.length"
+            title="Soon To Be Released"
+            [gamesToDisplay]="games.soonToBeReleased"></carousel>
 </div>
-<hr />
-<p>{{gameString}}</p>
-<a routerLink="/game">Game</a>

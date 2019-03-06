@@ -23,8 +23,6 @@ namespace CompareTheGame.dal
             this.GamePlatforms = new HashSet<GamePlatform>();
             this.GameScreenshots = new HashSet<GameScreenshot>();
             this.GameThemes = new HashSet<GameTheme>();
-            this.VendorGameHistories = new HashSet<VendorGameHistory>();
-            this.VendorGameSettings = new HashSet<VendorGameSetting>();
         }
     
         public int GameID { get; set; }
@@ -52,9 +50,5 @@ namespace CompareTheGame.dal
         public virtual ICollection<GameScreenshot> GameScreenshots { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GameTheme> GameThemes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VendorGameHistory> VendorGameHistories { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VendorGameSetting> VendorGameSettings { get; set; }
     }
 }

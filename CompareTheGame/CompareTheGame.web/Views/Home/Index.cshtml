@@ -1,1 +1,23 @@
-﻿Loading the site for you, please wait just a moment.
+﻿<nav class="navbar navbar-light fixed-top navbar-expand-lg bg-light">
+    <a class="navbar-brand" routerLink="/">CompareTheGame</a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" routerLink="/search">Advanced Search</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
+        </ul>
+        <form class="form-inline">
+            <input class="form-control" type="search" placeholder="Search by game name" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<p class="text-center">Attempting to load the site for you, please wait just a moment.</p>
+<footer>
+    <hr />
+    <p>@DateTime.Now.Year - CompareTheGame</p>
+</footer>

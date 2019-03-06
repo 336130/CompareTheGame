@@ -39,11 +39,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
-/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
-/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
-/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
-/* harmony import */ var _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
+/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
+/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
+/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
+/* harmony import */ var _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var _components_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/carousel/carousel.component */ "./src/app/components/carousel/carousel.component.ts");
+
+
 
 
 
@@ -59,19 +63,19 @@ const routes = [
     {
         path: '',
         pathMatch: 'full',
-        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"]
+        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"]
     },
     {
         path: 'game',
-        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_7__["GameComponent"]
+        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_8__["GameComponent"]
     },
     {
         path: 'about',
-        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_8__["AboutUsComponent"]
+        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_9__["AboutUsComponent"]
     },
     {
         path: 'search',
-        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_9__["SearchComponent"]
+        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_10__["SearchComponent"]
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -79,18 +83,25 @@ let AppRoutingModule = class AppRoutingModule {
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _views_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"],
-            _views_game_game_component__WEBPACK_IMPORTED_MODULE_7__["GameComponent"],
-            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_8__["AboutUsComponent"],
-            _views_search_search_component__WEBPACK_IMPORTED_MODULE_9__["SearchComponent"]
+            _views_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
+            _views_game_game_component__WEBPACK_IMPORTED_MODULE_8__["GameComponent"],
+            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_9__["AboutUsComponent"],
+            _views_search_search_component__WEBPACK_IMPORTED_MODULE_10__["SearchComponent"],
+            _components_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_12__["CarouselComponent"]
         ],
-        providers: [_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_10__["DataFactory"]],
-        entryComponents: [],
+        providers: [
+            _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_11__["DataFactory"],
+            _components_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_12__["CarouselComponent"]
+        ],
+        entryComponents: [
+            _components_carousel_carousel_component__WEBPACK_IMPORTED_MODULE_12__["CarouselComponent"]
+        ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes)
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes),
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModule"]
         ],
         exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]]
     })
@@ -189,6 +200,55 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/components/carousel/carousel.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/carousel/carousel.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>{{title}}</h2>\r\n<ngb-carousel *ngIf=\"gamesToDisplay && gamesToDisplay.length\" [showNavigationArrows]=\"'true'\" [showNavigationIndicators]=\"'true'\" [interval]=\"100000\">\r\n  <ng-template *ngFor=\"let game of gamesToDisplay\" ngbSlide>\r\n    <div class=\"carousel-gameContainer\" [title]=\"game.gameName\">\r\n      <div class=\"col-12\" style=\"padding: 0 10%\">\r\n        <h2 class=\"text-center carousel-gameTextOverflow\">{{game.gameName}}</h2>\r\n      </div>\r\n      <div class=\"row\" style=\"height:330px; padding: 0 10%\">\r\n        <div class=\"col-4 carousel-imageContainer\">\r\n          <img class=\"carousel-image\" [src]=\"game.coverImageURL\" [alt]=\"game.gameName\">\r\n        </div>\r\n        <div class=\"col-8\">\r\n          <div style=\"width: 100%; overflow:hidden\">\r\n            <p *ngIf=\"game.modes.length\" class=\"carousel-gameInfo\">\r\n              Modes:\r\n              <span *ngFor=\"let mode of game.modes; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{mode:mode.modeID}\">\r\n                  {{mode.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.perspectives.length\" class=\"carousel-gameInfo\">\r\n              Perspectives:\r\n              <span *ngFor=\"let perspective of game.perspectives; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{perspective:perspective.perspectiveID}\">\r\n                  {{perspective.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.genres.length\" class=\"carousel-gameInfo\">\r\n              Genres:\r\n              <span *ngFor=\"let genre of game.genres; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{genre:genre.genreID}\">\r\n                  {{genre.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.themes.length\" class=\"carousel-gameInfo\">\r\n              Themes:\r\n              <span *ngFor=\"let theme of game.themes; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{theme:theme.themeID}\">\r\n                  {{theme.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <hr />\r\n          </div>\r\n          <div *ngIf=\"game.summary\" style=\"width: 100%;max-height:100px;overflow:hidden\">\r\n            <p class=\"carousel-gameSummary\">Summmary: {{game.summary}}</p>\r\n            <hr />\r\n          </div>\r\n          <div class=\"carousel-cheapestContainer\">\r\n            <div class=\"carousel-cheapestPlatforms\" *ngIf=\"game.cheapest\">\r\n              <span style=\"padding:15px; font-size:2rem\">\r\n                Cheapest at £{{game.cheapestPrice}}\r\n              </span>\r\n              <span *ngFor=\"let price of game.cheapest; let last = last\" class=\"float-right\">\r\n                <span>\r\n                  <span *ngIf=\"price.platform.abbreviation\" [title]=\"price.platform.name\">| {{price.platform.abbreviation}} |</span>\r\n                </span>\r\n              </span>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </ng-template>\r\n</ngb-carousel>\r\n<div class=\"carousel-seperator\"></div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/carousel/carousel.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/carousel/carousel.component.ts ***!
+  \***********************************************************/
+/*! exports provided: CarouselComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CarouselComponent", function() { return CarouselComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let CarouselComponent = class CarouselComponent {
+    constructor() {
+    }
+};
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+], CarouselComponent.prototype, "title", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+], CarouselComponent.prototype, "gamesToDisplay", void 0);
+CarouselComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'carousel',
+        template: __webpack_require__(/*! ./carousel.component.html */ "./src/app/components/carousel/carousel.component.html")
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], CarouselComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/footer/footer.component.html":
 /*!*********************************************************!*\
   !*** ./src/app/components/footer/footer.component.html ***!
@@ -196,7 +256,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<hr />\r\n<footer>\r\n  <p>&copy;{{date}} - CompareTheGame</p>\r\n</footer>\r\n"
+module.exports = "\r\n<footer>\r\n  <hr />\r\n  <p>&copy;{{date}} - CompareTheGame</p>\r\n</footer>\r\n"
 
 /***/ }),
 
@@ -237,7 +297,7 @@ Footer = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n      <a class=\"navbar-brand\" routerLink=\"/\">CompareTheGame</a>\r\n    </div>\r\n    <div class=\"navbar-collapse collapse navbar-right\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a routerLink=\"/search\">Advanced Search</a></li>\r\n        <li><a routerLink=\"/about\">About</a></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<nav class=\"navbar navbar-light fixed-top navbar-expand-lg bg-light\">\r\n      <a class=\"navbar-brand\" routerLink=\"/\">CompareTheGame</a>\r\n\r\n      <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n\r\n      <div class=\"navbar-collapse collapse\">\r\n        <ul class=\"nav navbar-nav mr-auto\">\r\n          <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/search\">Advanced Search</a></li>\r\n          <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/about\">About</a></li>\r\n        </ul>\r\n        <form class=\"form-inline\" action=\"/search\" method=\"get\">\r\n          <input class=\"form-control\" type=\"search\" placeholder=\"Search by game name\" />\r\n          <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>\r\n        </form>\r\n      </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -291,7 +351,7 @@ let DataFactory = class DataFactory {
     constructor(http) {
         this.http = http;
     }
-    GetRecentlyAdded() {
+    GetHomePageData() {
         return this.http.get(apiUrl + "game/getallgames");
     }
     ;
@@ -395,7 +455,7 @@ GameComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>games:</p>\r\n<div *ngIf=\"games.length\">\r\n  <div *ngFor=\"let game of games\">\r\n    <p>{{game.gameName}}</p>\r\n    <img [src]=\"game.coverImageURL\" />\r\n  </div>\r\n</div>\r\n<hr />\r\n<p>{{gameString}}</p>\r\n<a routerLink=\"/game\">Game</a>\r\n"
+module.exports = "<div *ngIf=\"games\">\r\n  <carousel *ngIf=\"games.recentlyReleased.length\"\r\n            title=\"Recently Released\"\r\n            [gamesToDisplay]=\"games.recentlyReleased\"></carousel>\r\n  <hr/>\r\n  <carousel *ngIf=\"games.soonToBeReleased.length\"\r\n            title=\"Soon To Be Released\"\r\n            [gamesToDisplay]=\"games.soonToBeReleased\"></carousel>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -418,14 +478,12 @@ __webpack_require__.r(__webpack_exports__);
 let HomeComponent = class HomeComponent {
     constructor(dataFactory) {
         this.dataFactory = dataFactory;
-        this.games = [];
-        this.gameString = "";
+        this.title = "";
     }
     ;
     ngOnInit() {
-        this.dataFactory.GetRecentlyAdded().subscribe((data) => {
+        this.dataFactory.GetHomePageData().subscribe((data) => {
             this.games = data;
-            this.gameString = JSON.stringify(data);
         }, (err) => {
             console.log(err);
         });

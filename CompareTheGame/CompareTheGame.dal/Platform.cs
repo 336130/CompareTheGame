@@ -18,8 +18,6 @@ namespace CompareTheGame.dal
         public Platform()
         {
             this.GamePlatforms = new HashSet<GamePlatform>();
-            this.VendorGameHistories = new HashSet<VendorGameHistory>();
-            this.VendorGameSettings = new HashSet<VendorGameSetting>();
         }
     
         public int PlatformID { get; set; }
@@ -30,9 +28,5 @@ namespace CompareTheGame.dal
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GamePlatform> GamePlatforms { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VendorGameHistory> VendorGameHistories { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VendorGameSetting> VendorGameSettings { get; set; }
     }
 }

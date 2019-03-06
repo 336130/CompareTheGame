@@ -149,11 +149,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\GameViews\GameViewModel.cs" />
+    <Compile Include="Models\GameViews\GenreViewModel.cs" />
+    <Compile Include="Models\GameViews\ModeViewModel.cs" />
+    <Compile Include="Models\GameViews\PerspectiveViewModel.cs" />
+    <Compile Include="Models\GameViews\PlatformViewModel.cs" />
+    <Compile Include="Models\GameViews\PriceHistoryViewModel.cs" />
+    <Compile Include="Models\GameViews\ScreenshotViewModel.cs" />
+    <Compile Include="Models\GameViews\ThemeViewModel.cs" />
+    <Compile Include="Models\GameViews\VendorViewModel.cs" />
+    <Compile Include="Models\HomePageGameData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\bootstrap-theme.css" />
-    <Content Include="CSS\bootstrap-theme.min.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -168,6 +176,7 @@
     <Content Include="Scripts\Angular\Build\runtime.js" />
     <Content Include="Scripts\Angular\Build\styles.js" />
     <Content Include="Scripts\Angular\Build\vendor.js" />
+    <Content Include="Scripts\Angular\src\app\components\carousel\carousel.component.html" />
     <Content Include="Scripts\Angular\src\app\components\menu\main-menu.component.html" />
     <Content Include="Scripts\Angular\src\app\components\footer\footer.component.html" />
     <Content Include="Scripts\Angular\src\app\views\about\about-us.component.html" />
@@ -178,8 +187,6 @@
     <Content Include="Scripts\Angular\src\index.html" />
     <Content Include="Scripts\Angular\src\karma.conf.js" />
     <Content Include="Scripts\Angular\src\styles.css" />
-    <Content Include="Scripts\External\bootstrap.js" />
-    <Content Include="Scripts\External\bootstrap.min.js" />
     <Content Include="Scripts\Angular\src\assets\.gitkeep" />
     <Content Include="Scripts\Angular\src\browserslist" />
     <Content Include="Scripts\Angular\src\tsconfig.app.json" />
@@ -199,7 +206,12 @@
     <Content Include="Scripts\Angular\Build\runtime.js.map" />
     <Content Include="Scripts\Angular\Build\styles.js.map" />
     <Content Include="Scripts\Angular\Build\vendor.js.map" />
+    <Content Include="CSS\bootstrap.css.map" />
+    <Content Include="CSS\bootstrap.min.css.map" />
+    <Content Include="Scripts\External\bootstrap.min.js.map" />
     <None Include="Scripts\External\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\External\bootstrap.js" />
+    <Content Include="Scripts\External\bootstrap.min.js" />
     <Content Include="Scripts\External\jquery-3.3.1.js" />
     <Content Include="Scripts\External\jquery-3.3.1.min.js" />
     <Content Include="Scripts\External\jquery-3.3.1.slim.js" />
@@ -225,17 +237,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="CSS\bootstrap.min.css.map" />
-    <Content Include="CSS\bootstrap.css.map" />
-    <Content Include="CSS\bootstrap-theme.min.css.map" />
-    <Content Include="CSS\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\External\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\External\jquery-3.3.1.min.map" />
@@ -247,8 +254,17 @@
     <TypeScriptCompile Include="Scripts\Angular\src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\app.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\app.module.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\components\carousel\carousel.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\menu\main-menu.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\footer\footer.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\game.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\genre.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\homepageresponse.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\mode.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\perspective.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\platform.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\screenshot.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\theme.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\services\DataFactory.service.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\about\about-us.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\game\game.component.ts" />

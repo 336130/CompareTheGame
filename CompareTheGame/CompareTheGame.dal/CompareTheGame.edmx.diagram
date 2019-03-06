@@ -4,41 +4,39 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b63dc2a7d30a4339b22006c52f43c75a" Name="Diagram1">
-        <EntityTypeShape EntityType="CompareTheGameModel.Game" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.GameGenre" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.GameMode" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.GamePerspective" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.GamePlatform" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.GameScreenshot" Width="1.5" PointX="6" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.GameTheme" Width="1.5" PointX="6" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.Genre" Width="1.5" PointX="0.75" PointY="18.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.Mode" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.Perspective" Width="1.5" PointX="0.75" PointY="21.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.Platform" Width="1.5" PointX="6.75" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.Screenshot" Width="1.5" PointX="3.75" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.Theme" Width="1.5" PointX="3.75" PointY="19.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.Vendor" Width="1.5" PointX="6.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.VendorGameHistory" Width="1.5" PointX="9" PointY="13.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CompareTheGameModel.VendorGameSetting" Width="1.5" PointX="9" PointY="7.75" IsExpanded="true" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GameGenre__GameI__605D434C" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GameMode__GameID__7740A8A4" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GamePersp__GameI__6BCEF5F8" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GamePlatf__GameI__7CF981FA" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GameScree__GameI__7187CF4E" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GameTheme__GameI__66161CA2" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__GameI__03A67F89" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__GameI__086B34A6" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GameGenre__Genre__61516785" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GameMode__ModeID__7834CCDD" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GamePersp__Persp__6CC31A31" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GamePlatf__Platf__7DEDA633" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GameScree__Scree__727BF387" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__GameTheme__Theme__670A40DB" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__Platf__02B25B50" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__Platf__0777106D" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__Vendo__049AA3C2" ManuallyRouted="false" />
-        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__Vendo__095F58DF" ManuallyRouted="false" />
+      <Diagram DiagramId="113842e1bf70493e9bca8b5f4f56de9f" Name="Diagram1">
+        <EntityTypeShape EntityType="CompareTheGameModel.Game" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.GameGenre" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.GameMode" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.GamePerspective" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.GamePlatform" Width="1.5" PointX="6" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.GameScreenshot" Width="1.5" PointX="6" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.GameTheme" Width="1.5" PointX="6" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.Genre" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.Mode" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.Perspective" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.Platform" Width="1.5" PointX="3.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.Screenshot" Width="1.5" PointX="3.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.Theme" Width="1.5" PointX="3.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.Vendor" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.VendorGameHistory" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompareTheGameModel.VendorGameSetting" Width="1.5" PointX="11.25" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GameGenre__GameI__6FF48C97" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GameMode__GameID__06D7F1EF" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GamePersp__GameI__7B663F43" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GamePlatf__GameI__0C90CB45" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GameScree__GameI__011F1899" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GameTheme__GameI__75AD65ED" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GameGenre__Genre__70E8B0D0" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GameMode__ModeID__07CC1628" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GamePersp__Persp__7C5A637C" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GamePlatf__Platf__0D84EF7E" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__GameP__1249A49B" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__GameP__161A357F" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GameScree__Scree__02133CD2" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__GameTheme__Theme__76A18A26" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__Vendo__133DC8D4" ManuallyRouted="false" />
+        <AssociationConnector Association="CompareTheGameModel.FK__VendorGam__Vendo__170E59B8" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

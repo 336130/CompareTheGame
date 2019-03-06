@@ -1,4 +1,6 @@
 ﻿using CompareTheGame.dal;
+using CompareTheGame.web.Models;
+using CompareTheGame.web.Models.GameViews;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +13,13 @@ namespace CompareTheGame.web.API
     public class GameController : ApiController
     {
         [HttpGet]
-        public List<Game> GetAllGames()
+        public HomePageGameData GetAllGames()
         {
-            return new DatabaseAccessManager().GetAllGames();
+            var games = new DatabaseAccessManager().GetAllGames().Select(g => new GameViewModel(g));
+
+            var responseObj = new HomePageGameData(games.ToList());
+
+            return responseObj;
         }
     }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DataFactory } from 'src/app/services/DataFactory.service';
+import { HomePageResponse } from 'src/app/models/homepageresponse.model';
 
 
 @Component({
@@ -11,15 +12,13 @@ import { DataFactory } from 'src/app/services/DataFactory.service';
 export class HomeComponent implements OnInit {
   constructor(public dataFactory: DataFactory) { };
 
-  games = [];
-  gameString = "";
-
+  games: HomePageResponse;
+  title = ""
 
   ngOnInit(): void {
-    this.dataFactory.GetRecentlyAdded().subscribe(
+    this.dataFactory.GetHomePageData().subscribe(
       (data) => {
         this.games = data;
-        this.gameString = JSON.stringify(data);
       },
       (err) => {
         console.log(err);
