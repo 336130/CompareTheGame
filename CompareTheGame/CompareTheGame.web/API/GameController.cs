@@ -21,5 +21,11 @@ namespace CompareTheGame.web.API
 
             return responseObj;
         }
+
+        [HttpGet]
+        public GameViewModel GetGame([FromUri] string gameID)
+        {
+            return new GameViewModel(new DatabaseAccessManager().GetGame(gameID));
+        }
     }
 }

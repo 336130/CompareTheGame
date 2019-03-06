@@ -49,18 +49,28 @@
             <p class="carousel-gameSummary">Summmary: {{game.summary}}</p>
             <hr />
           </div>
-          <div class="carousel-cheapestContainer">
+          <div style="width:100%;height:100px">
+            <div>
+              <p *ngIf="game.platforms.length">
+                Available on:
+                <span *ngFor="let platform of game.platforms; let last = last">
+                  <a *ngIf="platform.abbreviation" routerLink="/search" [queryParams]="{platform:platform.platformID}" [title]="'Release Date: ' + (platform.releaseDate | date:'dd/MM/yy')">
+                    {{platform.name}}
+                  </a><span *ngIf="!last">, </span>
+                </span>
+              </p>
+            </div>
+          </div>
+          <a class="carousel-cheapestContainer" routerLink="/game" [queryParams]="{game:game.gameID}">
             <div class="carousel-cheapestPlatforms" *ngIf="game.cheapest">
               <span style="padding:15px; font-size:2rem">
                 Cheapest at £{{game.cheapestPrice}}
               </span>
               <span *ngFor="let price of game.cheapest; let last = last" class="float-right">
-                <span>
-                  <span *ngIf="price.platform.abbreviation" [title]="price.platform.name">| {{price.platform.abbreviation}} |</span>
-                </span>
+                <span *ngIf="price.platform.abbreviation" [title]="price.platform.name">| {{price.platform.abbreviation}} |</span>
               </span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

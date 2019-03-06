@@ -207,7 +207,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\r\n<ngb-carousel *ngIf=\"gamesToDisplay && gamesToDisplay.length\" [showNavigationArrows]=\"'true'\" [showNavigationIndicators]=\"'true'\" [interval]=\"100000\">\r\n  <ng-template *ngFor=\"let game of gamesToDisplay\" ngbSlide>\r\n    <div class=\"carousel-gameContainer\" [title]=\"game.gameName\">\r\n      <div class=\"col-12\" style=\"padding: 0 10%\">\r\n        <h2 class=\"text-center carousel-gameTextOverflow\">{{game.gameName}}</h2>\r\n      </div>\r\n      <div class=\"row\" style=\"height:330px; padding: 0 10%\">\r\n        <div class=\"col-4 carousel-imageContainer\">\r\n          <img class=\"carousel-image\" [src]=\"game.coverImageURL\" [alt]=\"game.gameName\">\r\n        </div>\r\n        <div class=\"col-8\">\r\n          <div style=\"width: 100%; overflow:hidden\">\r\n            <p *ngIf=\"game.modes.length\" class=\"carousel-gameInfo\">\r\n              Modes:\r\n              <span *ngFor=\"let mode of game.modes; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{mode:mode.modeID}\">\r\n                  {{mode.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.perspectives.length\" class=\"carousel-gameInfo\">\r\n              Perspectives:\r\n              <span *ngFor=\"let perspective of game.perspectives; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{perspective:perspective.perspectiveID}\">\r\n                  {{perspective.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.genres.length\" class=\"carousel-gameInfo\">\r\n              Genres:\r\n              <span *ngFor=\"let genre of game.genres; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{genre:genre.genreID}\">\r\n                  {{genre.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.themes.length\" class=\"carousel-gameInfo\">\r\n              Themes:\r\n              <span *ngFor=\"let theme of game.themes; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{theme:theme.themeID}\">\r\n                  {{theme.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <hr />\r\n          </div>\r\n          <div *ngIf=\"game.summary\" style=\"width: 100%;max-height:100px;overflow:hidden\">\r\n            <p class=\"carousel-gameSummary\">Summmary: {{game.summary}}</p>\r\n            <hr />\r\n          </div>\r\n          <div class=\"carousel-cheapestContainer\">\r\n            <div class=\"carousel-cheapestPlatforms\" *ngIf=\"game.cheapest\">\r\n              <span style=\"padding:15px; font-size:2rem\">\r\n                Cheapest at £{{game.cheapestPrice}}\r\n              </span>\r\n              <span *ngFor=\"let price of game.cheapest; let last = last\" class=\"float-right\">\r\n                <span>\r\n                  <span *ngIf=\"price.platform.abbreviation\" [title]=\"price.platform.name\">| {{price.platform.abbreviation}} |</span>\r\n                </span>\r\n              </span>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </ng-template>\r\n</ngb-carousel>\r\n<div class=\"carousel-seperator\"></div>\r\n"
+module.exports = "<h2>{{title}}</h2>\r\n<ngb-carousel *ngIf=\"gamesToDisplay && gamesToDisplay.length\" [showNavigationArrows]=\"'true'\" [showNavigationIndicators]=\"'true'\" [interval]=\"100000\">\r\n  <ng-template *ngFor=\"let game of gamesToDisplay\" ngbSlide>\r\n    <div class=\"carousel-gameContainer\" [title]=\"game.gameName\">\r\n      <div class=\"col-12\" style=\"padding: 0 10%\">\r\n        <h2 class=\"text-center carousel-gameTextOverflow\">{{game.gameName}}</h2>\r\n      </div>\r\n      <div class=\"row\" style=\"height:330px; padding: 0 10%\">\r\n        <div class=\"col-4 carousel-imageContainer\">\r\n          <img class=\"carousel-image\" [src]=\"game.coverImageURL\" [alt]=\"game.gameName\">\r\n        </div>\r\n        <div class=\"col-8\">\r\n          <div style=\"width: 100%; overflow:hidden\">\r\n            <p *ngIf=\"game.modes.length\" class=\"carousel-gameInfo\">\r\n              Modes:\r\n              <span *ngFor=\"let mode of game.modes; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{mode:mode.modeID}\">\r\n                  {{mode.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.perspectives.length\" class=\"carousel-gameInfo\">\r\n              Perspectives:\r\n              <span *ngFor=\"let perspective of game.perspectives; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{perspective:perspective.perspectiveID}\">\r\n                  {{perspective.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.genres.length\" class=\"carousel-gameInfo\">\r\n              Genres:\r\n              <span *ngFor=\"let genre of game.genres; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{genre:genre.genreID}\">\r\n                  {{genre.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <p *ngIf=\"game.themes.length\" class=\"carousel-gameInfo\">\r\n              Themes:\r\n              <span *ngFor=\"let theme of game.themes; let last = last\">\r\n                <a routerLink=\"/search\" [queryParams]=\"{theme:theme.themeID}\">\r\n                  {{theme.name}}\r\n                </a><span *ngIf=\"!last\">, </span>\r\n              </span>\r\n            </p>\r\n            <hr />\r\n          </div>\r\n          <div *ngIf=\"game.summary\" style=\"width: 100%;max-height:100px;overflow:hidden\">\r\n            <p class=\"carousel-gameSummary\">Summmary: {{game.summary}}</p>\r\n            <hr />\r\n          </div>\r\n          <div style=\"width:100%;height:100px\">\r\n            <div>\r\n              <p *ngIf=\"game.platforms.length\">\r\n                Available on:\r\n                <span *ngFor=\"let platform of game.platforms; let last = last\">\r\n                  <a *ngIf=\"platform.abbreviation\" routerLink=\"/search\" [queryParams]=\"{platform:platform.platformID}\" [title]=\"'Release Date: ' + (platform.releaseDate | date:'dd/MM/yy')\">\r\n                    {{platform.name}}\r\n                  </a><span *ngIf=\"!last\">, </span>\r\n                </span>\r\n              </p>\r\n            </div>\r\n          </div>\r\n          <a class=\"carousel-cheapestContainer\" routerLink=\"/game\" [queryParams]=\"{game:game.gameID}\">\r\n            <div class=\"carousel-cheapestPlatforms\" *ngIf=\"game.cheapest\">\r\n              <span style=\"padding:15px; font-size:2rem\">\r\n                Cheapest at £{{game.cheapestPrice}}\r\n              </span>\r\n              <span *ngFor=\"let price of game.cheapest; let last = last\" class=\"float-right\">\r\n                <span *ngIf=\"price.platform.abbreviation\" [title]=\"price.platform.name\">| {{price.platform.abbreviation}} |</span>\r\n              </span>\r\n            </div>\r\n          </a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </ng-template>\r\n</ngb-carousel>\r\n<div class=\"carousel-seperator\"></div>\r\n"
 
 /***/ }),
 
@@ -355,6 +355,9 @@ let DataFactory = class DataFactory {
         return this.http.get(apiUrl + "game/getallgames");
     }
     ;
+    FetchGame(gameID) {
+        return this.http.get(apiUrl + "game/getgame", { params: { gameID: gameID } });
+    }
 };
 DataFactory = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
@@ -414,7 +417,7 @@ AboutUsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>{{title}}</p>\r\n"
+module.exports = "<p>{{title}}</p>\r\n<p>{{gameID}}</p>\r\n"
 
 /***/ }),
 
@@ -430,18 +433,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GameComponent", function() { return GameComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+
+
 
 
 let GameComponent = class GameComponent {
-    constructor() {
+    constructor(route, dataFactory) {
+        this.route = route;
+        this.dataFactory = dataFactory;
         this.title = "Game page";
+    }
+    ngOnInit() {
+        this.route.queryParamMap.subscribe(params => {
+            this.dataFactory.FetchGame(params.get("game")).subscribe((data) => {
+                this.game = data;
+                console.log(JSON.stringify(this.game));
+            }, (err) => {
+                console.log(err);
+            });
+        });
+        // this.route.queryParamMap.pipe(map())
     }
 };
 GameComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: '',
         template: __webpack_require__(/*! ./game.component.html */ "./src/app/views/game/game.component.html")
-    })
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__["DataFactory"]])
 ], GameComponent);
 
 
