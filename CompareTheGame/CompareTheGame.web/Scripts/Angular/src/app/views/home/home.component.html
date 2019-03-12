@@ -1,9 +1,9 @@
 <div *ngIf="games">
-  <carousel *ngIf="games.recentlyReleased.length"
+  <game-carousel *ngIf="games.recentlyReleased.length"
             title="Recently Released"
-            [gamesToDisplay]="games.recentlyReleased"></carousel>
+            [gamesToDisplay]="games.recentlyReleased"></game-carousel>
   <hr/>
-  <carousel *ngIf="games.soonToBeReleased.length"
+  <game-carousel *ngIf="games.soonToBeReleased.length"
             title="Soon To Be Released"
-            [gamesToDisplay]="games.soonToBeReleased"></carousel>
+            [gamesToDisplay]="games.soonToBeReleased"></game-carousel>
 </div>

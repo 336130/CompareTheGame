@@ -18,6 +18,7 @@ namespace CompareTheGame.web.Models.GameViews
             Price = history.Price;
             SalePrice = history.SalePrice;
             CreatedDate = history.CreatedDate;
+            PageURL = history.PageURL;
         }
 
         public PlatformViewModel Platform { get; set; }
@@ -25,5 +26,6 @@ namespace CompareTheGame.web.Models.GameViews
         public string Price { get; set; }
         public string SalePrice { get; set; }
         public DateTime CreatedDate { get; set; }
+        public string PageURL { get; set; }
     }
 }

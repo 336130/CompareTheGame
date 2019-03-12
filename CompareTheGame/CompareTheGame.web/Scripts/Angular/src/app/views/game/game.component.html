@@ -1,2 +1,119 @@
-<p>{{title}}</p>
-<p>{{gameID}}</p>
+<div *ngIf="game && !loading" class="gameContainer">
+  <h1>{{game.gameName}}</h1>
+  <div class="row">
+    <div class="col-4">
+      <img style="width:100%; height: auto" [src]="game.coverImageURL" />
+    </div>
+    <div class="col-8">
+      <p *ngIf="game.modes.length">
+        <b>Modes:</b>
+        <span *ngFor="let mode of game.modes; let last = last">
+          <a routerLink="/search" class="siteButton btn" [queryParams]="{mode:mode.modeID}">
+            {{mode.name}}
+          </a>
+        </span>
+      </p>
+      <p *ngIf="game.genres.length">
+        <b>Genres:</b>
+        <span *ngFor="let genre of game.genres; let last = last">
+          <a routerLink="/search" class="siteButton btn" [queryParams]="{genre:genre.genreID}">
+            {{genre.name}}
+          </a>
+        </span>
+      </p>
+      <p *ngIf="game.themes.length">
+        <b>Themes:</b>
+        <span *ngFor="let theme of game.themes; let last = last">
+          <a routerLink="/search" class="siteButton btn" [queryParams]="{theme:theme.themeID}">
+            {{theme.name}}
+          </a>
+        </span>
+      </p>
+      <p *ngIf="game.perspectives.length">
+        <b>Perspectives:</b>
+        <span *ngFor="let perspective of game.perspectives; let last = last">
+          <a routerLink="/search" class="siteButton btn" [queryParams]="{perspective:perspective.perspectiveID}">
+            {{perspective.name}}
+          </a>
+        </span>
+      </p>
+      <p *ngIf="game.platforms.length">
+        <b>Available on:</b>
+        <span *ngFor="let platform of game.platforms; let last = last">
+          <a *ngIf="platform.abbreviation" class="siteButton btn" routerLink="/search" [queryParams]="{platform:platform.platformID}" [title]="'Release Date: ' + (platform.releaseDate | date:'dd/MM/yy')">
+            {{platform.name}}
+          </a>
+        </span>
+      </p>
+    </div>
+
+    <div class="col-12">
+      <ngb-tabset>
+        <ngb-tab title="Game Information">
+          <ng-template ngbTabContent>
+            <div class="col-12 position-relative" *ngIf="game.summary">
+              <h5>Summary</h5>
+              <p class="gameText" [ngClass]="{'gameTextCollapsed':summaryCollapsed}">
+                {{game.summary}}
+              </p>
+              <button (click)="summaryCollapsed = !summaryCollapsed" class="siteButton float-right btn">
+                <span *ngIf="summaryCollapsed">More</span>
+                <span *ngIf="!summaryCollapsed">Less</span>
+              </button>
+              <hr />
+            </div>
+            <div class="col-12 position-relative" *ngIf="game.storyLine">
+              <h5>Story</h5>
+              <p class="gameText" [ngClass]="{'gameTextCollapsed':storyLineCollapsed}">
+                {{game.storyLine}}
+              </p>
+              <button (click)="storyLineCollapsed = !storyLineCollapsed" class="siteButton float-right btn">
+                <span *ngIf="storyLineCollapsed">More</span>
+                <span *ngIf="!storyLineCollapsed">Less</span>
+              </button>
+              <hr />
+            </div>
+            <div class="col-12" *ngIf="galleryImages && galleryImages.length">
+              <h5>Screenshots</h5>
+              <div class="col-sm-2"></div>
+              <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+              <div class="col-sm-2"></div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="Today's Prices">
+          <ng-template ngbTabContent>
+            <hr />
+            <ngb-tabset *ngIf="todaysPrices && todaysPrices.length">
+              <ngb-tab *ngFor="let consoleArray of todaysPrices" [title]="consoleArray[0].platform.name">
+                <ng-template ngbTabContent>
+                  <div class="col-12 priceContainer" *ngFor="let price of consoleArray">
+                    <div class="row">
+                      <div class="col-4">
+                        <a target="_blank" class="link" [href]="price.vendor.homepageURL">
+                          <img *ngIf="price.vendor.logoURL" style="max-width: 100%; max-height:50px;" [src]="price.vendor.logoURL" [alt]="price.vendor.name.toUpperCase()" />
+                          <b *ngIf="!price.vendor.logoURL" [ngStyle]="{'font-family':price.vendor.font}">{{price.vendor.name.toUpperCase()}}</b>
+                        </a>
+                      </div>
+                      <div class="col-4">
+                        Currently sold for £{{price.price}}
+                      </div>
+                      <div class="col-4">
+                        <a target="_blank" style="margin: 10px 20px" class="btn siteButton" [href]="price.pageURL">Go to site</a>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="How's the week gone">
+          <ng-template ngbTabContent>
+            Third tab
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+  </div>
+</div>

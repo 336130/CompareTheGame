@@ -24,6 +24,7 @@ namespace CompareTheGame.dal
         public string CreatedBy { get; set; }
         public System.DateTime ModifiedDate { get; set; }
         public string ModifiedBy { get; set; }
+        public string PageURL { get; set; }
     
         public virtual GamePlatform GamePlatform { get; set; }
         public virtual Vendor Vendor { get; set; }

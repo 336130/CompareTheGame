@@ -1,6 +1,6 @@
 export class Platform {
   platformID: number;
-  platformName: string;
+  name: string;
   abbreviation: string;
   releaseDate: Date;
 }

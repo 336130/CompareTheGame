@@ -18,6 +18,7 @@ namespace CompareTheGame.web.Models.GameViews
             Platforms = new List<PlatformViewModel>();
             Screenshots = new List<ScreenshotViewModel>();
             PriceHistory = new List<PriceHistoryViewModel>();
+            TodaysPrices = new List<PriceHistoryViewModel>();
         }
 
         public GameViewModel(Game game) : this()
@@ -84,21 +85,10 @@ namespace CompareTheGame.web.Models.GameViews
             
             if (PriceHistory.Count() > 0)
             {
-                Cheapest = PriceHistory?.GroupBy(ph => ph.Price).OrderBy(ph => double.Parse(ph.Key)).FirstOrDefault().Select(ph => ph).ToList();
-                CheapestPrice = Cheapest.FirstOrDefault().Price;
+                TodaysPrices = PriceHistory?.Where(ph => ph.CreatedDate >= DateTime.Today).ToList();
+                Cheapest = TodaysPrices?.GroupBy(ph => ph.Price)?.OrderBy(ph => double.Parse(ph.Key))?.FirstOrDefault().Select(ph => ph).ToList();
+                CheapestPrice = Cheapest?.FirstOrDefault().Price;
             }
-
-            //foreach (var priceHistory in game.VendorGameHistories)
-            //{
-            //    PriceHistory.Add(new PriceHistoryViewModel
-            //    {
-            //        CreatedDate = priceHistory.CreatedDate,
-            //        Price = priceHistory.Price,
-            //        SalePrice = priceHistory.SalePrice,
-            //        VendorID = priceHistory.VendorID.Value,
-            //        PlatformID = priceHistory.PlatformID.Value
-            //    });
-            //}
         }
 
         public int GameID { get; set; }
@@ -116,6 +106,7 @@ namespace CompareTheGame.web.Models.GameViews
         public List<PlatformViewModel> Platforms { get;set;}
         public List<PriceHistoryViewModel> PriceHistory { get; set; }
         public List<PriceHistoryViewModel> Cheapest { get; set; }
+        public List<PriceHistoryViewModel> TodaysPrices { get; set; }
         public string CheapestPrice { get; set; }
     }
 }

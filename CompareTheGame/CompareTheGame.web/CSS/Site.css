@@ -1,4 +1,18 @@
-﻿body {
+﻿/*for game.co.uk font*/
+/* montserrat-regular - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/montserrat-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/montserrat-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/montserrat-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/montserrat-v12-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+body {
     padding-top: 72px;
     padding-bottom: 73px;
 }
@@ -13,7 +27,7 @@ footer {
     bottom: 0;
     width: 100%;
     background: white;
-    z-index: 2;
+    z-index: 100;
 }
 
 .carousel-gameTextOverflow {
@@ -67,9 +81,9 @@ footer {
     background: #cccccc
 }
 
-.carousel-gameContainer hr {
-    margin: 0.5rem 0;
-}
+    .carousel-gameContainer hr {
+        margin: 0.5rem 0;
+    }
 
 
 .carousel-gameInfo {
@@ -78,10 +92,6 @@ footer {
     text-overflow: ellipsis;
     margin-bottom: 0;
 }
-
-/*.carousel-gameInfo a {
-    color: #000000;
-}*/
 
 .carousel-control-next, .carousel-control-prev {
     width: 10% !important;
@@ -103,18 +113,97 @@ footer {
 
 .carousel-cheapestContainer {
     position: absolute;
-    bottom: 20px;
-    right: 50px;
+    bottom: 15px;
+    right: calc(10% + 10px);
     width: 80%;
     height: 66px;
-    border: 1px black solid;
-    border-radius: 5px;
-    background:white;
+}
+
+.siteButton {
+    margin: 0.5px 1.5px;
+    padding: 0 5px;
+    background: white;
     box-shadow: 0px 5px 5px #aaaaaa;
+    border:none;
+    vertical-align:initial;
+}
+
+    .siteButton:active {
+        box-shadow: none;
+    }
+
+    .siteButton:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+/*game page*/
+.gameContainer {
+    width: 100%;
+    background: #cccccc
+}
+
+.gameContainer .col-12 p {
+    padding: 0 2px;
+}
+
+.gameText{
+    max-height:20rem;
+    transition: max-height 0.5s ease-in;
+    overflow:hidden;
+}
+
+.gameTextCollapsed{
+    max-height: 1.5rem;
+}
+
+.priceContainer {
+    background: #eeeeee;
+    border:1px solid black;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.link{
+    color:black;
+}
+
+/* Overrides for bootstrap */
+.btn:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #eeeeee;
+}
+
+.nav-link{
     color: black;
 }
 
-.carousel-cheapestContainer:hover {
-    color:black;
-    text-decoration-line:none;
+/* Overrides for image gallery */
+.ngx-gallery-image-size-cover[_ngcontent-c1] .ngx-gallery-image[_ngcontent-c1] {
+    background-size: contain !important;
+}
+
+.ngx-gallery-thumbnail-size-cover[_ngcontent-c2] .ngx-gallery-thumbnails[_ngcontent-c2] .ngx-gallery-thumbnail[_ngcontent-c2] {
+    background-size: contain !important;
+}
+
+.ngx-gallery-arrow.ngx-gallery-disabled[_ngcontent-c4] {
+    opacity: 1 !important;
+    cursor: no-drop !important;
+}
+
+.ngx-gallery-image.ngx-gallery-active[_ngcontent-c1] {
+    z-index: 1 !important;
+}
+
+[_nghost-c0] .ngx-gallery-icon {
+    z-index: 2 !important;
+}
+
+[_nghost-c0] .ngx-gallery-layout[_ngcontent-c0]{
+    background:#999999;
+}
+
+.ngx-gallery-preview-img{
+    width: calc(100% - 100px)!important;
 }

@@ -176,7 +176,7 @@
     <Content Include="Scripts\Angular\Build\runtime.js" />
     <Content Include="Scripts\Angular\Build\styles.js" />
     <Content Include="Scripts\Angular\Build\vendor.js" />
-    <Content Include="Scripts\Angular\src\app\components\carousel\carousel.component.html" />
+    <Content Include="Scripts\Angular\src\app\components\carousel\game-carousel.component.html" />
     <Content Include="Scripts\Angular\src\app\components\menu\main-menu.component.html" />
     <Content Include="Scripts\Angular\src\app\components\footer\footer.component.html" />
     <Content Include="Scripts\Angular\src\app\views\about\about-us.component.html" />
@@ -254,7 +254,7 @@
     <TypeScriptCompile Include="Scripts\Angular\src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\app.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\app.module.ts" />
-    <TypeScriptCompile Include="Scripts\Angular\src\app\components\carousel\carousel.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\components\carousel\game-carousel.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\menu\main-menu.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\footer\footer.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\game.model.ts" />
@@ -263,8 +263,10 @@
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\mode.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\perspective.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\platform.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\price-history.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\screenshot.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\theme.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\vendor.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\services\DataFactory.service.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\about\about-us.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\game\game.component.ts" />

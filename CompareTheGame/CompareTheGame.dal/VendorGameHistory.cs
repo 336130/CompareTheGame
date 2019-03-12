@@ -20,6 +20,7 @@ namespace CompareTheGame.dal
         public string Price { get; set; }
         public string SalePrice { get; set; }
         public System.DateTime CreatedDate { get; set; }
+        public string PageURL { get; set; }
     
         public virtual GamePlatform GamePlatform { get; set; }
         public virtual Vendor Vendor { get; set; }
