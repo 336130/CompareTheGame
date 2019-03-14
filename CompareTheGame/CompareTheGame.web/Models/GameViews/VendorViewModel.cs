@@ -20,8 +20,8 @@ namespace CompareTheGame.web.Models.GameViews
             Name = vendor.VendorName;
             URL = vendor.HomePageURL;
             LogoURL = vendor.LogoURL;
-            XCodePrice = vendor.XcodePrice;
-            XCodeSalePrice = vendor.XcodeSalePrice;
+            ElementType = vendor.ElementType;
+            ElementValue = vendor.ElementValue; ;
             Font = vendor.Font;
         }
 
@@ -30,8 +30,8 @@ namespace CompareTheGame.web.Models.GameViews
         public string Name { get; set; }
         public string URL { get; set; }
         public string LogoURL { get; set; }
-        public string XCodeSalePrice { get; set; }
-        public string XCodePrice { get; set; }
+        public string ElementType { get; set; }
+        public string ElementValue { get; set; }
         public string Font { get; set; }
     }
 }

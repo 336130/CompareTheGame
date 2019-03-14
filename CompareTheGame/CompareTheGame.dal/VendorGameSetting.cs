@@ -18,13 +18,13 @@ namespace CompareTheGame.dal
         public Nullable<int> GamePlatformID { get; set; }
         public Nullable<int> VendorID { get; set; }
         public Nullable<bool> Automated { get; set; }
-        public string XcodePrice { get; set; }
-        public string XcodeSalePrice { get; set; }
         public System.DateTime CreatedDate { get; set; }
         public string CreatedBy { get; set; }
         public System.DateTime ModifiedDate { get; set; }
         public string ModifiedBy { get; set; }
         public string PageURL { get; set; }
+        public string ElementType { get; set; }
+        public string ElementValue { get; set; }
     
         public virtual GamePlatform GamePlatform { get; set; }
         public virtual Vendor Vendor { get; set; }
