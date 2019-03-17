@@ -86,7 +86,7 @@ namespace CompareTheGame.web.Models.GameViews
             if (PriceHistory.Count() > 0)
             {
                 TodaysPrices = PriceHistory?.Where(ph => ph.CreatedDate >= DateTime.Today).ToList();
-                Cheapest = TodaysPrices?.GroupBy(ph => ph.Price)?.OrderBy(ph => double.Parse(ph.Key))?.FirstOrDefault().Select(ph => ph).ToList();
+                Cheapest = TodaysPrices?.GroupBy(ph => ph.Price)?.OrderBy(ph => double.Parse(ph.Key))?.FirstOrDefault()?.Select(ph => ph).ToList();
                 CheapestPrice = Cheapest?.FirstOrDefault().Price;
             }
         }

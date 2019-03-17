@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DataFactory } from 'src/app/services/DataFactory.service';
-import { HomePageResponse } from 'src/app/models/homepageresponse.model';
+import { HomePageResponse } from 'src/app/models/home-page-response.model';
 
 
 @Component({

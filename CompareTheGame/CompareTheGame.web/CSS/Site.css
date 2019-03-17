@@ -12,8 +12,12 @@
     url('../fonts/montserrat-v12-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 
+hr {
+    margin: 0.5rem 0;
+}
+
 body {
-    padding-top: 72px;
+    padding-top: 65px;
     padding-bottom: 73px;
 }
 
@@ -30,13 +34,13 @@ footer {
     z-index: 100;
 }
 
-.carousel-gameTextOverflow {
+.ctg-gameTextOverflow {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.carousel-gameSummary { /* hide text if it more than N lines  */
+.ctg-gameSummary { /* hide text if it more than N lines  */
     overflow: hidden;
     /* for set '...' in absolute position */
     position: relative;
@@ -50,7 +54,7 @@ footer {
     padding-right: 1em;
 }
     /* create the ... */
-    .carousel-gameSummary:before {
+    .ctg-gameSummary:before {
         /* points in the end */
         content: '...';
         /* absolute position */
@@ -60,7 +64,7 @@ footer {
         bottom: 0;
     }
     /* hide ... if we have text, which is less than or equal to max lines */
-    .carousel-gameSummary:after {
+    .ctg-gameSummary:after {
         /* points in the end */
         content: '';
         /* absolute position */
@@ -75,34 +79,24 @@ footer {
         background: #cccccc;
     }
 
-.carousel-gameContainer {
+.ctg-gameContainer {
     width: 100%;
     height: 400px;
     background: #cccccc
 }
 
-    .carousel-gameContainer hr {
-        margin: 0.5rem 0;
-    }
-
-
-.carousel-gameInfo {
+.ctg-gameInfo {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 0;
 }
 
-.carousel-control-next, .carousel-control-prev {
-    width: 10% !important;
-    background: #efefef;
-}
-
-.carousel-imageContainer {
+.ctg-imageContainer {
     position: relative;
 }
 
-.carousel-image {
+.ctg-image {
     max-height: 310px;
     width: 90%;
     margin: auto;
@@ -111,7 +105,7 @@ footer {
     bottom: 0;
 }
 
-.carousel-cheapestContainer {
+.ctg-cheapestContainer {
     position: absolute;
     bottom: 15px;
     right: calc(10% + 10px);
@@ -119,7 +113,7 @@ footer {
     height: 66px;
 }
 
-.siteButton {
+.ctg-siteButton {
     margin: 0.5px 1.5px;
     padding: 0 5px;
     background: white;
@@ -128,44 +122,49 @@ footer {
     vertical-align:initial;
 }
 
-    .siteButton:active {
+    .ctg-siteButton:active {
         box-shadow: none;
     }
 
-    .siteButton:hover {
+    .ctg-siteButton:hover {
         color: black;
         text-decoration: none;
     }
 
+.ctg-link {
+    color: black;
+    cursor: pointer
+}
+
 /*game page*/
-.gameContainer {
+.ctg-container {
     width: 100%;
     background: #cccccc
 }
 
-.gameContainer .col-12 p {
+.ctg-container .col-12 p {
     padding: 0 2px;
 }
 
-.gameText{
+.ctg-gameText{
     max-height:20rem;
     transition: max-height 0.5s ease-in;
     overflow:hidden;
 }
 
-.gameTextCollapsed{
+.ctg-gameText + .ctg-siteButton + hr{
+    margin-bottom:1.5rem;
+}
+
+.ctg-gameTextCollapsed{
     max-height: 1.5rem;
 }
 
-.priceContainer {
+.ctg-priceContainer {
     background: #eeeeee;
     border:1px solid black;
     border-radius: 5px;
     margin: 5px 0;
-}
-
-.link{
-    color:black;
 }
 
 /* Overrides for bootstrap */
@@ -176,6 +175,12 @@ footer {
 
 .nav-link{
     color: black;
+}
+
+/*override ngb-carousel*/
+.carousel-control-next, .carousel-control-prev {
+    width: 10% !important;
+    background: #efefef;
 }
 
 /* Overrides for image gallery */

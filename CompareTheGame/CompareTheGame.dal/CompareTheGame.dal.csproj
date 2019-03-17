@@ -121,6 +121,7 @@
     <Compile Include="Mode.cs">
       <DependentUpon>CompareTheGame.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SearchOptions.cs" />
     <Compile Include="Perspective.cs">
       <DependentUpon>CompareTheGame.tt</DependentUpon>
     </Compile>

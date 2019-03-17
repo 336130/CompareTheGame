@@ -22,7 +22,7 @@ export class GameComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[] = [
     {
       width:'100%',
-      height: '300px',
+      height: '400px',
       thumbnailsColumns: 4,
       imageAnimation: NgxGalleryAnimation.Slide
     },

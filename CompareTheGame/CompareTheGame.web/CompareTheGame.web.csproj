@@ -159,6 +159,7 @@
     <Compile Include="Models\GameViews\ThemeViewModel.cs" />
     <Compile Include="Models\GameViews\VendorViewModel.cs" />
     <Compile Include="Models\HomePageGameData.cs" />
+    <Compile Include="Models\SearchOptionsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +210,8 @@
     <Content Include="CSS\bootstrap.css.map" />
     <Content Include="CSS\bootstrap.min.css.map" />
     <Content Include="Scripts\External\bootstrap.min.js.map" />
+    <Content Include="Scripts\Angular\src\app\components\game-displays\small-game-display.component.html" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\components\game-displays\small-game-display.component.ts" />
     <None Include="Scripts\External\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\External\bootstrap.js" />
     <Content Include="Scripts\External\bootstrap.min.js" />
@@ -259,12 +262,13 @@
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\footer\footer.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\game.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\genre.model.ts" />
-    <TypeScriptCompile Include="Scripts\Angular\src\app\models\homepageresponse.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\home-page-response.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\mode.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\perspective.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\platform.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\price-history.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\screenshot.model.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\models\search-options.mmodel.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\theme.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\vendor.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\services\DataFactory.service.ts" />

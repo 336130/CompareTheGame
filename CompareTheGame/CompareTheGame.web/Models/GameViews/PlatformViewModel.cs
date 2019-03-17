@@ -11,9 +11,15 @@ namespace CompareTheGame.web.Models.GameViews
     {
         public PlatformViewModel(){}
 
+        public PlatformViewModel(Platform platform)
+        {
+            PlatformID = platform.PlatformID;
+            Abbreviation = platform.Abbreviation;
+            Name = platform.PlatformName;
+        }
+
         public PlatformViewModel(Platform platform, DateTime releaseDate)
         {
-
             PlatformID = platform.PlatformID;
             Abbreviation = platform.Abbreviation;
             Name = platform.PlatformName;

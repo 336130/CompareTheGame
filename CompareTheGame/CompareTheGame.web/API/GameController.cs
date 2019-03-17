@@ -27,5 +27,17 @@ namespace CompareTheGame.web.API
         {
             return new GameViewModel(new DatabaseAccessManager().GetGame(gameID));
         }
+
+        [HttpGet]
+        public SearchOptionsViewModel GetSearchOptions()
+        {
+            return new SearchOptionsViewModel(new DatabaseAccessManager().GetSearchOptions());
+        }
+
+        [HttpGet]
+        public List<GameViewModel> SearchForGame([FromUri]string gameName)
+        {
+            return new DatabaseAccessManager().SearchForGame(gameName).Select(g => new GameViewModel(g)).ToList();
+        }
     }
 }

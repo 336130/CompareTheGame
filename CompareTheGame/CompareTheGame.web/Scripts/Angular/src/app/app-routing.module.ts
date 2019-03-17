@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { NgxGalleryModule } from 'ngx-gallery';
@@ -16,6 +17,8 @@ import { SearchComponent } from './views/search/search.component';
 
 import { DataFactory } from './services/DataFactory.service';
 import { GameCarouselComponent } from './components/carousel/game-carousel.component';
+import { FormsModule } from '@angular/forms';
+import { SmallGameDisplay } from './components/game-displays/small-game-display.component';
 
 class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -55,7 +58,8 @@ const routes: Routes = [
     GameComponent,
     AboutUsComponent,
     SearchComponent,
-    GameCarouselComponent
+    GameCarouselComponent,
+    SmallGameDisplay
   ],
   providers: [
     DataFactory,
@@ -66,11 +70,14 @@ const routes: Routes = [
     }
   ],
   entryComponents: [
-    GameCarouselComponent
+    GameCarouselComponent,
+    SmallGameDisplay
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CommonModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
     NgbModule,

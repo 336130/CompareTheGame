@@ -1,1 +1,87 @@
-<p>{{title}}</p>
+<h1>Search</h1>
+<div class="ctg-container">
+  <form>
+    <div class="row">
+      <div class="col-8">
+        <input class="form-control" [(ngModel)]="gameName" [ngModelOptions]="{standalone: true}" placeholder="Search by game name" />
+      </div>
+      <div class="col-4">
+        <button (click)="SearchForGame()" class="btn btn-outline-dark form-control bg-light">Search</button>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+    </div>
+    <div class="row" *ngIf="showFilters" [@slideInOut]>
+      <div class="col-md-2">
+        <p class="text-right">Genre:</p>
+      </div>
+      <div class="col-md-4">
+        <select [(ngModel)]="selectedGenre" name="genres" class="form-control">
+          <option value=0 selected>-- All Genres --</option>
+          <option *ngFor="let genre of genres" value="{{genre.genreID}}">{{genre.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <p class="text-right">Themes:</p>
+      </div>
+      <div class="col-md-4">
+        <select [(ngModel)]="selectedTheme" name="themes" class="form-control">
+          <option value=0 selected>-- All Themes --</option>
+          <option *ngFor="let theme of themes" value="{{theme.themeID}}">{{theme.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <p class="text-right">Perspectives:</p>
+      </div>
+      <div class="col-md-4">
+        <select [(ngModel)]="selectedPerspective" name="perspectives" class="form-control">
+          <option value=0 selected>-- All Perspectives --</option>
+          <option *ngFor="let perspective of perspectives" value="{{perspective.perspectiveID}}">{{perspective.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <p class="text-right">Mode:</p>
+      </div>
+      <div class="col-md-4">
+        <select [(ngModel)]="selectedMode" name="modes" class="form-control">
+          <option value=0 selected>-- All Modes --</option>
+          <option *ngFor="let mode of modes" value="{{mode.modeID}}">{{mode.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <p class="text-right">Platform:</p>
+      </div>
+      <div class="col-md-4">
+        <select [(ngModel)]="selectedPlatform" name="platforms" class="form-control">
+          <option value=0 selected>-- All Platforms --</option>
+          <option *ngFor="let platform of platforms" value="{{platform.platformID}}">{{platform.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-outline-dark bg-light form-control" (click)="ApplyFilters()">Apply</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center link" (click)="showFilters = !showFilters" >
+        <hr *ngIf="showFilters"/>
+        <i [ngClass]="{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}" class="fa fa-chevron-down"></i>
+        <i [ngClass]="{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}" class="fa fa-chevron-down"></i>
+        <i [ngClass]="{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}" class="fa fa-chevron-down"></i>
+        Show Filters
+        <i [ngClass]="{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}" class="fa fa-chevron-down"></i>
+        <i [ngClass]="{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}" class="fa fa-chevron-down"></i>
+        <i [ngClass]="{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}" class="fa fa-chevron-down"></i>
+      </div>
+    </div>
+  </form>
+  <hr />
+  <p>Showing: {{gamesToDisplay.length}}/{{searchResults.length}}</p>
+  <div *ngIf="searchResults && searchResults.length">
+    <hr />
+    <div *ngFor="let game of gamesToDisplay">
+      <small-game-display [game]="game"></small-game-display>
+      <hr />
+    </div>
+  </div>
+</div>
