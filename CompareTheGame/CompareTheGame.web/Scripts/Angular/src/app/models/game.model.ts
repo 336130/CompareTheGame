@@ -23,4 +23,5 @@ export class Game {
   todaysPrices: PriceHistory[];
   cheapest: PriceHistory[];
   cheapestPrice: string;
+  published: boolean;
 }

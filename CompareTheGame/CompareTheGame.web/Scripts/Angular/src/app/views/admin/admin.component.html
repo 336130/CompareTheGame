@@ -1,0 +1,127 @@
+<h1>Admin</h1>
+<div class="ctg-container">
+  <ngb-tabset>
+    <ngb-tab title="Vendors">
+      <ng-template ngbTabContent>
+        <form class="row" style="margin-bottom:10px;">
+          <div class="col-12">
+            <h4>New Vendor</h4>
+          </div>
+
+          <div class="col-4"><p class="text-right">Name</p></div>
+          <div class="col-4">
+            <input [(ngModel)]="newVendor.name" class="form-control" required [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="col-4"></div>
+
+          <div class="col-4"><p class="text-right">Logo URL</p></div>
+          <div class="col-4">
+            <input [(ngModel)]="newVendor.logoURL" class="form-control" [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="col-4"></div>
+
+          <div class="col-4"><p class="text-right">Logo Preview</p></div>
+          <div class="col-4">
+            <img [src]="newVendor.logoURL" style="max-width:100%; max-height:400px;" />
+          </div>
+          <div class="col-4"></div>
+
+          <div class="col-4"><p class="text-right">Font</p></div>
+          <div class="col-4">
+            <input [(ngModel)]="newVendor.font" class="form-control" [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="col-4"></div>
+
+          <div class="col-4"><p class="text-right">Home Page URL</p></div>
+          <div class="col-4">
+            <input [(ngModel)]="newVendor.homePageURL" class="form-control" required [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="col-4"></div>
+
+          <div class="col-4"><p class="text-right">Element Type</p></div>
+          <div class="col-4">
+            <select [(ngModel)]="newVendor.elementType" class="form-control" [ngModelOptions]="{standalone: true}">
+              <option value="ID">ID</option>
+              <option value="CLASS">CLASS</option>
+            </select>
+          </div>
+          <div class="col-4"></div>
+
+          <div class="col-4"><p class="text-right">Element Value</p></div>
+          <div class="col-4">
+            <input [(ngModel)]="newVendor.elementValue" class="form-control" [ngModelOptions]="{standalone: true}" />
+          </div>
+          <div class="col-4"></div>
+
+          <div class="col-8"></div>
+          <div class="col-4">
+            <button class="btn ctg-siteButton"><i class="fa fa-plus"></i> Add</button>
+          </div>
+
+        </form>
+
+        <table class="table table-bordered table-striped table-dark">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Logo</th>
+              <th>Font</th>
+              <th>Game Scrap Configs</th>
+              <th>Element Type</th>
+              <th>Element Value</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="vendors && vendors.length">
+            <tr *ngFor="let vendor of vendors">
+              <td>{{vendor.vendorID}}</td>
+              <td>{{vendor.name}}</td>
+              <td>
+                <img *ngIf="vendor.logoURL" style="max-width: 100%; max-height:50px;" [src]="vendor.logoURL" [alt]="vendor.name.toUpperCase()" />
+                <b *ngIf="!vendor.logoURL" [ngStyle]="{'font-family':vendor.font}">{{vendor.name.toUpperCase()}}</b>
+              </td>
+              <td><p *ngIf="!vendor.logoURL">{{vendor.font}}</p></td>
+              <td>{{vendor.settings.length}}</td>
+              <td>{{vendor.elementType}}</td>
+              <td>{{vendor.elementValue}}</td>
+              <td><i class="fa fa-edit"></i></td>
+              <td><i class="fa fa-remove"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Games">
+      <ng-template ngbTabContent>
+        <table class="table table-bordered table-striped table-dark">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Platforms</th>
+              <th>Screenshots</th>
+              <th>Story</th>
+              <th>Summary</th>
+              <th>Published</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="games && games.length">
+            <tr *ngFor="let game of games">
+              <td>{{game.gameID}}</td>
+              <td>{{game.gameName}}</td>
+              <td>{{game.platforms.length}}</td>
+              <td>{{game.screenshots.length}}</td>
+              <td><i class="fa fa-check" *ngIf="game.storyLine"></i></td>
+              <td><i class="fa fa-check" *ngIf="game.summary"></i></td>
+              <td><i class="fa fa-check" *ngIf="game.published"></i></td>
+              <td><i class="fa fa-edit"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>

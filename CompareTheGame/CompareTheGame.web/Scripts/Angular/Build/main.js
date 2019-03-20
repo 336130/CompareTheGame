@@ -53,6 +53,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/carousel/game-carousel.component */ "./src/app/components/carousel/game-carousel.component.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/game-displays/small-game-display.component */ "./src/app/components/game-displays/small-game-display.component.ts");
+/* harmony import */ var _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./views/admin/admin.component */ "./src/app/views/admin/admin.component.ts");
+
 
 
 
@@ -102,6 +104,10 @@ const routes = [
     {
         path: 'search',
         component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_13__["SearchComponent"]
+    },
+    {
+        path: 'admin',
+        component: _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_18__["AdminComponent"]
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -114,7 +120,8 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_12__["AboutUsComponent"],
             _views_search_search_component__WEBPACK_IMPORTED_MODULE_13__["SearchComponent"],
             _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_15__["GameCarouselComponent"],
-            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_17__["SmallGameDisplay"]
+            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_17__["SmallGameDisplay"],
+            _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_18__["AdminComponent"]
         ],
         providers: [
             _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_14__["DataFactory"],
@@ -373,7 +380,7 @@ SmallGameDisplay = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light fixed-top navbar-expand-lg bg-light\">\r\n      <a class=\"navbar-brand\" routerLink=\"/\">CompareTheGame</a>\r\n\r\n      <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n\r\n      <div class=\"navbar-collapse collapse\">\r\n        <ul class=\"nav navbar-nav mr-auto\">\r\n          <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/search\">Advanced Search</a></li>\r\n          <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/about\">About</a></li>\r\n        </ul>\r\n        <form class=\"form-inline\" action=\"/search\" method=\"get\">\r\n          <input class=\"form-control\" type=\"search\" placeholder=\"Search by game name\" />\r\n          <button class=\"btn btn-outline-dark\" type=\"submit\">Search</button>\r\n        </form>\r\n      </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-light fixed-top navbar-expand-lg bg-light\">\r\n      <a class=\"navbar-brand\" routerLink=\"/\">CompareTheGame</a>\r\n\r\n      <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n\r\n      <div class=\"navbar-collapse collapse\">\r\n        <ul class=\"nav navbar-nav mr-auto\">\r\n          <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/search\">Search</a></li>\r\n          <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/about\">About</a></li>\r\n          <li class=\"nav-item\"><a class=\"nav-link\" routerLink=\"/admin\">Admin</a></li>\r\n        </ul>\r\n        <form class=\"form-inline\" action=\"/search\" method=\"get\">\r\n          <input class=\"form-control\" type=\"search\" placeholder=\"Search by game name\" />\r\n          <button class=\"btn btn-outline-dark\" type=\"submit\">Search</button>\r\n        </form>\r\n      </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -424,6 +431,22 @@ class Game {
 
 /***/ }),
 
+/***/ "./src/app/models/vendor.model.ts":
+/*!****************************************!*\
+  !*** ./src/app/models/vendor.model.ts ***!
+  \****************************************/
+/*! exports provided: Vendor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Vendor", function() { return Vendor; });
+class Vendor {
+}
+
+
+/***/ }),
+
 /***/ "./src/app/services/DataFactory.service.ts":
 /*!*************************************************!*\
   !*** ./src/app/services/DataFactory.service.ts ***!
@@ -445,7 +468,7 @@ let DataFactory = class DataFactory {
         this.http = http;
     }
     GetHomePageData() {
-        return this.http.get(apiUrl + "game/getallgames");
+        return this.http.get(apiUrl + "game/getHomepageData");
     }
     ;
     GetSearchOptions() {
@@ -457,6 +480,13 @@ let DataFactory = class DataFactory {
     SearchForGame(gameName) {
         return this.http.get(apiUrl + "game/searchforgame", { params: { gameName: gameName } });
         ;
+    }
+    GetVendors() {
+        return this.http.get(apiUrl + "admin/getvendors");
+        ;
+    }
+    GetAllGames() {
+        return this.http.get(apiUrl + "admin/getallgames");
     }
 };
 DataFactory = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -505,6 +535,69 @@ AboutUsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: __webpack_require__(/*! ./about-us.component.html */ "./src/app/views/about/about-us.component.html")
     })
 ], AboutUsComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/admin/admin.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/views/admin/admin.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Admin</h1>\r\n<div class=\"ctg-container\">\r\n  <ngb-tabset>\r\n    <ngb-tab title=\"Vendors\">\r\n      <ng-template ngbTabContent>\r\n        <form class=\"row\" style=\"margin-bottom:10px;\">\r\n          <div class=\"col-12\">\r\n            <h4>New Vendor</h4>\r\n          </div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Name</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.name\" class=\"form-control\" required [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Logo URL</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.logoURL\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Logo Preview</p></div>\r\n          <div class=\"col-4\">\r\n            <img [src]=\"newVendor.logoURL\" style=\"max-width:100%; max-height:400px;\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Font</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.font\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Home Page URL</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.homePageURL\" class=\"form-control\" required [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Element Type</p></div>\r\n          <div class=\"col-4\">\r\n            <select [(ngModel)]=\"newVendor.elementType\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\r\n              <option value=\"ID\">ID</option>\r\n              <option value=\"CLASS\">CLASS</option>\r\n            </select>\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Element Value</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.elementValue\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-8\"></div>\r\n          <div class=\"col-4\">\r\n            <button class=\"btn ctg-siteButton\"><i class=\"fa fa-plus\"></i> Add</button>\r\n          </div>\r\n\r\n        </form>\r\n\r\n        <table class=\"table table-bordered table-striped table-dark\">\r\n          <thead>\r\n            <tr>\r\n              <th>ID</th>\r\n              <th>Name</th>\r\n              <th>Logo</th>\r\n              <th>Font</th>\r\n              <th>Game Scrap Configs</th>\r\n              <th>Element Type</th>\r\n              <th>Element Value</th>\r\n              <th>Edit</th>\r\n              <th>Delete</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody *ngIf=\"vendors && vendors.length\">\r\n            <tr *ngFor=\"let vendor of vendors\">\r\n              <td>{{vendor.vendorID}}</td>\r\n              <td>{{vendor.name}}</td>\r\n              <td>\r\n                <img *ngIf=\"vendor.logoURL\" style=\"max-width: 100%; max-height:50px;\" [src]=\"vendor.logoURL\" [alt]=\"vendor.name.toUpperCase()\" />\r\n                <b *ngIf=\"!vendor.logoURL\" [ngStyle]=\"{'font-family':vendor.font}\">{{vendor.name.toUpperCase()}}</b>\r\n              </td>\r\n              <td><p *ngIf=\"!vendor.logoURL\">{{vendor.font}}</p></td>\r\n              <td>{{vendor.settings.length}}</td>\r\n              <td>{{vendor.elementType}}</td>\r\n              <td>{{vendor.elementValue}}</td>\r\n              <td><i class=\"fa fa-edit\"></i></td>\r\n              <td><i class=\"fa fa-remove\"></i></td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </ng-template>\r\n    </ngb-tab>\r\n    <ngb-tab title=\"Games\">\r\n      <ng-template ngbTabContent>\r\n        <table class=\"table table-bordered table-striped table-dark\">\r\n          <thead>\r\n            <tr>\r\n              <th>ID</th>\r\n              <th>Name</th>\r\n              <th>Platforms</th>\r\n              <th>Screenshots</th>\r\n              <th>Story</th>\r\n              <th>Summary</th>\r\n              <th>Published</th>\r\n              <th>Edit</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody *ngIf=\"games && games.length\">\r\n            <tr *ngFor=\"let game of games\">\r\n              <td>{{game.gameID}}</td>\r\n              <td>{{game.gameName}}</td>\r\n              <td>{{game.platforms.length}}</td>\r\n              <td>{{game.screenshots.length}}</td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.storyLine\"></i></td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.summary\"></i></td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.published\"></i></td>\r\n              <td><i class=\"fa fa-edit\"></i></td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </ng-template>\r\n    </ngb-tab>\r\n  </ngb-tabset>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/views/admin/admin.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/views/admin/admin.component.ts ***!
+  \************************************************/
+/*! exports provided: AdminComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return AdminComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/vendor.model */ "./src/app/models/vendor.model.ts");
+
+
+
+
+let AdminComponent = class AdminComponent {
+    constructor(dataFactory) {
+        this.dataFactory = dataFactory;
+        this.loading = false;
+        this.newVendor = new src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_3__["Vendor"]();
+    }
+    ngOnInit() {
+        this.loading = true;
+        this.dataFactory.GetVendors().subscribe((data) => {
+            this.vendors = data;
+        }, (err) => {
+            console.log(err);
+        }, () => { this.loading = false; });
+        this.dataFactory.GetAllGames().subscribe((data) => {
+            this.games = data;
+        }, (err) => {
+            console.log(err);
+        }, () => {
+            this.loading = false;
+        });
+    }
+};
+AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'admin',
+        template: __webpack_require__(/*! ./admin.component.html */ "./src/app/views/admin/admin.component.html")
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__["DataFactory"]])
+], AdminComponent);
 
 
 

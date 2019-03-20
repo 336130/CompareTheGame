@@ -13,7 +13,7 @@ namespace CompareTheGame.web.API
     public class GameController : ApiController
     {
         [HttpGet]
-        public HomePageGameData GetAllGames()
+        public HomePageGameData getHomePageData()
         {
             var games = new DatabaseAccessManager().GetAllGames().Select(g => new GameViewModel(g));
 

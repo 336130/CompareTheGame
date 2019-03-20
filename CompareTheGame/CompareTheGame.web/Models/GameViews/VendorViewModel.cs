@@ -24,6 +24,10 @@ namespace CompareTheGame.web.Models.GameViews
             ElementValue = vendor.ElementValue; ;
             Font = vendor.Font;
         }
+        public VendorViewModel(Vendor vendor, List<VendorGameSetting> settings): this(vendor)
+        {
+            Settings = settings.Select(vs => new VendorGameSettingViewModel(vs)).ToList();
+        }
 
         public int VendorID { get; set; }
         public string Abbreviation { get; set; }
@@ -33,5 +37,6 @@ namespace CompareTheGame.web.Models.GameViews
         public string ElementType { get; set; }
         public string ElementValue { get; set; }
         public string Font { get; set; }
+        public List<VendorGameSettingViewModel> Settings { get; set; }
     }
 }

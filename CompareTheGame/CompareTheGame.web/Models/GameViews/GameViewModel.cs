@@ -30,6 +30,7 @@ namespace CompareTheGame.web.Models.GameViews
             StoryLine = game.StoreLine;
             Summary = game.Summary;
             FirstReleaseDate = game.FirstReleaseDate;
+            Published = game.Published.HasValue ? game.Published.Value : false;
 
             foreach (var gameGenre in game.GameGenres)
             {
@@ -108,5 +109,6 @@ namespace CompareTheGame.web.Models.GameViews
         public List<PriceHistoryViewModel> Cheapest { get; set; }
         public List<PriceHistoryViewModel> TodaysPrices { get; set; }
         public string CheapestPrice { get; set; }
+        public bool Published { get; set; }
     }
 }

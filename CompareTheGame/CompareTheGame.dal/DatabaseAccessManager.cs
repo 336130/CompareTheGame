@@ -22,7 +22,9 @@ namespace CompareTheGame.dal
                     .Include(g => g.GameScreenshots.Select(gs => gs.Screenshot))
                     .Include(g => g.GameThemes.Select(gt => gt.Theme))
                     .Include(g => g.GamePlatforms.Select(gp => gp.VendorGameHistories.Select(vfh => vfh.Vendor)))
-                    .Where(g => g.CoverImageURL != null).ToList();
+                    .Where(g => g.CoverImageURL != null && !g.GameName.StartsWith("???"))
+                    .OrderBy(g => g.GameName)
+                    .ToList();
             }
         }
 
@@ -73,6 +75,14 @@ namespace CompareTheGame.dal
                     .Where(g => g.CoverImageURL != null && g.GameName.Contains(gameName) && !g.GameName.StartsWith("???"))
                     .OrderBy(g => g.GameName)
                     .ToList();
+            }
+        }
+        
+        public List<Vendor> GetVendors()
+        {
+            using (var dbContext = new CompareTheGameEntities())
+            {
+                return dbContext.Vendors.Include(v => v.VendorGameSettings).OrderBy(v => v.VendorName).ToList();
             }
         }
     }

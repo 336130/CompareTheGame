@@ -19,6 +19,7 @@ import { DataFactory } from './services/DataFactory.service';
 import { GameCarouselComponent } from './components/carousel/game-carousel.component';
 import { FormsModule } from '@angular/forms';
 import { SmallGameDisplay } from './components/game-displays/small-game-display.component';
+import { AdminComponent } from './views/admin/admin.component';
 
 class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 
@@ -59,7 +64,8 @@ const routes: Routes = [
     AboutUsComponent,
     SearchComponent,
     GameCarouselComponent,
-    SmallGameDisplay
+    SmallGameDisplay,
+    AdminComponent
   ],
   providers: [
     DataFactory,

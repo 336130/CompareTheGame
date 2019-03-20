@@ -4,13 +4,14 @@ import { Observable } from 'rxjs'
 import { HomePageResponse } from '../models/home-page-response.model';
 import { Game } from '../models/game.model';
 import { SearchOptions } from '../models/search-options.mmodel';
+import { Vendor } from '../models/vendor.model';
 
 @Injectable()
 export class DataFactory {
   constructor(private http: HttpClient) { }
 
   GetHomePageData(): Observable<HomePageResponse> {
-    return this.http.get<HomePageResponse>(apiUrl + "game/getallgames");
+    return this.http.get<HomePageResponse>(apiUrl + "game/getHomepageData");
   };
 
   GetSearchOptions(): Observable<SearchOptions> {
@@ -23,6 +24,14 @@ export class DataFactory {
 
   SearchForGame(gameName: string): Observable<Game[]> {
     return this.http.get<Game[]>(apiUrl + "game/searchforgame", { params: { gameName: gameName } });;
+  }
+
+  GetVendors(): Observable<Vendor[]> {
+    return this.http.get<Vendor[]>(apiUrl + "admin/getvendors");;
+  }
+
+  GetAllGames(): Observable<Game[]> {
+    return this.http.get<Game[]>(apiUrl + "admin/getallgames");
   }
 }
 
