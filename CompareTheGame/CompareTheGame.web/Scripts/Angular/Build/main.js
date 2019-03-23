@@ -38,22 +38,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
-/* harmony import */ var ngx_gallery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-gallery */ "./node_modules/ngx-gallery/bundles/ngx-gallery.umd.js");
-/* harmony import */ var ngx_gallery__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(ngx_gallery__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
-/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
-/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
-/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
-/* harmony import */ var _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
-/* harmony import */ var _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/carousel/game-carousel.component */ "./src/app/components/carousel/game-carousel.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/game-displays/small-game-display.component */ "./src/app/components/game-displays/small-game-display.component.ts");
-/* harmony import */ var _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./views/admin/admin.component */ "./src/app/views/admin/admin.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+/* harmony import */ var ngx_gallery__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-gallery */ "./node_modules/ngx-gallery/bundles/ngx-gallery.umd.js");
+/* harmony import */ var ngx_gallery__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(ngx_gallery__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
+/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
+/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
+/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
+/* harmony import */ var _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/carousel/game-carousel.component */ "./src/app/components/carousel/game-carousel.component.ts");
+/* harmony import */ var _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/game-displays/small-game-display.component */ "./src/app/components/game-displays/small-game-display.component.ts");
+/* harmony import */ var _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./views/admin/admin.component */ "./src/app/views/admin/admin.component.ts");
+/* harmony import */ var _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/modals/edit-vendor-modal/edit-vendor-modal.component */ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.ts");
+/* harmony import */ var _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/modals/delete-vendor-modal/delete-vendor-modal.component */ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.ts");
 
 
 
@@ -73,7 +76,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class MyHammerConfig extends _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["HammerGestureConfig"] {
+
+
+
+class MyHammerConfig extends _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["HammerGestureConfig"] {
     constructor() {
         super(...arguments);
         this.overrides = {
@@ -91,23 +97,23 @@ const routes = [
     {
         path: '',
         pathMatch: 'full',
-        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"]
+        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"]
     },
     {
         path: 'game',
-        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_11__["GameComponent"]
+        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_14__["GameComponent"]
     },
     {
         path: 'about',
-        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_12__["AboutUsComponent"]
+        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_15__["AboutUsComponent"]
     },
     {
         path: 'search',
-        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_13__["SearchComponent"]
+        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_16__["SearchComponent"]
     },
     {
         path: 'admin',
-        component: _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_18__["AdminComponent"]
+        component: _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_19__["AdminComponent"]
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -115,35 +121,44 @@ let AppRoutingModule = class AppRoutingModule {
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _views_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"],
-            _views_game_game_component__WEBPACK_IMPORTED_MODULE_11__["GameComponent"],
-            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_12__["AboutUsComponent"],
-            _views_search_search_component__WEBPACK_IMPORTED_MODULE_13__["SearchComponent"],
-            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_15__["GameCarouselComponent"],
-            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_17__["SmallGameDisplay"],
-            _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_18__["AdminComponent"]
+            _views_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
+            _views_game_game_component__WEBPACK_IMPORTED_MODULE_14__["GameComponent"],
+            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_15__["AboutUsComponent"],
+            _views_search_search_component__WEBPACK_IMPORTED_MODULE_16__["SearchComponent"],
+            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_17__["GameCarouselComponent"],
+            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_18__["SmallGameDisplay"],
+            _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_19__["AdminComponent"],
+            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_20__["EditVendorModalComponent"],
+            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["DeleteVendorModalComponent"]
         ],
         providers: [
-            _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_14__["DataFactory"],
-            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_15__["GameCarouselComponent"],
+            _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_12__["DataFactory"],
+            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_17__["GameCarouselComponent"],
             {
-                provide: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["HAMMER_GESTURE_CONFIG"],
+                provide: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["HAMMER_GESTURE_CONFIG"],
                 useClass: MyHammerConfig
-            }
+            },
+            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_20__["EditVendorModalComponent"],
+            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["DeleteVendorModalComponent"]
         ],
         entryComponents: [
-            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_15__["GameCarouselComponent"],
-            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_17__["SmallGameDisplay"]
+            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_17__["GameCarouselComponent"],
+            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_18__["SmallGameDisplay"],
+            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_20__["EditVendorModalComponent"],
+            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["DeleteVendorModalComponent"]
         ],
         imports: [
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["BrowserModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["BrowserModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes),
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"],
-            ngx_gallery__WEBPACK_IMPORTED_MODULE_8__["NgxGalleryModule"]
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_9__["NgbModule"],
+            ngx_gallery__WEBPACK_IMPORTED_MODULE_10__["NgxGalleryModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatProgressSpinnerModule"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialogModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ReactiveFormsModule"]
         ],
         exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]]
     })
@@ -414,6 +429,217 @@ MainMenu = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.html":
+/*!******************************************************************************************!*\
+  !*** ./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.html ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"ctg-modalContainer\">\r\n  <i class=\"fa fa-remove ctg-modalCloseButton\" (click)=\"CloseModal()\"></i>\r\n  <div class=\"row\" style=\"margin-left:0px\">\r\n    <div class=\"col-12\">\r\n      <h4>Delete Vendor: {{vendor.name}}</h4>\r\n    </div>\r\n    <div class=\"col-12\">\r\n      <p class=\"text-center\">Confirm you wish to delete the vendor?</p>\r\n    </div>\r\n    <div class=\"col-12\" *ngIf=\"errors && errors.length\">\r\n      <p *ngFor=\"let error of errors\">{{error}}</p>\r\n    </div>\r\n    <div class=\"col-12 ctg-modalButton\">\r\n      <button class=\"btn ctg-siteButton form-control\" (click)=\"DeleteVendor()\"><i class=\"fa fa-remove\"></i>Delete</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.ts":
+/*!****************************************************************************************!*\
+  !*** ./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.ts ***!
+  \****************************************************************************************/
+/*! exports provided: DeleteVendorModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteVendorModalComponent", function() { return DeleteVendorModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+
+let DeleteVendorModalComponent = class DeleteVendorModalComponent {
+    constructor(dataFactory, data, dialogRef) {
+        this.dataFactory = dataFactory;
+        this.dialogRef = dialogRef;
+        this.errors = [];
+        this.vendor = data.Vendor;
+        this.dialogRef = dialogRef;
+    }
+    CloseModal() {
+        this.dialogRef.close(false);
+    }
+    DeleteVendor() {
+        this.dataFactory.DeleteVendor(this.vendor).subscribe((data) => {
+            this.dialogRef.close(true);
+        }, (err) => {
+            this.errors = [err.message];
+            console.log(err);
+        }, () => { });
+    }
+};
+DeleteVendorModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'delete-vendor-modal',
+        template: __webpack_require__(/*! ./delete-vendor-modal.component.html */ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.html")
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"])),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__["DataFactory"], Object, _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogRef"]])
+], DeleteVendorModalComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.html":
+/*!**************************************************************************************!*\
+  !*** ./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.html ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"ctg-modalContainer\">\r\n  <i class=\"fa fa-remove ctg-modalCloseButton\" (click)=\"CloseModal()\"></i>\r\n  <form class=\"row\" style=\"margin-left:0px\" [formGroup]=\"form\">\r\n    <div class=\"col-12\">\r\n      <h4>{{title}}</h4>\r\n    </div>\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Name</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" required formControlName=\"name\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Logo URL</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"logoURL\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Logo Preview</p></div>\r\n    <div class=\"col-8\">\r\n      <img style=\"max-width:100%; max-height:400px;\" [src]=\"form.controls['logoURL'].value\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Font</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"font\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Home Page URL</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" required formControlName=\"url\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Element Type</p></div>\r\n    <div class=\"col-8\">\r\n      <select class=\"form-control\" formControlName=\"elementType\">\r\n        <option value=\"\" selected></option>\r\n        <option value=\"ID\">ID</option>\r\n        <option value=\"CLASS\">CLASS</option>\r\n      </select>\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Element Value</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"elementValue\" />\r\n    </div>\r\n\r\n    <div class=\"col-12 bk-dark\" *ngIf=\"errors && errors.length\">\r\n      <p class=\"text-light\" *ngFor=\"let error of errors\">{{error}}</p>\r\n    </div>\r\n\r\n\r\n    <div [hidden]=\"loading <= 0\" class=\"col-12\">\r\n      <mat-spinner [diameter]=\"75\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n    </div>\r\n\r\n    <div class=\"col-12 ctg-modalButton\">\r\n      <button class=\"btn ctg-siteButton form-control\" (click)=\"AddOrUpdateVendor()\">\r\n        <span *ngIf=\"isNew\">\r\n          <i class=\"fa fa-plus\"></i> Add\r\n        </span>\r\n        <span *ngIf=\"!isNew\">\r\n          <i class=\"fa fa-save\"></i> Save\r\n        </span>\r\n      </button>\r\n\r\n    </div>\r\n\r\n  </form>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.ts":
+/*!************************************************************************************!*\
+  !*** ./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.ts ***!
+  \************************************************************************************/
+/*! exports provided: EditVendorModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditVendorModalComponent", function() { return EditVendorModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/vendor.model */ "./src/app/models/vendor.model.ts");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+
+
+
+
+
+
+let EditVendorModalComponent = class EditVendorModalComponent {
+    constructor(dialogRef, data, dataFactory) {
+        this.dialogRef = dialogRef;
+        this.dataFactory = dataFactory;
+        this.title = "";
+        this.loading = 0;
+        if (data != null && data.Vendor != null) {
+            this.title = "Edit Vendor: " + data.Vendor.name;
+            //make a clean copy of passed in vendor
+            this.vendor = JSON.parse(JSON.stringify(data.Vendor));
+            this.isNew = false;
+        }
+        else {
+            this.title = "New Vendor";
+            this.vendor = new src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_3__["Vendor"]();
+            this.isNew = true;
+        }
+    }
+    ngOnInit() {
+        this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroup"]({
+            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.name, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required),
+            url: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.url, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required),
+            font: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.font),
+            logoURL: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.logoURL),
+            elementType: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.elementType),
+            elementValue: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.elementValue)
+        });
+    }
+    CloseModal() {
+        this.dialogRef.close(false);
+    }
+    IsValid() {
+        //if untouched return immediately.
+        if (this.form.pristine)
+            return false;
+        let errors = [];
+        let vendor = this.form.value;
+        let valid = true;
+        if (this.vendor) {
+            if (!this.isNew) {
+                let editFound = false;
+                if (vendor.name != this.vendor.name &&
+                    vendor.font != this.vendor.font &&
+                    vendor.logoURL != this.vendor.logoURL &&
+                    vendor.url != this.vendor.url &&
+                    vendor.elementType != this.vendor.elementType &&
+                    vendor.elementValue != this.vendor.elementValue) {
+                    editFound = true;
+                }
+                valid = editFound;
+                errors.push("No changes found.");
+            }
+            if (!vendor.name) {
+                valid = false;
+                errors.push('Vendor must have a name.');
+            }
+            if (!vendor.logoURL && !vendor.font) {
+                valid = false;
+                errors.push('You must provide either a logoURL or a font in which to display the vendor\'s name.');
+            }
+            if (vendor.logoURL && (!vendor.logoURL.match(/http/) && !vendor.logoURL.match(/www/))) {
+                valid = false;
+                errors.push('Logo URL should start with "http://" or "www.".');
+            }
+            if (!vendor.url) {
+                valid = false;
+                errors.push('You must provide a vendor home page URL.');
+            }
+            if (vendor.url && (!vendor.url.match(/http/) && !vendor.logoURL.match(/www/))) {
+                valid = false;
+                errors.push('Home Page URL should start with "http://" or "www.".');
+            }
+        }
+        else {
+            valid = false;
+        }
+        this.errors = errors;
+        return valid;
+    }
+    AddOrUpdateVendor() {
+        if (this.IsValid()) {
+            this.loading++;
+            let vendor = this.form.value;
+            //pass up original values
+            vendor.createdBy = this.vendor.createdBy;
+            vendor.createdDate = this.vendor.createdDate;
+            vendor.vendorID = this.vendor.vendorID;
+            this.dataFactory.EditVendor(vendor).subscribe((data) => {
+                if (data) {
+                    this.dialogRef.close(true);
+                }
+                else {
+                    this.errors = ["Error saving vendor."];
+                }
+            }, (err) => {
+                this.errors = [err.message];
+                console.log(err);
+            }, () => {
+                this.loading--;
+            });
+        }
+    }
+};
+EditVendorModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'edit-vendor-modal',
+        template: __webpack_require__(/*! ./edit-vendor-modal.component.html */ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.html")
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object, src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_4__["DataFactory"]])
+], EditVendorModalComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/models/game.model.ts":
 /*!**************************************!*\
   !*** ./src/app/models/game.model.ts ***!
@@ -481,12 +707,19 @@ let DataFactory = class DataFactory {
         return this.http.get(apiUrl + "game/searchforgame", { params: { gameName: gameName } });
         ;
     }
+    //ADMIN PAGE
     GetVendors() {
         return this.http.get(apiUrl + "admin/getvendors");
         ;
     }
     GetAllGames() {
         return this.http.get(apiUrl + "admin/getallgames");
+    }
+    EditVendor(vendor) {
+        return this.http.post(apiUrl + "admin/savevendor", vendor);
+    }
+    DeleteVendor(vendor) {
+        return this.http.post(apiUrl + "admin/deletevendor", vendor);
     }
 };
 DataFactory = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -547,7 +780,7 @@ AboutUsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Admin</h1>\r\n<div class=\"ctg-container\">\r\n  <ngb-tabset>\r\n    <ngb-tab title=\"Vendors\">\r\n      <ng-template ngbTabContent>\r\n        <form class=\"row\" style=\"margin-bottom:10px;\">\r\n          <div class=\"col-12\">\r\n            <h4>New Vendor</h4>\r\n          </div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Name</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.name\" class=\"form-control\" required [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Logo URL</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.logoURL\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Logo Preview</p></div>\r\n          <div class=\"col-4\">\r\n            <img [src]=\"newVendor.logoURL\" style=\"max-width:100%; max-height:400px;\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Font</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.font\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Home Page URL</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.homePageURL\" class=\"form-control\" required [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Element Type</p></div>\r\n          <div class=\"col-4\">\r\n            <select [(ngModel)]=\"newVendor.elementType\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\">\r\n              <option value=\"ID\">ID</option>\r\n              <option value=\"CLASS\">CLASS</option>\r\n            </select>\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-4\"><p class=\"text-right\">Element Value</p></div>\r\n          <div class=\"col-4\">\r\n            <input [(ngModel)]=\"newVendor.elementValue\" class=\"form-control\" [ngModelOptions]=\"{standalone: true}\" />\r\n          </div>\r\n          <div class=\"col-4\"></div>\r\n\r\n          <div class=\"col-8\"></div>\r\n          <div class=\"col-4\">\r\n            <button class=\"btn ctg-siteButton\"><i class=\"fa fa-plus\"></i> Add</button>\r\n          </div>\r\n\r\n        </form>\r\n\r\n        <table class=\"table table-bordered table-striped table-dark\">\r\n          <thead>\r\n            <tr>\r\n              <th>ID</th>\r\n              <th>Name</th>\r\n              <th>Logo</th>\r\n              <th>Font</th>\r\n              <th>Game Scrap Configs</th>\r\n              <th>Element Type</th>\r\n              <th>Element Value</th>\r\n              <th>Edit</th>\r\n              <th>Delete</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody *ngIf=\"vendors && vendors.length\">\r\n            <tr *ngFor=\"let vendor of vendors\">\r\n              <td>{{vendor.vendorID}}</td>\r\n              <td>{{vendor.name}}</td>\r\n              <td>\r\n                <img *ngIf=\"vendor.logoURL\" style=\"max-width: 100%; max-height:50px;\" [src]=\"vendor.logoURL\" [alt]=\"vendor.name.toUpperCase()\" />\r\n                <b *ngIf=\"!vendor.logoURL\" [ngStyle]=\"{'font-family':vendor.font}\">{{vendor.name.toUpperCase()}}</b>\r\n              </td>\r\n              <td><p *ngIf=\"!vendor.logoURL\">{{vendor.font}}</p></td>\r\n              <td>{{vendor.settings.length}}</td>\r\n              <td>{{vendor.elementType}}</td>\r\n              <td>{{vendor.elementValue}}</td>\r\n              <td><i class=\"fa fa-edit\"></i></td>\r\n              <td><i class=\"fa fa-remove\"></i></td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </ng-template>\r\n    </ngb-tab>\r\n    <ngb-tab title=\"Games\">\r\n      <ng-template ngbTabContent>\r\n        <table class=\"table table-bordered table-striped table-dark\">\r\n          <thead>\r\n            <tr>\r\n              <th>ID</th>\r\n              <th>Name</th>\r\n              <th>Platforms</th>\r\n              <th>Screenshots</th>\r\n              <th>Story</th>\r\n              <th>Summary</th>\r\n              <th>Published</th>\r\n              <th>Edit</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody *ngIf=\"games && games.length\">\r\n            <tr *ngFor=\"let game of games\">\r\n              <td>{{game.gameID}}</td>\r\n              <td>{{game.gameName}}</td>\r\n              <td>{{game.platforms.length}}</td>\r\n              <td>{{game.screenshots.length}}</td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.storyLine\"></i></td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.summary\"></i></td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.published\"></i></td>\r\n              <td><i class=\"fa fa-edit\"></i></td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </ng-template>\r\n    </ngb-tab>\r\n  </ngb-tabset>\r\n</div>\r\n"
+module.exports = "<h1>Admin</h1>\r\n<div class=\"ctg-container\">\r\n  <ngb-tabset>\r\n    <ngb-tab title=\"Vendors\">\r\n      <ng-template ngbTabContent>\r\n        <div class=\"row\">\r\n          <div class=\"col-12\">\r\n            <button class=\" btn ctg-siteButton\" (click)=\"AddNewVendor()\"><i class=\"fa fa-plus\"></i> Add a new Vendor</button>\r\n          </div>\r\n        </div>\r\n\r\n        <table class=\"table table-bordered table-striped table-dark\">\r\n          <thead>\r\n            <tr>\r\n              <th>ID</th>\r\n              <th>Name</th>\r\n              <th>Logo</th>\r\n              <th>Font</th>\r\n              <th>Game Scrap Configs</th>\r\n              <th>Element Type</th>\r\n              <th>Element Value</th>\r\n              <th>Edit</th>\r\n              <th>Delete</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody *ngIf=\"vendors && vendors.length && !loading\">\r\n            <tr *ngFor=\"let vendor of vendors\">\r\n              <td>{{vendor.vendorID}}</td>\r\n              <td>{{vendor.name}}</td>\r\n              <td>\r\n                <img *ngIf=\"vendor.logoURL\" style=\"max-width: 100%; max-height:50px;\" [src]=\"vendor.logoURL\" [alt]=\"vendor.name.toUpperCase()\" />\r\n                <b *ngIf=\"!vendor.logoURL\" [ngStyle]=\"{'font-family':vendor.font}\">{{vendor.name.toUpperCase()}}</b>\r\n              </td>\r\n              <td><p *ngIf=\"!vendor.logoURL\">{{vendor.font}}</p></td>\r\n              <td>{{vendor.settings.length}}</td>\r\n              <td>{{vendor.elementType}}</td>\r\n              <td>{{vendor.elementValue}}</td>\r\n              <td><i (click)=\"EditVendor(vendor)\" class=\"fa fa-edit fa-2x\"></i></td>\r\n              <td><i (click)=\"DeleteVendor(vendor)\" class=\"fa fa-remove fa-2x\"></i></td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n        <div [hidden]=\"loading <= 0\">\r\n          <mat-spinner [diameter]=\"150\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n        </div>\r\n      </ng-template>\r\n    </ngb-tab>\r\n    <ngb-tab title=\"Games\">\r\n      <ng-template ngbTabContent>\r\n        <table class=\"table table-bordered table-striped table-dark\">\r\n          <thead>\r\n            <tr>\r\n              <th>ID</th>\r\n              <th>Name</th>\r\n              <th>Platforms</th>\r\n              <th>Screenshots</th>\r\n              <th>Story</th>\r\n              <th>Summary</th>\r\n              <th>Published</th>\r\n              <th>Edit</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody *ngIf=\"games && games.length && !loading\">\r\n            <tr *ngFor=\"let game of games\">\r\n              <td>{{game.gameID}}</td>\r\n              <td>{{game.gameName}}</td>\r\n              <td>{{game.platforms.length}}</td>\r\n              <td>{{game.screenshots.length}}</td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.storyLine\"></i></td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.summary\"></i></td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.published\"></i></td>\r\n              <td><i class=\"fa fa-edit fa-2x\"></i></td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n        <div [hidden]=\"loading <= 0\" class=\"row\">\r\n          <mat-spinner [diameter]=\"150\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n        </div>\r\n      </ng-template>\r\n    </ngb-tab>\r\n  </ngb-tabset>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -563,32 +796,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return AdminComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
-/* harmony import */ var src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/vendor.model */ "./src/app/models/vendor.model.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var src_app_components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component */ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.ts");
+/* harmony import */ var src_app_components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component */ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.ts");
+
+
 
 
 
 
 let AdminComponent = class AdminComponent {
-    constructor(dataFactory) {
+    constructor(dataFactory, dialog) {
         this.dataFactory = dataFactory;
-        this.loading = false;
-        this.newVendor = new src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_3__["Vendor"]();
+        this.dialog = dialog;
+        this.loading = 0;
+        this.AddNewVendor = () => {
+            const dialogConfig = this.GetDialogConfig();
+            this.editVendorDialogRef = this.dialog.open(src_app_components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_4__["EditVendorModalComponent"], dialogConfig);
+            this.editVendorDialogRef.afterClosed().subscribe((data) => {
+                if (data) {
+                    this.GetVendors();
+                }
+            });
+        };
     }
     ngOnInit() {
-        this.loading = true;
-        this.dataFactory.GetVendors().subscribe((data) => {
-            this.vendors = data;
-        }, (err) => {
-            console.log(err);
-        }, () => { this.loading = false; });
+        this.GetGames();
+        this.GetVendors();
+    }
+    GetGames() {
+        this.loading++;
         this.dataFactory.GetAllGames().subscribe((data) => {
             this.games = data;
         }, (err) => {
             console.log(err);
         }, () => {
-            this.loading = false;
+            this.loading--;
         });
+    }
+    GetVendors() {
+        this.loading++;
+        this.dataFactory.GetVendors().subscribe((data) => {
+            this.vendors = data;
+        }, (err) => {
+            console.log(err);
+        }, () => {
+            this.loading--;
+        });
+    }
+    EditVendor(vendor) {
+        const dialogConfig = this.GetDialogConfig(vendor);
+        this.editVendorDialogRef = this.dialog.open(src_app_components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_4__["EditVendorModalComponent"], dialogConfig);
+        this.editVendorDialogRef.afterClosed().subscribe((data) => {
+            if (data) {
+                this.GetVendors();
+            }
+        });
+    }
+    DeleteVendor(vendor) {
+        const dialogConfig = this.GetDialogConfig(vendor);
+        this.deleteVendorDialogRef = this.dialog.open(src_app_components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_5__["DeleteVendorModalComponent"], dialogConfig);
+        this.deleteVendorDialogRef.afterClosed().subscribe((data) => {
+            if (data) {
+                this.GetVendors();
+            }
+        });
+    }
+    GetDialogConfig(data = null) {
+        const dialogConfig = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
+        dialogConfig.width = '700px';
+        dialogConfig.height = '500px';
+        dialogConfig.position = { top: '100px' };
+        dialogConfig.data = { Vendor: data };
+        return dialogConfig;
     }
 };
 AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -596,7 +877,8 @@ AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         selector: 'admin',
         template: __webpack_require__(/*! ./admin.component.html */ "./src/app/views/admin/admin.component.html")
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__["DataFactory"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__["DataFactory"],
+        _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
 ], AdminComponent);
 
 
@@ -774,7 +1056,7 @@ HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Search</h1>\r\n<div class=\"ctg-container\">\r\n  <form>\r\n    <div class=\"row\">\r\n      <div class=\"col-8\">\r\n        <input class=\"form-control\" [(ngModel)]=\"gameName\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Search by game name\" />\r\n      </div>\r\n      <div class=\"col-4\">\r\n        <button (click)=\"SearchForGame()\" class=\"btn btn-outline-dark form-control bg-light\">Search</button>\r\n      </div>\r\n    </div>\r\n    <hr />\r\n    <div class=\"row\">\r\n    </div>\r\n    <div class=\"row\" *ngIf=\"showFilters\" [@slideInOut]>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Genre:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedGenre\" name=\"genres\" class=\"form-control\">\r\n          <option value=0 selected>-- All Genres --</option>\r\n          <option *ngFor=\"let genre of genres\" value=\"{{genre.genreID}}\">{{genre.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Themes:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedTheme\" name=\"themes\" class=\"form-control\">\r\n          <option value=0 selected>-- All Themes --</option>\r\n          <option *ngFor=\"let theme of themes\" value=\"{{theme.themeID}}\">{{theme.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Perspectives:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedPerspective\" name=\"perspectives\" class=\"form-control\">\r\n          <option value=0 selected>-- All Perspectives --</option>\r\n          <option *ngFor=\"let perspective of perspectives\" value=\"{{perspective.perspectiveID}}\">{{perspective.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Mode:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedMode\" name=\"modes\" class=\"form-control\">\r\n          <option value=0 selected>-- All Modes --</option>\r\n          <option *ngFor=\"let mode of modes\" value=\"{{mode.modeID}}\">{{mode.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Platform:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedPlatform\" name=\"platforms\" class=\"form-control\">\r\n          <option value=0 selected>-- All Platforms --</option>\r\n          <option *ngFor=\"let platform of platforms\" value=\"{{platform.platformID}}\">{{platform.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-6\">\r\n        <button class=\"btn btn-outline-dark bg-light form-control\" (click)=\"ApplyFilters()\">Apply</button>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-12 text-center link\" (click)=\"showFilters = !showFilters\" >\r\n        <hr *ngIf=\"showFilters\"/>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        Show Filters\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n      </div>\r\n    </div>\r\n  </form>\r\n  <hr />\r\n  <p>Showing: {{gamesToDisplay.length}}/{{searchResults.length}}</p>\r\n  <div *ngIf=\"searchResults && searchResults.length\">\r\n    <hr />\r\n    <div *ngFor=\"let game of gamesToDisplay\">\r\n      <small-game-display [game]=\"game\"></small-game-display>\r\n      <hr />\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<h1>Search</h1>\r\n<div class=\"ctg-container\">\r\n  <form>\r\n    <div class=\"row\">\r\n      <div class=\"col-8\">\r\n        <input class=\"form-control\" [(ngModel)]=\"gameName\" [ngModelOptions]=\"{standalone: true}\" placeholder=\"Search by game name\" />\r\n      </div>\r\n      <div class=\"col-4\">\r\n        <button (click)=\"SearchForGame()\" class=\"btn btn-outline-dark form-control bg-light\">Search</button>\r\n      </div>\r\n    </div>\r\n    <hr />\r\n    <div class=\"row\">\r\n    </div>\r\n    <div class=\"row\" *ngIf=\"showFilters\" [@slideInOut]>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Genre:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedGenre\" name=\"genres\" class=\"form-control\">\r\n          <option value=0 selected>-- All Genres --</option>\r\n          <option *ngFor=\"let genre of genres\" value=\"{{genre.genreID}}\">{{genre.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Themes:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedTheme\" name=\"themes\" class=\"form-control\">\r\n          <option value=0 selected>-- All Themes --</option>\r\n          <option *ngFor=\"let theme of themes\" value=\"{{theme.themeID}}\">{{theme.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Perspectives:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedPerspective\" name=\"perspectives\" class=\"form-control\">\r\n          <option value=0 selected>-- All Perspectives --</option>\r\n          <option *ngFor=\"let perspective of perspectives\" value=\"{{perspective.perspectiveID}}\">{{perspective.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Mode:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedMode\" name=\"modes\" class=\"form-control\">\r\n          <option value=0 selected>-- All Modes --</option>\r\n          <option *ngFor=\"let mode of modes\" value=\"{{mode.modeID}}\">{{mode.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-2\">\r\n        <p class=\"text-right\">Platform:</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <select [(ngModel)]=\"selectedPlatform\" name=\"platforms\" class=\"form-control\">\r\n          <option value=0 selected>-- All Platforms --</option>\r\n          <option *ngFor=\"let platform of platforms\" value=\"{{platform.platformID}}\">{{platform.name}}</option>\r\n        </select>\r\n      </div>\r\n      <div class=\"col-md-6\">\r\n        <button class=\"btn btn-outline-dark bg-light form-control\" (click)=\"ApplyFilters()\">Apply</button>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-12 text-center link\" (click)=\"showFilters = !showFilters\" >\r\n        <hr *ngIf=\"showFilters\"/>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        Show Filters\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n        <i [ngClass]=\"{'fa-chevron-down':!showFilters,'fa-chevron-up':showFilters}\" class=\"fa fa-chevron-down\"></i>\r\n      </div>\r\n    </div>\r\n  </form>\r\n  <hr />\r\n  <p>Showing: {{gamesToDisplay.length}}/{{searchResults.length}}</p>\r\n  <div *ngIf=\"searchResults && searchResults.length && !loading\">\r\n    <hr />\r\n    <div *ngFor=\"let game of gamesToDisplay\">\r\n      <small-game-display [game]=\"game\"></small-game-display>\r\n      <hr />\r\n    </div>\r\n  </div>\r\n  <div [hidden]=\"loading <= 0\">\r\n    <mat-spinner [diameter]=\"150\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -799,7 +1081,7 @@ __webpack_require__.r(__webpack_exports__);
 let SearchComponent = class SearchComponent {
     constructor(dataFactory) {
         this.dataFactory = dataFactory;
-        this.loading = false;
+        this.loading = 0;
         this.showFilters = false;
         // user input
         this.gameName = "";
@@ -812,7 +1094,7 @@ let SearchComponent = class SearchComponent {
         this.gamesToDisplay = [];
     }
     ngOnInit() {
-        this.loading = true;
+        this.loading++;
         this.dataFactory.GetSearchOptions().subscribe((data) => {
             this.genres = data.genres;
             this.themes = data.themes;
@@ -822,20 +1104,22 @@ let SearchComponent = class SearchComponent {
         }, (err) => {
             console.log(err);
         }, () => {
-            this.loading = false;
+            this.loading--;
         });
     }
     SearchForGame() {
+        this.loading++;
         this.dataFactory.SearchForGame(this.gameName).subscribe((data) => {
             this.searchResults = data;
             this.ApplyFilters();
         }, (err) => {
             console.log(err);
         }, () => {
-            this.loading = true;
+            this.loading--;
         });
     }
     ApplyFilters() {
+        this.loading++;
         let temp = this.searchResults;
         if (this.searchResults && this.searchResults.length) {
             temp = parseInt(this.selectedTheme) ? temp.filter(g => g.themes.map(t => t.themeID).includes(parseInt(this.selectedTheme))) : temp;
@@ -845,6 +1129,7 @@ let SearchComponent = class SearchComponent {
             temp = parseInt(this.selectedGenre) ? temp.filter(g => g.genres.map(g => g.genreID).includes(parseInt(this.selectedGenre))) : temp;
         }
         this.gamesToDisplay = temp;
+        this.loading--;
     }
 };
 SearchComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

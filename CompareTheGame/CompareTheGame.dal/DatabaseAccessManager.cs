@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using CompareTheGame.dal.Models;
+using System.Data.Entity.Migrations;
+using System.Web;
 
 namespace CompareTheGame.dal
 {
@@ -25,6 +27,16 @@ namespace CompareTheGame.dal
                     .Where(g => g.CoverImageURL != null && !g.GameName.StartsWith("???"))
                     .OrderBy(g => g.GameName)
                     .ToList();
+            }
+        }
+
+        public int DeleteVendors(Vendor vendor)
+        {
+            using (var dbContext = new CompareTheGameEntities())
+            {
+                var foundVendor = dbContext.Vendors.First(v => v.VendorID == vendor.VendorID);
+                dbContext.Vendors.Remove(foundVendor);
+                return dbContext.SaveChanges();
             }
         }
 
@@ -77,12 +89,31 @@ namespace CompareTheGame.dal
                     .ToList();
             }
         }
-        
+
         public List<Vendor> GetVendors()
         {
             using (var dbContext = new CompareTheGameEntities())
             {
                 return dbContext.Vendors.Include(v => v.VendorGameSettings).OrderBy(v => v.VendorName).ToList();
+            }
+        }
+
+        public int SaveVendor(Vendor vendor)
+        {
+            using (var dbContext = new CompareTheGameEntities())
+            {
+                var user = HttpContext.Current.User.Identity.Name;
+                if (vendor.VendorID == 0)
+                {
+                    vendor.CreatedBy = user;
+                    vendor.CreatedDate = DateTime.Now;
+                }
+                vendor.ModifiedBy = user;
+                vendor.ModifiedDate = DateTime.Now;
+
+                dbContext.Vendors.AddOrUpdate(vendor);
+
+                return dbContext.SaveChanges();
             }
         }
     }

@@ -77,11 +77,14 @@
   </form>
   <hr />
   <p>Showing: {{gamesToDisplay.length}}/{{searchResults.length}}</p>
-  <div *ngIf="searchResults && searchResults.length">
+  <div *ngIf="searchResults && searchResults.length && !loading">
     <hr />
     <div *ngFor="let game of gamesToDisplay">
       <small-game-display [game]="game"></small-game-display>
       <hr />
     </div>
+  </div>
+  <div [hidden]="loading <= 0">
+    <mat-spinner [diameter]="150" [color]="'warn'" style="margin-left:42%; margin-top: 50px;"></mat-spinner>
   </div>
 </div>

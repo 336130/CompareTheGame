@@ -22,5 +22,17 @@ namespace CompareTheGame.web.API
         {
             return new DatabaseAccessManager().GetAllGames().Select(g => new GameViewModel(g)).ToList();
         }
+
+        [HttpPost]
+        public int SaveVendor(VendorViewModel vendor)
+        {
+            return new DatabaseAccessManager().SaveVendor(vendor.ConvertToVendor());
+        }
+
+        [HttpPost]
+        public int DeleteVendor(VendorViewModel vendor)
+        {
+            return new DatabaseAccessManager().DeleteVendors(vendor.ConvertToVendor());
+        }
     }
 }

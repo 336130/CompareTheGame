@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, animate, style } from '@angular/animations'
+import { MatDialog, MatDialogRef } from '@angular/material';
 
 import { DataFactory } from 'src/app/services/DataFactory.service';
 import { Genre } from 'src/app/models/genre.model';
@@ -8,6 +9,7 @@ import { Perspective } from 'src/app/models/perspective.model';
 import { Mode } from 'src/app/models/mode.model';
 import { Platform } from 'src/app/models/platform.model';
 import { Game } from 'src/app/models/game.model';
+import { EditVendorModalComponent } from 'src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component';
 
 @Component({
   selector: '',
@@ -29,7 +31,7 @@ export class SearchComponent implements OnInit {
   constructor(private dataFactory: DataFactory) {
   }
 
-  loading: boolean = false;
+  loading: number = 0;
   showFilters: boolean = false;
 
   genres: Genre[];
@@ -50,7 +52,7 @@ export class SearchComponent implements OnInit {
   gamesToDisplay: Game[] = [];
 
   ngOnInit(): void {
-    this.loading = true;
+    this.loading++;
     this.dataFactory.GetSearchOptions().subscribe(
       (data) => {
         this.genres = data.genres;
@@ -63,12 +65,13 @@ export class SearchComponent implements OnInit {
         console.log(err);
       },
       () => {
-        this.loading = false;
+        this.loading--;
       }
     )
   }
 
   SearchForGame(): void {
+    this.loading++;
     this.dataFactory.SearchForGame(this.gameName).subscribe(
       (data) => {
         this.searchResults = data;
@@ -78,12 +81,13 @@ export class SearchComponent implements OnInit {
         console.log(err);
       },
       () => {
-        this.loading = true;
+        this.loading--;
       }
     );
   }
 
   ApplyFilters(): void {
+    this.loading++;
     let temp: Game[] = this.searchResults;
     if (this.searchResults && this.searchResults.length) {
       temp = parseInt(this.selectedTheme) ? temp.filter(g => g.themes.map(t => t.themeID).includes(parseInt(this.selectedTheme))) : temp;
@@ -93,5 +97,6 @@ export class SearchComponent implements OnInit {
       temp = parseInt(this.selectedGenre) ? temp.filter(g => g.genres.map(g => g.genreID).includes(parseInt(this.selectedGenre))) : temp;
     }
     this.gamesToDisplay = temp;
+    this.loading--;
   }
 }

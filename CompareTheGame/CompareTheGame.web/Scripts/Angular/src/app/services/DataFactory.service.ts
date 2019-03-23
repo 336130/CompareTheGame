@@ -26,12 +26,21 @@ export class DataFactory {
     return this.http.get<Game[]>(apiUrl + "game/searchforgame", { params: { gameName: gameName } });;
   }
 
+  //ADMIN PAGE
   GetVendors(): Observable<Vendor[]> {
     return this.http.get<Vendor[]>(apiUrl + "admin/getvendors");;
   }
 
   GetAllGames(): Observable<Game[]> {
     return this.http.get<Game[]>(apiUrl + "admin/getallgames");
+  }
+
+  EditVendor(vendor: Vendor): Observable<any> {
+    return this.http.post(apiUrl + "admin/savevendor", vendor);
+  }
+
+  DeleteVendor(vendor: Vendor): Observable<any> {
+    return this.http.post(apiUrl + "admin/deletevendor", vendor);
   }
 }
 

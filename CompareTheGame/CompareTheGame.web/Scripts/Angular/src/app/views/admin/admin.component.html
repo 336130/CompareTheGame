@@ -3,62 +3,11 @@
   <ngb-tabset>
     <ngb-tab title="Vendors">
       <ng-template ngbTabContent>
-        <form class="row" style="margin-bottom:10px;">
+        <div class="row">
           <div class="col-12">
-            <h4>New Vendor</h4>
+            <button class=" btn ctg-siteButton" (click)="AddNewVendor()"><i class="fa fa-plus"></i> Add a new Vendor</button>
           </div>
-
-          <div class="col-4"><p class="text-right">Name</p></div>
-          <div class="col-4">
-            <input [(ngModel)]="newVendor.name" class="form-control" required [ngModelOptions]="{standalone: true}" />
-          </div>
-          <div class="col-4"></div>
-
-          <div class="col-4"><p class="text-right">Logo URL</p></div>
-          <div class="col-4">
-            <input [(ngModel)]="newVendor.logoURL" class="form-control" [ngModelOptions]="{standalone: true}" />
-          </div>
-          <div class="col-4"></div>
-
-          <div class="col-4"><p class="text-right">Logo Preview</p></div>
-          <div class="col-4">
-            <img [src]="newVendor.logoURL" style="max-width:100%; max-height:400px;" />
-          </div>
-          <div class="col-4"></div>
-
-          <div class="col-4"><p class="text-right">Font</p></div>
-          <div class="col-4">
-            <input [(ngModel)]="newVendor.font" class="form-control" [ngModelOptions]="{standalone: true}" />
-          </div>
-          <div class="col-4"></div>
-
-          <div class="col-4"><p class="text-right">Home Page URL</p></div>
-          <div class="col-4">
-            <input [(ngModel)]="newVendor.homePageURL" class="form-control" required [ngModelOptions]="{standalone: true}" />
-          </div>
-          <div class="col-4"></div>
-
-          <div class="col-4"><p class="text-right">Element Type</p></div>
-          <div class="col-4">
-            <select [(ngModel)]="newVendor.elementType" class="form-control" [ngModelOptions]="{standalone: true}">
-              <option value="ID">ID</option>
-              <option value="CLASS">CLASS</option>
-            </select>
-          </div>
-          <div class="col-4"></div>
-
-          <div class="col-4"><p class="text-right">Element Value</p></div>
-          <div class="col-4">
-            <input [(ngModel)]="newVendor.elementValue" class="form-control" [ngModelOptions]="{standalone: true}" />
-          </div>
-          <div class="col-4"></div>
-
-          <div class="col-8"></div>
-          <div class="col-4">
-            <button class="btn ctg-siteButton"><i class="fa fa-plus"></i> Add</button>
-          </div>
-
-        </form>
+        </div>
 
         <table class="table table-bordered table-striped table-dark">
           <thead>
@@ -74,7 +23,7 @@
               <th>Delete</th>
             </tr>
           </thead>
-          <tbody *ngIf="vendors && vendors.length">
+          <tbody *ngIf="vendors && vendors.length && !loading">
             <tr *ngFor="let vendor of vendors">
               <td>{{vendor.vendorID}}</td>
               <td>{{vendor.name}}</td>
@@ -86,11 +35,14 @@
               <td>{{vendor.settings.length}}</td>
               <td>{{vendor.elementType}}</td>
               <td>{{vendor.elementValue}}</td>
-              <td><i class="fa fa-edit"></i></td>
-              <td><i class="fa fa-remove"></i></td>
+              <td><i (click)="EditVendor(vendor)" class="fa fa-edit fa-2x"></i></td>
+              <td><i (click)="DeleteVendor(vendor)" class="fa fa-remove fa-2x"></i></td>
             </tr>
           </tbody>
         </table>
+        <div [hidden]="loading <= 0">
+          <mat-spinner [diameter]="150" [color]="'warn'" style="margin-left:42%; margin-top: 50px;"></mat-spinner>
+        </div>
       </ng-template>
     </ngb-tab>
     <ngb-tab title="Games">
@@ -108,7 +60,7 @@
               <th>Edit</th>
             </tr>
           </thead>
-          <tbody *ngIf="games && games.length">
+          <tbody *ngIf="games && games.length && !loading">
             <tr *ngFor="let game of games">
               <td>{{game.gameID}}</td>
               <td>{{game.gameName}}</td>
@@ -117,10 +69,13 @@
               <td><i class="fa fa-check" *ngIf="game.storyLine"></i></td>
               <td><i class="fa fa-check" *ngIf="game.summary"></i></td>
               <td><i class="fa fa-check" *ngIf="game.published"></i></td>
-              <td><i class="fa fa-edit"></i></td>
+              <td><i class="fa fa-edit fa-2x"></i></td>
             </tr>
           </tbody>
         </table>
+        <div [hidden]="loading <= 0" class="row">
+          <mat-spinner [diameter]="150" [color]="'warn'" style="margin-left:42%; margin-top: 50px;"></mat-spinner>
+        </div>
       </ng-template>
     </ngb-tab>
   </ngb-tabset>

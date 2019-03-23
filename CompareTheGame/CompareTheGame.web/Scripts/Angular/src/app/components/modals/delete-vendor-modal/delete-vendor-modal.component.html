@@ -1,0 +1,17 @@
+<div class="ctg-modalContainer">
+  <i class="fa fa-remove ctg-modalCloseButton" (click)="CloseModal()"></i>
+  <div class="row" style="margin-left:0px">
+    <div class="col-12">
+      <h4>Delete Vendor: {{vendor.name}}</h4>
+    </div>
+    <div class="col-12">
+      <p class="text-center">Confirm you wish to delete the vendor?</p>
+    </div>
+    <div class="col-12" *ngIf="errors && errors.length">
+      <p *ngFor="let error of errors">{{error}}</p>
+    </div>
+    <div class="col-12 ctg-modalButton">
+      <button class="btn ctg-siteButton form-control" (click)="DeleteVendor()"><i class="fa fa-remove"></i>Delete</button>
+    </div>
+  </div>
+</div>

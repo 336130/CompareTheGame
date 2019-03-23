@@ -23,6 +23,8 @@ namespace CompareTheGame.web.Models.GameViews
             ElementType = vendor.ElementType;
             ElementValue = vendor.ElementValue; ;
             Font = vendor.Font;
+            CreatedBy = vendor.CreatedBy;
+            CreatedDate = vendor.CreatedDate;
         }
         public VendorViewModel(Vendor vendor, List<VendorGameSetting> settings): this(vendor)
         {
@@ -37,6 +39,26 @@ namespace CompareTheGame.web.Models.GameViews
         public string ElementType { get; set; }
         public string ElementValue { get; set; }
         public string Font { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedDate { get; set; }
         public List<VendorGameSettingViewModel> Settings { get; set; }
+
+        public Vendor ConvertToVendor()
+        {
+            var retVal = new Vendor()
+            {
+                VendorID = VendorID,
+                VendorName = Name,
+                HomePageURL = URL,
+                ElementType = ElementType,
+                ElementValue = ElementValue,
+                Font = Font,
+                LogoURL = LogoURL,
+                CreatedDate = CreatedDate,
+                CreatedBy = CreatedBy
+            };
+
+            return retVal;
+        }
     }
 }

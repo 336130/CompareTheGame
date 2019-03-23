@@ -167,6 +167,30 @@ footer {
     margin: 5px 0;
 }
 
+/*modal pages*/
+.ctg-modalContainer{
+    position:relative;
+    height:100%;
+}
+
+.ctg-modalContainer .row{
+    height:calc(100% - 50px);
+    overflow:hidden;
+    overflow-y:auto;
+}
+
+.ctg-modalButton{
+    position:absolute;
+    bottom:10px;
+}
+
+.ctg-modalCloseButton{
+    position:absolute;
+    top:-19px;
+    right: -19px;
+}
+
+
 /* Overrides for bootstrap */
 .btn:focus{
     outline: 0;
@@ -212,3 +236,9 @@ footer {
 .ngx-gallery-preview-img{
     width: calc(100% - 100px)!important;
 }
+
+/* overrides for @agular/material */
+.mat-progress-spinner.mat-warn circle, .mat-spinner.mat-warn circle {
+    stroke: #dddddd!important;
+}
+
