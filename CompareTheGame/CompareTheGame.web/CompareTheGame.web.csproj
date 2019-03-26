@@ -192,9 +192,12 @@
     <Content Include="Scripts\Angular\Build\styles.js" />
     <Content Include="Scripts\Angular\Build\vendor.js" />
     <Content Include="Scripts\Angular\src\app\components\carousel\game-carousel.component.html" />
+    <Content Include="Scripts\Angular\src\app\components\game-displays\admin-game-display.component.html" />
     <Content Include="Scripts\Angular\src\app\components\menu\main-menu.component.html" />
     <Content Include="Scripts\Angular\src\app\components\footer\footer.component.html" />
+    <Content Include="Scripts\Angular\src\app\components\modals\edit-game-modal\edit-game-modal.component.html" />
     <Content Include="Scripts\Angular\src\app\components\modals\edit-vendor-modal\edit-vendor-modal.component.html" />
+    <Content Include="Scripts\Angular\src\app\components\vendors\admin-vendor-display.component.html" />
     <Content Include="Scripts\Angular\src\app\views\about\about-us.component.html" />
     <Content Include="Scripts\Angular\src\app\views\admin\admin.component.html" />
     <Content Include="Scripts\Angular\src\app\views\game\game.component.html" />
@@ -227,6 +230,7 @@
     <Content Include="CSS\bootstrap.min.css.map" />
     <Content Include="Scripts\External\bootstrap.min.js.map" />
     <Content Include="Scripts\Angular\src\app\components\game-displays\small-game-display.component.html" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\components\game-displays\admin-game-display.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\game-displays\small-game-display.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\modals\delete-vendor-modal\delete-vendor-modal.component.ts" />
     <Content Include="Scripts\Angular\src\app\components\modals\delete-vendor-modal\delete-vendor-modal.component.html" />
@@ -281,7 +285,9 @@
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\carousel\game-carousel.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\menu\main-menu.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\footer\footer.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\components\modals\edit-game-modal\edit-game-modal.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\components\modals\edit-vendor-modal\edit-vendor-modal.component.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\components\vendors\admin-vendor-display.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\game.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\genre.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\home-page-response.model.ts" />
@@ -295,6 +301,7 @@
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\vendor-game-settings.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\models\vendor.model.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\services\DataFactory.service.ts" />
+    <TypeScriptCompile Include="Scripts\Angular\src\app\services\DialogFactory.service.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\about\about-us.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\admin\admin.component.ts" />
     <TypeScriptCompile Include="Scripts\Angular\src\app\views\game\game.component.ts" />

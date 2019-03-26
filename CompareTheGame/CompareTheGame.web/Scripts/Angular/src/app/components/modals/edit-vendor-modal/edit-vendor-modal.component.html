@@ -1,5 +1,5 @@
 <div class="ctg-modalContainer">
-  <i class="fa fa-remove ctg-modalCloseButton" (click)="CloseModal()"></i>
+  <i class="fa fa-remove ctg-modalCloseButton ctg-link" (click)="CloseModal()"></i>
   <form class="row" style="margin-left:0px" [formGroup]="form">
     <div class="col-12">
       <h4>{{title}}</h4>
@@ -60,7 +60,7 @@
     </div>
 
     <div class="col-12 ctg-modalButton">
-      <button class="btn ctg-siteButton form-control" (click)="AddOrUpdateVendor()">
+      <button class="btn ctg-siteButton form-control ctg-link" (click)="AddOrUpdateVendor()">
         <span *ngIf="isNew">
           <i class="fa fa-plus"></i> Add
         </span>

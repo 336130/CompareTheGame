@@ -20,7 +20,7 @@ namespace CompareTheGame.web.API
         [HttpGet]
         public List<GameViewModel> GetAllGames()
         {
-            return new DatabaseAccessManager().GetAllGames().Select(g => new GameViewModel(g)).ToList();
+            return new DatabaseAccessManager().GetAllGames(true).Select(g => new GameViewModel(g)).ToList();
         }
 
         [HttpPost]

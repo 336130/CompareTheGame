@@ -23,20 +23,30 @@ namespace CompareTheGame.dal
                     .Include(g => g.GamePlatforms.Select(gp => gp.Platform))
                     .Include(g => g.GameScreenshots.Select(gs => gs.Screenshot))
                     .Include(g => g.GameThemes.Select(gt => gt.Theme))
-                    .Include(g => g.GamePlatforms.Select(gp => gp.VendorGameHistories.Select(vfh => vfh.Vendor)))
+                    .Include(g => g.GamePlatforms.Select(gp => gp.VendorGameHistories.Select(vgh => vgh.Vendor)))
                     .Where(g => g.CoverImageURL != null && !g.GameName.StartsWith("???"))
                     .OrderBy(g => g.GameName)
                     .ToList();
             }
         }
 
-        public int DeleteVendors(Vendor vendor)
+        public List<Game> GetAllGames(bool forAdmin)
         {
             using (var dbContext = new CompareTheGameEntities())
             {
-                var foundVendor = dbContext.Vendors.First(v => v.VendorID == vendor.VendorID);
-                dbContext.Vendors.Remove(foundVendor);
-                return dbContext.SaveChanges();
+                return dbContext.Games
+                    .Include(g => g.GameGenres.Select(gg => gg.Genre))
+                    .Include(g => g.GameModes.Select(gm => gm.Mode))
+                    .Include(g => g.GamePerspectives.Select(gp => gp.Perspective))
+                    .Include(g => g.GamePlatforms.Select(gp => gp.Platform))
+                    .Include(g => g.GameScreenshots.Select(gs => gs.Screenshot))
+                    .Include(g => g.GameThemes.Select(gt => gt.Theme))
+                    .Include(g => g.GamePlatforms.Select(gp => gp.VendorGameHistories.Select(vgh => vgh.Vendor)))
+                    .Include(g => g.GamePlatforms.Select(gp => gp.VendorGameSettings.Select(vgs => vgs.Vendor)))
+                    .Include(g => g.GamePlatforms.Select(gp => gp.VendorGameSettings.Select(vgs => vgs.GamePlatform.Platform)))
+                    .Where(g => g.CoverImageURL != null && !g.GameName.StartsWith("???"))
+                    .OrderBy(g => g.GameName)
+                    .ToList();
             }
         }
 
@@ -94,7 +104,9 @@ namespace CompareTheGame.dal
         {
             using (var dbContext = new CompareTheGameEntities())
             {
-                return dbContext.Vendors.Include(v => v.VendorGameSettings).OrderBy(v => v.VendorName).ToList();
+                return dbContext.Vendors
+                    .Include(v => v.VendorGameSettings.Select(vgs => vgs.GamePlatform.Platform))
+                    .OrderBy(v => v.VendorName).ToList();
             }
         }
 
@@ -113,6 +125,16 @@ namespace CompareTheGame.dal
 
                 dbContext.Vendors.AddOrUpdate(vendor);
 
+                return dbContext.SaveChanges();
+            }
+        }
+
+        public int DeleteVendors(Vendor vendor)
+        {
+            using (var dbContext = new CompareTheGameEntities())
+            {
+                var foundVendor = dbContext.Vendors.First(v => v.VendorID == vendor.VendorID);
+                dbContext.Vendors.Remove(foundVendor);
                 return dbContext.SaveChanges();
             }
         }

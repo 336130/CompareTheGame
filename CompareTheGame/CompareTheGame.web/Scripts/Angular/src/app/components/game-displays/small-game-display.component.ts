@@ -6,6 +6,6 @@ import { Game } from 'src/app/models/game.model';
   templateUrl: 'small-game-display.component.html'
 })
 
-export class SmallGameDisplay {
+export class SmallGameDisplayComponent {
   @Input() game: Game;
 }

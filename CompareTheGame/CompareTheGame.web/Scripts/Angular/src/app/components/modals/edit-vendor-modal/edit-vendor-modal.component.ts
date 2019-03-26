@@ -1,9 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core'
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { Vendor } from 'src/app/models/vendor.model';
 import { DataFactory } from 'src/app/services/DataFactory.service';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'edit-vendor-modal',
@@ -14,10 +14,10 @@ export class EditVendorModalComponent implements OnInit {
   constructor(private dialogRef: MatDialogRef<EditVendorModalComponent>,
     @Inject(MAT_DIALOG_DATA) data,
     private dataFactory: DataFactory) {
-    if (data != null && data.Vendor != null) {
-      this.title = "Edit Vendor: " + data.Vendor.name;
+    if (data != null && data.Data != null) {
+      this.title = "Edit Vendor: " + data.Data.name;
       //make a clean copy of passed in vendor
-      this.vendor = JSON.parse(JSON.stringify(data.Vendor));
+      this.vendor = JSON.parse(JSON.stringify(data.Data));
       this.isNew = false;
     } else {
       this.title = "New Vendor";

@@ -19,6 +19,7 @@ namespace CompareTheGame.web.Models.GameViews
             Screenshots = new List<ScreenshotViewModel>();
             PriceHistory = new List<PriceHistoryViewModel>();
             TodaysPrices = new List<PriceHistoryViewModel>();
+            Settings = new List<VendorGameSettingViewModel>();
         }
 
         public GameViewModel(Game game) : this()
@@ -90,6 +91,12 @@ namespace CompareTheGame.web.Models.GameViews
                 Cheapest = TodaysPrices?.GroupBy(ph => ph.Price)?.OrderBy(ph => double.Parse(ph.Key))?.FirstOrDefault()?.Select(ph => ph).ToList();
                 CheapestPrice = Cheapest?.FirstOrDefault().Price;
             }
+
+            foreach (var settings in game.GamePlatforms.Select(gp => gp.VendorGameSettings))
+            {
+                foreach (var setting in settings)
+                Settings.Add(new VendorGameSettingViewModel(setting));
+            }
         }
 
         public int GameID { get; set; }
@@ -108,6 +115,7 @@ namespace CompareTheGame.web.Models.GameViews
         public List<PriceHistoryViewModel> PriceHistory { get; set; }
         public List<PriceHistoryViewModel> Cheapest { get; set; }
         public List<PriceHistoryViewModel> TodaysPrices { get; set; }
+        public List<VendorGameSettingViewModel> Settings { get; set; }
         public string CheapestPrice { get; set; }
         public bool Published { get; set; }
     }

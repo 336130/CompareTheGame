@@ -1,0 +1,18 @@
+<div class="ctg-modalContainer">
+  <i class="fa fa-remove ctg-modalCloseButton ctg-link" (click)="CloseModal()"></i>
+  <div class="row">
+    <div class="col-12">
+      <h4>Edit: {{game.name}}</h4>
+    </div>
+    <div class="col-12">
+      <h5>Published</h5>
+      <input type="checkbox" [(ngModel)]="game.published" [ngModelOptions]="{standalone:true}" />
+    </div>
+    <div class="col-12">
+      <h5>Vendor Settings</h5>
+      <div *ngFor="let setting of game.settings">
+
+      </div>
+    </div>
+  </div>
+</div>

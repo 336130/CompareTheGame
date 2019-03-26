@@ -5,6 +5,7 @@ import { Perspective } from './perspective.model';
 import { Screenshot } from './screenshot.model';
 import { Platform } from './platform.model';
 import { PriceHistory } from './price-history.model';
+import { VendorGameSetting } from './vendor-game-settings.model';
 
 export class Game {
   gameID: number;
@@ -22,6 +23,7 @@ export class Game {
   priceHistory: PriceHistory[];
   todaysPrices: PriceHistory[];
   cheapest: PriceHistory[];
+  settings: VendorGameSetting[];
   cheapestPrice: string;
   published: boolean;
 }

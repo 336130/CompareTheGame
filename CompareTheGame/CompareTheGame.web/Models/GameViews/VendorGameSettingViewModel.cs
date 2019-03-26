@@ -26,6 +26,7 @@ namespace CompareTheGame.web.Models.GameViews
             CreatedDate = setting.CreatedDate;
             ModifiedBy = setting.ModifiedBy;
             ModifiedDate = setting.ModifiedDate;
+            Platform = new PlatformViewModel(setting.GamePlatform.Platform);
         }
 
         public int VendorGameSettingID { get; set; }
@@ -39,5 +40,6 @@ namespace CompareTheGame.web.Models.GameViews
         public string CreatedBy { get; set; }
         public DateTime ModifiedDate { get; set; }
         public string ModifiedBy { get; set; }
+        public PlatformViewModel Platform { get; set; }
     }
 }

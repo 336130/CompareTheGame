@@ -1,0 +1,31 @@
+<table class="table table-bordered table-striped table-dark">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Platforms</th>
+      <th>Settings</th>
+      <th>Screenshots</th>
+      <th>Story</th>
+      <th>Summary</th>
+      <th>Published</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="games && games.length && !loading">
+    <tr *ngFor="let game of games">
+      <td>{{game.gameID}}</td>
+      <td>{{game.gameName}}</td>
+      <td>{{game.platforms.length}}</td>
+      <td>{{game.settings.length}}</td>
+      <td>{{game.screenshots.length}}</td>
+      <td><i class="fa fa-check" *ngIf="game.storyLine"></i></td>
+      <td><i class="fa fa-check" *ngIf="game.summary"></i></td>
+      <td><i class="fa fa-check" *ngIf="game.published"></i></td>
+      <td><i class="fa fa-edit fa-2x ctg-link" (click)="EditGame(game)"></i></td>
+    </tr>
+  </tbody>
+</table>
+<div [hidden]="loading <= 0" class="row">
+  <mat-spinner [diameter]="150" [color]="'warn'" style="margin-left:42%; margin-top: 50px;"></mat-spinner>
+</div>

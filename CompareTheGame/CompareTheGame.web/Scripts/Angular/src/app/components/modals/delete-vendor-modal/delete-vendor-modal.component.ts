@@ -1,7 +1,9 @@
 import { Component, Inject } from '@angular/core';
-import { DataFactory } from 'src/app/services/DataFactory.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+
 import { Vendor } from 'src/app/models/vendor.model';
+
+import { DataFactory } from 'src/app/services/DataFactory.service';
 
 @Component({
   selector: 'delete-vendor-modal',
@@ -12,7 +14,7 @@ export class DeleteVendorModalComponent {
   constructor(private dataFactory: DataFactory,
     @Inject(MAT_DIALOG_DATA) data,
     private dialogRef: MatDialogRef<DeleteVendorModalComponent>) {
-    this.vendor = data.Vendor;
+    this.vendor = data.Data;
     this.dialogRef = dialogRef;
   }
 

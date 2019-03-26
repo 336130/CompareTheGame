@@ -13,6 +13,7 @@ import { NgxGalleryModule } from 'ngx-gallery';
 import 'hammerjs';
 
 import { DataFactory } from './services/DataFactory.service';
+import { DialogFactory } from './services/DialogFactory.service';
 
 import { HomeComponent } from './views/home/home.component';
 import { GameComponent } from './views/game/game.component';
@@ -20,10 +21,13 @@ import { AboutUsComponent } from './views/about/about-us.component';
 import { SearchComponent } from './views/search/search.component';
 
 import { GameCarouselComponent } from './components/carousel/game-carousel.component';
-import { SmallGameDisplay } from './components/game-displays/small-game-display.component';
+import { SmallGameDisplayComponent } from './components/game-displays/small-game-display.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { EditVendorModalComponent } from './components/modals/edit-vendor-modal/edit-vendor-modal.component';
 import { DeleteVendorModalComponent } from './components/modals/delete-vendor-modal/delete-vendor-modal.component';
+import { EditGameModalComponent } from './components/modals/edit-game-modal/edit-game-modal.component';
+import { AdminGameDisplayComponent } from './components/game-displays/admin-game-display.component';
+import { AdminVendorDisplayComponent } from './components/vendors/admin-vendor-display.component';
 
 class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -63,31 +67,39 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    GameComponent,
     AboutUsComponent,
-    SearchComponent,
-    GameCarouselComponent,
-    SmallGameDisplay,
     AdminComponent,
+    AdminGameDisplayComponent,
+    AdminVendorDisplayComponent,
+    EditGameModalComponent,
     EditVendorModalComponent,
-    DeleteVendorModalComponent
+    GameCarouselComponent,
+    GameComponent,
+    HomeComponent,
+    SmallGameDisplayComponent,
+    DeleteVendorModalComponent,
+    SearchComponent,
   ],
   providers: [
     DataFactory,
+    DialogFactory,
     GameCarouselComponent,
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: MyHammerConfig 
     },
     EditVendorModalComponent,
-    DeleteVendorModalComponent
+    DeleteVendorModalComponent,
+    EditGameModalComponent
   ],
   entryComponents: [
-    GameCarouselComponent,
-    SmallGameDisplay,
+    AdminGameDisplayComponent,
+    AdminVendorDisplayComponent,
+    DeleteVendorModalComponent,
+    EditGameModalComponent,
     EditVendorModalComponent,
-    DeleteVendorModalComponent
+    GameCarouselComponent,
+    SmallGameDisplayComponent,
   ],
   imports: [
     BrowserModule,

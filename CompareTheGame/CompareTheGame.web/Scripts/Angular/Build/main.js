@@ -48,15 +48,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
 /* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
-/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
-/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
-/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
-/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
-/* harmony import */ var _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/carousel/game-carousel.component */ "./src/app/components/carousel/game-carousel.component.ts");
-/* harmony import */ var _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/game-displays/small-game-display.component */ "./src/app/components/game-displays/small-game-display.component.ts");
-/* harmony import */ var _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./views/admin/admin.component */ "./src/app/views/admin/admin.component.ts");
-/* harmony import */ var _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/modals/edit-vendor-modal/edit-vendor-modal.component */ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.ts");
-/* harmony import */ var _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/modals/delete-vendor-modal/delete-vendor-modal.component */ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.ts");
+/* harmony import */ var _services_DialogFactory_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/DialogFactory.service */ "./src/app/services/DialogFactory.service.ts");
+/* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./views/home/home.component */ "./src/app/views/home/home.component.ts");
+/* harmony import */ var _views_game_game_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./views/game/game.component */ "./src/app/views/game/game.component.ts");
+/* harmony import */ var _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./views/about/about-us.component */ "./src/app/views/about/about-us.component.ts");
+/* harmony import */ var _views_search_search_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./views/search/search.component */ "./src/app/views/search/search.component.ts");
+/* harmony import */ var _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/carousel/game-carousel.component */ "./src/app/components/carousel/game-carousel.component.ts");
+/* harmony import */ var _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/game-displays/small-game-display.component */ "./src/app/components/game-displays/small-game-display.component.ts");
+/* harmony import */ var _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./views/admin/admin.component */ "./src/app/views/admin/admin.component.ts");
+/* harmony import */ var _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/modals/edit-vendor-modal/edit-vendor-modal.component */ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.ts");
+/* harmony import */ var _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/modals/delete-vendor-modal/delete-vendor-modal.component */ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.ts");
+/* harmony import */ var _components_modals_edit_game_modal_edit_game_modal_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/modals/edit-game-modal/edit-game-modal.component */ "./src/app/components/modals/edit-game-modal/edit-game-modal.component.ts");
+/* harmony import */ var _components_game_displays_admin_game_display_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/game-displays/admin-game-display.component */ "./src/app/components/game-displays/admin-game-display.component.ts");
+/* harmony import */ var _components_vendors_admin_vendor_display_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/vendors/admin-vendor-display.component */ "./src/app/components/vendors/admin-vendor-display.component.ts");
+
+
+
+
 
 
 
@@ -97,23 +105,23 @@ const routes = [
     {
         path: '',
         pathMatch: 'full',
-        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"]
+        component: _views_home_home_component__WEBPACK_IMPORTED_MODULE_14__["HomeComponent"]
     },
     {
         path: 'game',
-        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_14__["GameComponent"]
+        component: _views_game_game_component__WEBPACK_IMPORTED_MODULE_15__["GameComponent"]
     },
     {
         path: 'about',
-        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_15__["AboutUsComponent"]
+        component: _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_16__["AboutUsComponent"]
     },
     {
         path: 'search',
-        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_16__["SearchComponent"]
+        component: _views_search_search_component__WEBPACK_IMPORTED_MODULE_17__["SearchComponent"]
     },
     {
         path: 'admin',
-        component: _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_19__["AdminComponent"]
+        component: _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_20__["AdminComponent"]
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -121,31 +129,39 @@ let AppRoutingModule = class AppRoutingModule {
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
-            _views_home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
-            _views_game_game_component__WEBPACK_IMPORTED_MODULE_14__["GameComponent"],
-            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_15__["AboutUsComponent"],
-            _views_search_search_component__WEBPACK_IMPORTED_MODULE_16__["SearchComponent"],
-            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_17__["GameCarouselComponent"],
-            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_18__["SmallGameDisplay"],
-            _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_19__["AdminComponent"],
-            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_20__["EditVendorModalComponent"],
-            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["DeleteVendorModalComponent"]
+            _views_about_about_us_component__WEBPACK_IMPORTED_MODULE_16__["AboutUsComponent"],
+            _views_admin_admin_component__WEBPACK_IMPORTED_MODULE_20__["AdminComponent"],
+            _components_game_displays_admin_game_display_component__WEBPACK_IMPORTED_MODULE_24__["AdminGameDisplayComponent"],
+            _components_vendors_admin_vendor_display_component__WEBPACK_IMPORTED_MODULE_25__["AdminVendorDisplayComponent"],
+            _components_modals_edit_game_modal_edit_game_modal_component__WEBPACK_IMPORTED_MODULE_23__["EditGameModalComponent"],
+            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["EditVendorModalComponent"],
+            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_18__["GameCarouselComponent"],
+            _views_game_game_component__WEBPACK_IMPORTED_MODULE_15__["GameComponent"],
+            _views_home_home_component__WEBPACK_IMPORTED_MODULE_14__["HomeComponent"],
+            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_19__["SmallGameDisplayComponent"],
+            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_22__["DeleteVendorModalComponent"],
+            _views_search_search_component__WEBPACK_IMPORTED_MODULE_17__["SearchComponent"],
         ],
         providers: [
             _services_DataFactory_service__WEBPACK_IMPORTED_MODULE_12__["DataFactory"],
-            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_17__["GameCarouselComponent"],
+            _services_DialogFactory_service__WEBPACK_IMPORTED_MODULE_13__["DialogFactory"],
+            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_18__["GameCarouselComponent"],
             {
                 provide: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["HAMMER_GESTURE_CONFIG"],
                 useClass: MyHammerConfig
             },
-            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_20__["EditVendorModalComponent"],
-            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["DeleteVendorModalComponent"]
+            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["EditVendorModalComponent"],
+            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_22__["DeleteVendorModalComponent"],
+            _components_modals_edit_game_modal_edit_game_modal_component__WEBPACK_IMPORTED_MODULE_23__["EditGameModalComponent"]
         ],
         entryComponents: [
-            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_17__["GameCarouselComponent"],
-            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_18__["SmallGameDisplay"],
-            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_20__["EditVendorModalComponent"],
-            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["DeleteVendorModalComponent"]
+            _components_game_displays_admin_game_display_component__WEBPACK_IMPORTED_MODULE_24__["AdminGameDisplayComponent"],
+            _components_vendors_admin_vendor_display_component__WEBPACK_IMPORTED_MODULE_25__["AdminVendorDisplayComponent"],
+            _components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_22__["DeleteVendorModalComponent"],
+            _components_modals_edit_game_modal_edit_game_modal_component__WEBPACK_IMPORTED_MODULE_23__["EditGameModalComponent"],
+            _components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_21__["EditVendorModalComponent"],
+            _components_carousel_game_carousel_component__WEBPACK_IMPORTED_MODULE_18__["GameCarouselComponent"],
+            _components_game_displays_small_game_display_component__WEBPACK_IMPORTED_MODULE_19__["SmallGameDisplayComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["BrowserModule"],
@@ -344,6 +360,83 @@ Footer = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/components/game-displays/admin-game-display.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/components/game-displays/admin-game-display.component.html ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<table class=\"table table-bordered table-striped table-dark\">\r\n  <thead>\r\n    <tr>\r\n      <th>ID</th>\r\n      <th>Name</th>\r\n      <th>Platforms</th>\r\n      <th>Settings</th>\r\n      <th>Screenshots</th>\r\n      <th>Story</th>\r\n      <th>Summary</th>\r\n      <th>Published</th>\r\n      <th>Edit</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody *ngIf=\"games && games.length && !loading\">\r\n    <tr *ngFor=\"let game of games\">\r\n      <td>{{game.gameID}}</td>\r\n      <td>{{game.gameName}}</td>\r\n      <td>{{game.platforms.length}}</td>\r\n      <td>{{game.settings.length}}</td>\r\n      <td>{{game.screenshots.length}}</td>\r\n      <td><i class=\"fa fa-check\" *ngIf=\"game.storyLine\"></i></td>\r\n      <td><i class=\"fa fa-check\" *ngIf=\"game.summary\"></i></td>\r\n      <td><i class=\"fa fa-check\" *ngIf=\"game.published\"></i></td>\r\n      <td><i class=\"fa fa-edit fa-2x ctg-link\" (click)=\"EditGame(game)\"></i></td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n<div [hidden]=\"loading <= 0\" class=\"row\">\r\n  <mat-spinner [diameter]=\"150\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/game-displays/admin-game-display.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/game-displays/admin-game-display.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: AdminGameDisplayComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminGameDisplayComponent", function() { return AdminGameDisplayComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _modals_edit_game_modal_edit_game_modal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modals/edit-game-modal/edit-game-modal.component */ "./src/app/components/modals/edit-game-modal/edit-game-modal.component.ts");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var src_app_services_DialogFactory_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/DialogFactory.service */ "./src/app/services/DialogFactory.service.ts");
+
+
+
+
+
+
+let AdminGameDisplayComponent = class AdminGameDisplayComponent {
+    constructor(dataFactory, dialogFactory, dialog) {
+        this.dataFactory = dataFactory;
+        this.dialogFactory = dialogFactory;
+        this.dialog = dialog;
+        this.loading = 0;
+    }
+    ngOnInit() {
+        this.GetGames();
+    }
+    GetGames() {
+        this.loading++;
+        this.dataFactory.GetAllGames().subscribe((data) => {
+            this.games = data;
+        }, (err) => {
+            console.log(err);
+        }, () => {
+            this.loading--;
+        });
+    }
+    EditGame(game) {
+        const dialogConfig = this.dialogFactory.GetEditDialogConfig(game);
+        this.editGameDialogRef = this.dialog.open(_modals_edit_game_modal_edit_game_modal_component__WEBPACK_IMPORTED_MODULE_3__["EditGameModalComponent"], dialogConfig);
+        this.editGameDialogRef.afterClosed().subscribe((data) => {
+            if (data) {
+                this.GetGames();
+            }
+        });
+    }
+};
+AdminGameDisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'admin-game-display',
+        template: __webpack_require__(/*! ./admin-game-display.component.html */ "./src/app/components/game-displays/admin-game-display.component.html")
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_4__["DataFactory"],
+        src_app_services_DialogFactory_service__WEBPACK_IMPORTED_MODULE_5__["DialogFactory"],
+        _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+], AdminGameDisplayComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/game-displays/small-game-display.component.html":
 /*!****************************************************************************!*\
   !*** ./src/app/components/game-displays/small-game-display.component.html ***!
@@ -359,30 +452,30 @@ module.exports = "<div class=\"ctg-gameContainer\" [title]=\"game.gameName\">\r\
 /*!**************************************************************************!*\
   !*** ./src/app/components/game-displays/small-game-display.component.ts ***!
   \**************************************************************************/
-/*! exports provided: SmallGameDisplay */
+/*! exports provided: SmallGameDisplayComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SmallGameDisplay", function() { return SmallGameDisplay; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SmallGameDisplayComponent", function() { return SmallGameDisplayComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var src_app_models_game_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/models/game.model */ "./src/app/models/game.model.ts");
 
 
 
-let SmallGameDisplay = class SmallGameDisplay {
+let SmallGameDisplayComponent = class SmallGameDisplayComponent {
 };
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", src_app_models_game_model__WEBPACK_IMPORTED_MODULE_2__["Game"])
-], SmallGameDisplay.prototype, "game", void 0);
-SmallGameDisplay = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+], SmallGameDisplayComponent.prototype, "game", void 0);
+SmallGameDisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'small-game-display',
         template: __webpack_require__(/*! ./small-game-display.component.html */ "./src/app/components/game-displays/small-game-display.component.html")
     })
-], SmallGameDisplay);
+], SmallGameDisplayComponent);
 
 
 
@@ -436,7 +529,7 @@ MainMenu = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"ctg-modalContainer\">\r\n  <i class=\"fa fa-remove ctg-modalCloseButton\" (click)=\"CloseModal()\"></i>\r\n  <div class=\"row\" style=\"margin-left:0px\">\r\n    <div class=\"col-12\">\r\n      <h4>Delete Vendor: {{vendor.name}}</h4>\r\n    </div>\r\n    <div class=\"col-12\">\r\n      <p class=\"text-center\">Confirm you wish to delete the vendor?</p>\r\n    </div>\r\n    <div class=\"col-12\" *ngIf=\"errors && errors.length\">\r\n      <p *ngFor=\"let error of errors\">{{error}}</p>\r\n    </div>\r\n    <div class=\"col-12 ctg-modalButton\">\r\n      <button class=\"btn ctg-siteButton form-control\" (click)=\"DeleteVendor()\"><i class=\"fa fa-remove\"></i>Delete</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"ctg-modalContainer\">\r\n  <i class=\"fa fa-remove ctg-modalCloseButton ctg-link\" (click)=\"CloseModal()\"></i>\r\n  <div class=\"row\" style=\"margin-left:0px\">\r\n    <div class=\"col-12\">\r\n      <h4>Delete Vendor: {{vendor.name}}</h4>\r\n    </div>\r\n    <div class=\"col-12\">\r\n      <p class=\"text-center\">Confirm you wish to delete the vendor?</p>\r\n    </div>\r\n    <div class=\"col-12\" *ngIf=\"errors && errors.length\">\r\n      <p *ngFor=\"let error of errors\">{{error}}</p>\r\n    </div>\r\n    <div class=\"col-12 ctg-modalButton\">\r\n      <button class=\"btn ctg-siteButton form-control ctg-link\" (click)=\"DeleteVendor()\"><i class=\"fa fa-remove\"></i>Delete</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -452,8 +545,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteVendorModalComponent", function() { return DeleteVendorModalComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
 
 
 
@@ -463,7 +556,7 @@ let DeleteVendorModalComponent = class DeleteVendorModalComponent {
         this.dataFactory = dataFactory;
         this.dialogRef = dialogRef;
         this.errors = [];
-        this.vendor = data.Vendor;
+        this.vendor = data.Data;
         this.dialogRef = dialogRef;
     }
     CloseModal() {
@@ -483,9 +576,61 @@ DeleteVendorModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         selector: 'delete-vendor-modal',
         template: __webpack_require__(/*! ./delete-vendor-modal.component.html */ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.html")
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"])),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_2__["DataFactory"], Object, _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogRef"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__["DataFactory"], Object, _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
 ], DeleteVendorModalComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/modals/edit-game-modal/edit-game-modal.component.html":
+/*!**********************************************************************************!*\
+  !*** ./src/app/components/modals/edit-game-modal/edit-game-modal.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"ctg-modalContainer\">\r\n  <i class=\"fa fa-remove ctg-modalCloseButton ctg-link\" (click)=\"CloseModal()\"></i>\r\n  <div class=\"row\">\r\n    <div class=\"col-12\">\r\n      <h4>Edit: {{game.name}}</h4>\r\n    </div>\r\n    <div class=\"col-12\">\r\n      <h5>Published</h5>\r\n      <input type=\"checkbox\" [(ngModel)]=\"game.published\" [ngModelOptions]=\"{standalone:true}\" />\r\n    </div>\r\n    <div class=\"col-12\">\r\n      <h5>Vendor Settings</h5>\r\n      <div *ngFor=\"let setting of game.settings\">\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/modals/edit-game-modal/edit-game-modal.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/components/modals/edit-game-modal/edit-game-modal.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: EditGameModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditGameModalComponent", function() { return EditGameModalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+
+
+
+
+let EditGameModalComponent = class EditGameModalComponent {
+    constructor(dataFactory, data, dialogRef) {
+        this.dataFactory = dataFactory;
+        this.dialogRef = dialogRef;
+        this.game = JSON.parse(JSON.stringify(data.Data));
+    }
+    CloseModal() {
+        this.dialogRef.close();
+    }
+};
+EditGameModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'edit-game',
+        template: __webpack_require__(/*! ./edit-game-modal.component.html */ "./src/app/components/modals/edit-game-modal/edit-game-modal.component.html")
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__["DataFactory"], Object, _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]])
+], EditGameModalComponent);
 
 
 
@@ -498,7 +643,7 @@ DeleteVendorModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"ctg-modalContainer\">\r\n  <i class=\"fa fa-remove ctg-modalCloseButton\" (click)=\"CloseModal()\"></i>\r\n  <form class=\"row\" style=\"margin-left:0px\" [formGroup]=\"form\">\r\n    <div class=\"col-12\">\r\n      <h4>{{title}}</h4>\r\n    </div>\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Name</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" required formControlName=\"name\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Logo URL</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"logoURL\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Logo Preview</p></div>\r\n    <div class=\"col-8\">\r\n      <img style=\"max-width:100%; max-height:400px;\" [src]=\"form.controls['logoURL'].value\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Font</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"font\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Home Page URL</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" required formControlName=\"url\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Element Type</p></div>\r\n    <div class=\"col-8\">\r\n      <select class=\"form-control\" formControlName=\"elementType\">\r\n        <option value=\"\" selected></option>\r\n        <option value=\"ID\">ID</option>\r\n        <option value=\"CLASS\">CLASS</option>\r\n      </select>\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Element Value</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"elementValue\" />\r\n    </div>\r\n\r\n    <div class=\"col-12 bk-dark\" *ngIf=\"errors && errors.length\">\r\n      <p class=\"text-light\" *ngFor=\"let error of errors\">{{error}}</p>\r\n    </div>\r\n\r\n\r\n    <div [hidden]=\"loading <= 0\" class=\"col-12\">\r\n      <mat-spinner [diameter]=\"75\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n    </div>\r\n\r\n    <div class=\"col-12 ctg-modalButton\">\r\n      <button class=\"btn ctg-siteButton form-control\" (click)=\"AddOrUpdateVendor()\">\r\n        <span *ngIf=\"isNew\">\r\n          <i class=\"fa fa-plus\"></i> Add\r\n        </span>\r\n        <span *ngIf=\"!isNew\">\r\n          <i class=\"fa fa-save\"></i> Save\r\n        </span>\r\n      </button>\r\n\r\n    </div>\r\n\r\n  </form>\r\n</div>\r\n"
+module.exports = "<div class=\"ctg-modalContainer\">\r\n  <i class=\"fa fa-remove ctg-modalCloseButton ctg-link\" (click)=\"CloseModal()\"></i>\r\n  <form class=\"row\" style=\"margin-left:0px\" [formGroup]=\"form\">\r\n    <div class=\"col-12\">\r\n      <h4>{{title}}</h4>\r\n    </div>\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Name</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" required formControlName=\"name\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Logo URL</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"logoURL\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Logo Preview</p></div>\r\n    <div class=\"col-8\">\r\n      <img style=\"max-width:100%; max-height:400px;\" [src]=\"form.controls['logoURL'].value\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Font</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"font\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Home Page URL</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" required formControlName=\"url\" />\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Element Type</p></div>\r\n    <div class=\"col-8\">\r\n      <select class=\"form-control\" formControlName=\"elementType\">\r\n        <option value=\"\" selected></option>\r\n        <option value=\"ID\">ID</option>\r\n        <option value=\"CLASS\">CLASS</option>\r\n      </select>\r\n    </div>\r\n\r\n\r\n    <div class=\"col-4\"><p class=\"text-right\">Element Value</p></div>\r\n    <div class=\"col-8\">\r\n      <input class=\"form-control\" formControlName=\"elementValue\" />\r\n    </div>\r\n\r\n    <div class=\"col-12 bk-dark\" *ngIf=\"errors && errors.length\">\r\n      <p class=\"text-light\" *ngFor=\"let error of errors\">{{error}}</p>\r\n    </div>\r\n\r\n\r\n    <div [hidden]=\"loading <= 0\" class=\"col-12\">\r\n      <mat-spinner [diameter]=\"75\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n    </div>\r\n\r\n    <div class=\"col-12 ctg-modalButton\">\r\n      <button class=\"btn ctg-siteButton form-control ctg-link\" (click)=\"AddOrUpdateVendor()\">\r\n        <span *ngIf=\"isNew\">\r\n          <i class=\"fa fa-plus\"></i> Add\r\n        </span>\r\n        <span *ngIf=\"!isNew\">\r\n          <i class=\"fa fa-save\"></i> Save\r\n        </span>\r\n      </button>\r\n\r\n    </div>\r\n\r\n  </form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -515,9 +660,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/* harmony import */ var src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/vendor.model */ "./src/app/models/vendor.model.ts");
-/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/vendor.model */ "./src/app/models/vendor.model.ts");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
 
 
 
@@ -530,26 +675,26 @@ let EditVendorModalComponent = class EditVendorModalComponent {
         this.dataFactory = dataFactory;
         this.title = "";
         this.loading = 0;
-        if (data != null && data.Vendor != null) {
-            this.title = "Edit Vendor: " + data.Vendor.name;
+        if (data != null && data.Data != null) {
+            this.title = "Edit Vendor: " + data.Data.name;
             //make a clean copy of passed in vendor
-            this.vendor = JSON.parse(JSON.stringify(data.Vendor));
+            this.vendor = JSON.parse(JSON.stringify(data.Data));
             this.isNew = false;
         }
         else {
             this.title = "New Vendor";
-            this.vendor = new src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_3__["Vendor"]();
+            this.vendor = new src_app_models_vendor_model__WEBPACK_IMPORTED_MODULE_4__["Vendor"]();
             this.isNew = true;
         }
     }
     ngOnInit() {
-        this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroup"]({
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.name, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required),
-            url: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.url, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required),
-            font: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.font),
-            logoURL: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.logoURL),
-            elementType: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.elementType),
-            elementValue: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](this.vendor.elementValue)
+        this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroup"]({
+            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.vendor.name, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
+            url: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.vendor.url, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required),
+            font: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.vendor.font),
+            logoURL: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.vendor.logoURL),
+            elementType: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.vendor.elementType),
+            elementValue: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"](this.vendor.elementValue)
         });
     }
     CloseModal() {
@@ -633,8 +778,131 @@ EditVendorModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: __webpack_require__(/*! ./edit-vendor-modal.component.html */ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.html")
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object, src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_4__["DataFactory"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], Object, src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_5__["DataFactory"]])
 ], EditVendorModalComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/vendors/admin-vendor-display.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/components/vendors/admin-vendor-display.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-6\">\r\n    <input class=\"form-control\" [(ngModel)]=\"filterTerm\" [ngModelOptions]=\"{standalone:true}\" placeholder=\"Filter by name\" (change)=\"ApplyFilters()\"/>\r\n  </div>\r\n  <div class=\"col-3\">\r\n    <select class=\"form-control\" [(ngModel)]=\"filterType\" [ngModelOptions]=\"{standalone:true}\" (change)=\"ApplyFilters()\">\r\n      <option value=\"\" selected>-- Filter by Element --</option>\r\n      <option value=\"CLASS\">CLASS</option>\r\n      <option value=\"ID\">ID</option>\r\n    </select>\r\n  </div>\r\n  <div class=\"col-3\">\r\n    <button class=\" btn ctg-siteButton float-right\" (click)=\"AddNewVendor()\"><i class=\"fa fa-plus\"></i> Add a new Vendor</button>\r\n  </div>\r\n</div>\r\n\r\n<table class=\"table table-bordered table-striped table-dark\">\r\n  <thead>\r\n    <tr>\r\n      <th>ID</th>\r\n      <th>Name</th>\r\n      <th>Logo</th>\r\n      <th>Font</th>\r\n      <th>Game Scrap Configs</th>\r\n      <th>Element Type</th>\r\n      <th>Element Value</th>\r\n      <th>Edit</th>\r\n      <th>Delete</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody *ngIf=\"vendorsToDisplay && vendorsToDisplay.length && !loading\">\r\n    <tr *ngFor=\"let vendor of vendorsToDisplay\">\r\n      <td>{{vendor.vendorID}}</td>\r\n      <td>{{vendor.name}}</td>\r\n      <td>\r\n        <img *ngIf=\"vendor.logoURL\" style=\"max-width: 100%; max-height:50px;\" [src]=\"vendor.logoURL\" [alt]=\"vendor.name.toUpperCase()\" />\r\n        <b *ngIf=\"!vendor.logoURL\" [ngStyle]=\"{'font-family':vendor.font}\">{{vendor.name.toUpperCase()}}</b>\r\n      </td>\r\n      <td><p *ngIf=\"!vendor.logoURL\">{{vendor.font}}</p></td>\r\n      <td>{{vendor.settings.length}}</td>\r\n      <td>{{vendor.elementType}}</td>\r\n      <td>{{vendor.elementValue}}</td>\r\n      <td><i (click)=\"EditVendor(vendor)\" class=\"fa fa-edit fa-2x ctg-link\"></i></td>\r\n      <td><i (click)=\"DeleteVendor(vendor)\" class=\"fa fa-remove fa-2x ctg-link\"></i></td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n<div [hidden]=\"loading <= 0\">\r\n  <mat-spinner [diameter]=\"150\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/vendors/admin-vendor-display.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/components/vendors/admin-vendor-display.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: AdminVendorDisplayComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminVendorDisplayComponent", function() { return AdminVendorDisplayComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
+/* harmony import */ var src_app_services_DialogFactory_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/DialogFactory.service */ "./src/app/services/DialogFactory.service.ts");
+/* harmony import */ var _modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modals/edit-vendor-modal/edit-vendor-modal.component */ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.ts");
+/* harmony import */ var _modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modals/delete-vendor-modal/delete-vendor-modal.component */ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.ts");
+
+
+
+
+
+
+
+let AdminVendorDisplayComponent = class AdminVendorDisplayComponent {
+    constructor(dataFactory, dialogFactory, dialog) {
+        this.dataFactory = dataFactory;
+        this.dialogFactory = dialogFactory;
+        this.dialog = dialog;
+        this.loading = 0;
+        this.filterTerm = "";
+        this.filterType = "";
+        this.AddNewVendor = () => {
+            const dialogConfig = this.dialogFactory.GetEditDialogConfig();
+            this.editVendorDialogRef = this.dialog.open(_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_5__["EditVendorModalComponent"], dialogConfig);
+            this.editVendorDialogRef.afterClosed().subscribe((data) => {
+                if (data) {
+                    this.GetVendors();
+                }
+            });
+        };
+    }
+    ngOnInit() {
+        this.GetVendors();
+    }
+    GetVendors() {
+        this.loading++;
+        this.dataFactory.GetVendors().subscribe((data) => {
+            this.vendors = data;
+            this.ApplyFilters();
+        }, (err) => {
+            console.log(err);
+        }, () => {
+            this.loading--;
+        });
+    }
+    EditVendor(vendor) {
+        const dialogConfig = this.dialogFactory.GetEditDialogConfig(vendor);
+        this.editVendorDialogRef = this.dialog.open(_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_5__["EditVendorModalComponent"], dialogConfig);
+        this.editVendorDialogRef.afterClosed().subscribe((data) => {
+            if (data) {
+                this.GetVendors();
+            }
+        });
+    }
+    DeleteVendor(vendor) {
+        const dialogConfig = this.dialogFactory.GetDeleteDialogConfig(vendor);
+        this.deleteVendorDialogRef = this.dialog.open(_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_6__["DeleteVendorModalComponent"], dialogConfig);
+        this.deleteVendorDialogRef.afterClosed().subscribe((data) => {
+            if (data) {
+                this.GetVendors();
+            }
+        });
+    }
+    ApplyFilters() {
+        if (this.vendors && this.vendors.length) {
+            let temp = this.vendors;
+            if (this.filterTerm) {
+                temp = temp.filter(vendor => {
+                    return vendor.name.toString().includes(this.filterTerm) ||
+                        vendor.vendorID.toString().includes(this.filterTerm) ||
+                        (vendor.font && vendor.font.toString().includes(this.filterTerm)) ||
+                        (vendor.logoURL && vendor.logoURL.toString().includes(this.filterTerm)) ||
+                        (vendor.createdBy && vendor.createdBy.toString().includes(this.filterTerm)) ||
+                        (vendor.modifiedBy && vendor.modifiedBy.toString().includes(this.filterTerm)) ||
+                        (vendor.elementValue && vendor.elementValue.toString().includes(this.filterTerm)) ||
+                        (vendor.url && vendor.url.toString().includes(this.filterTerm));
+                });
+            }
+            if (this.filterType) {
+                temp = temp.filter(vendor => {
+                    return vendor.elementType == this.filterType;
+                });
+            }
+            this.vendorsToDisplay = temp;
+        }
+    }
+};
+AdminVendorDisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'admin-vendor-display',
+        template: __webpack_require__(/*! ./admin-vendor-display.component.html */ "./src/app/components/vendors/admin-vendor-display.component.html")
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__["DataFactory"],
+        src_app_services_DialogFactory_service__WEBPACK_IMPORTED_MODULE_4__["DialogFactory"],
+        _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+], AdminVendorDisplayComponent);
 
 
 
@@ -732,6 +1000,48 @@ const apiUrl = "api/";
 
 /***/ }),
 
+/***/ "./src/app/services/DialogFactory.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/services/DialogFactory.service.ts ***!
+  \***************************************************/
+/*! exports provided: DialogFactory */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DialogFactory", function() { return DialogFactory; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+let DialogFactory = class DialogFactory {
+    GetEditDialogConfig(data = null) {
+        const dialogConfig = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
+        dialogConfig.width = '900px';
+        dialogConfig.height = '600px';
+        dialogConfig.position = { top: '100px' };
+        dialogConfig.data = { Data: data };
+        return dialogConfig;
+    }
+    GetDeleteDialogConfig(data) {
+        const dialogConfig = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
+        dialogConfig.width = '500px';
+        dialogConfig.height = '400px';
+        dialogConfig.position = { top: '100px' };
+        dialogConfig.data = { Data: data };
+        return dialogConfig;
+    }
+};
+DialogFactory = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+], DialogFactory);
+
+
+
+/***/ }),
+
 /***/ "./src/app/views/about/about-us.component.html":
 /*!*****************************************************!*\
   !*** ./src/app/views/about/about-us.component.html ***!
@@ -780,7 +1090,7 @@ AboutUsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Admin</h1>\r\n<div class=\"ctg-container\">\r\n  <ngb-tabset>\r\n    <ngb-tab title=\"Vendors\">\r\n      <ng-template ngbTabContent>\r\n        <div class=\"row\">\r\n          <div class=\"col-12\">\r\n            <button class=\" btn ctg-siteButton\" (click)=\"AddNewVendor()\"><i class=\"fa fa-plus\"></i> Add a new Vendor</button>\r\n          </div>\r\n        </div>\r\n\r\n        <table class=\"table table-bordered table-striped table-dark\">\r\n          <thead>\r\n            <tr>\r\n              <th>ID</th>\r\n              <th>Name</th>\r\n              <th>Logo</th>\r\n              <th>Font</th>\r\n              <th>Game Scrap Configs</th>\r\n              <th>Element Type</th>\r\n              <th>Element Value</th>\r\n              <th>Edit</th>\r\n              <th>Delete</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody *ngIf=\"vendors && vendors.length && !loading\">\r\n            <tr *ngFor=\"let vendor of vendors\">\r\n              <td>{{vendor.vendorID}}</td>\r\n              <td>{{vendor.name}}</td>\r\n              <td>\r\n                <img *ngIf=\"vendor.logoURL\" style=\"max-width: 100%; max-height:50px;\" [src]=\"vendor.logoURL\" [alt]=\"vendor.name.toUpperCase()\" />\r\n                <b *ngIf=\"!vendor.logoURL\" [ngStyle]=\"{'font-family':vendor.font}\">{{vendor.name.toUpperCase()}}</b>\r\n              </td>\r\n              <td><p *ngIf=\"!vendor.logoURL\">{{vendor.font}}</p></td>\r\n              <td>{{vendor.settings.length}}</td>\r\n              <td>{{vendor.elementType}}</td>\r\n              <td>{{vendor.elementValue}}</td>\r\n              <td><i (click)=\"EditVendor(vendor)\" class=\"fa fa-edit fa-2x\"></i></td>\r\n              <td><i (click)=\"DeleteVendor(vendor)\" class=\"fa fa-remove fa-2x\"></i></td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n        <div [hidden]=\"loading <= 0\">\r\n          <mat-spinner [diameter]=\"150\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n        </div>\r\n      </ng-template>\r\n    </ngb-tab>\r\n    <ngb-tab title=\"Games\">\r\n      <ng-template ngbTabContent>\r\n        <table class=\"table table-bordered table-striped table-dark\">\r\n          <thead>\r\n            <tr>\r\n              <th>ID</th>\r\n              <th>Name</th>\r\n              <th>Platforms</th>\r\n              <th>Screenshots</th>\r\n              <th>Story</th>\r\n              <th>Summary</th>\r\n              <th>Published</th>\r\n              <th>Edit</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody *ngIf=\"games && games.length && !loading\">\r\n            <tr *ngFor=\"let game of games\">\r\n              <td>{{game.gameID}}</td>\r\n              <td>{{game.gameName}}</td>\r\n              <td>{{game.platforms.length}}</td>\r\n              <td>{{game.screenshots.length}}</td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.storyLine\"></i></td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.summary\"></i></td>\r\n              <td><i class=\"fa fa-check\" *ngIf=\"game.published\"></i></td>\r\n              <td><i class=\"fa fa-edit fa-2x\"></i></td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n        <div [hidden]=\"loading <= 0\" class=\"row\">\r\n          <mat-spinner [diameter]=\"150\" [color]=\"'warn'\" style=\"margin-left:42%; margin-top: 50px;\"></mat-spinner>\r\n        </div>\r\n      </ng-template>\r\n    </ngb-tab>\r\n  </ngb-tabset>\r\n</div>\r\n"
+module.exports = "<h1>Admin</h1>\r\n<div class=\"ctg-container\">\r\n  <ngb-tabset>\r\n    <ngb-tab title=\"Vendors\">\r\n      <ng-template ngbTabContent>\r\n        <admin-vendor-display></admin-vendor-display>\r\n      </ng-template>\r\n    </ngb-tab>\r\n    <ngb-tab title=\"Games\">\r\n      <ng-template ngbTabContent>\r\n        <admin-game-display></admin-game-display>\r\n      </ng-template>\r\n    </ngb-tab>\r\n  </ngb-tabset>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -796,89 +1106,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminComponent", function() { return AdminComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/* harmony import */ var src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/DataFactory.service */ "./src/app/services/DataFactory.service.ts");
-/* harmony import */ var src_app_components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component */ "./src/app/components/modals/edit-vendor-modal/edit-vendor-modal.component.ts");
-/* harmony import */ var src_app_components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component */ "./src/app/components/modals/delete-vendor-modal/delete-vendor-modal.component.ts");
-
-
-
-
 
 
 let AdminComponent = class AdminComponent {
-    constructor(dataFactory, dialog) {
-        this.dataFactory = dataFactory;
-        this.dialog = dialog;
-        this.loading = 0;
-        this.AddNewVendor = () => {
-            const dialogConfig = this.GetDialogConfig();
-            this.editVendorDialogRef = this.dialog.open(src_app_components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_4__["EditVendorModalComponent"], dialogConfig);
-            this.editVendorDialogRef.afterClosed().subscribe((data) => {
-                if (data) {
-                    this.GetVendors();
-                }
-            });
-        };
-    }
-    ngOnInit() {
-        this.GetGames();
-        this.GetVendors();
-    }
-    GetGames() {
-        this.loading++;
-        this.dataFactory.GetAllGames().subscribe((data) => {
-            this.games = data;
-        }, (err) => {
-            console.log(err);
-        }, () => {
-            this.loading--;
-        });
-    }
-    GetVendors() {
-        this.loading++;
-        this.dataFactory.GetVendors().subscribe((data) => {
-            this.vendors = data;
-        }, (err) => {
-            console.log(err);
-        }, () => {
-            this.loading--;
-        });
-    }
-    EditVendor(vendor) {
-        const dialogConfig = this.GetDialogConfig(vendor);
-        this.editVendorDialogRef = this.dialog.open(src_app_components_modals_edit_vendor_modal_edit_vendor_modal_component__WEBPACK_IMPORTED_MODULE_4__["EditVendorModalComponent"], dialogConfig);
-        this.editVendorDialogRef.afterClosed().subscribe((data) => {
-            if (data) {
-                this.GetVendors();
-            }
-        });
-    }
-    DeleteVendor(vendor) {
-        const dialogConfig = this.GetDialogConfig(vendor);
-        this.deleteVendorDialogRef = this.dialog.open(src_app_components_modals_delete_vendor_modal_delete_vendor_modal_component__WEBPACK_IMPORTED_MODULE_5__["DeleteVendorModalComponent"], dialogConfig);
-        this.deleteVendorDialogRef.afterClosed().subscribe((data) => {
-            if (data) {
-                this.GetVendors();
-            }
-        });
-    }
-    GetDialogConfig(data = null) {
-        const dialogConfig = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogConfig"]();
-        dialogConfig.width = '700px';
-        dialogConfig.height = '500px';
-        dialogConfig.position = { top: '100px' };
-        dialogConfig.data = { Vendor: data };
-        return dialogConfig;
-    }
 };
 AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'admin',
         template: __webpack_require__(/*! ./admin.component.html */ "./src/app/views/admin/admin.component.html")
-    }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_DataFactory_service__WEBPACK_IMPORTED_MODULE_3__["DataFactory"],
-        _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+    })
 ], AdminComponent);
 
 

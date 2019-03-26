@@ -1,3 +1,5 @@
+import { Platform } from './platform.model';
+
 export class VendorGameSetting {
   automated: boolean;
   createdBy: string;
@@ -10,4 +12,5 @@ export class VendorGameSetting {
   pageURL: string;
   vendorGameSettingID: number;
   vendorID: number;
+  platform: Platform;
 }

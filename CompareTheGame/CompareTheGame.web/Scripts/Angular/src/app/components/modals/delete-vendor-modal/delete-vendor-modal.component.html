@@ -1,5 +1,5 @@
 <div class="ctg-modalContainer">
-  <i class="fa fa-remove ctg-modalCloseButton" (click)="CloseModal()"></i>
+  <i class="fa fa-remove ctg-modalCloseButton ctg-link" (click)="CloseModal()"></i>
   <div class="row" style="margin-left:0px">
     <div class="col-12">
       <h4>Delete Vendor: {{vendor.name}}</h4>
@@ -11,7 +11,7 @@
       <p *ngFor="let error of errors">{{error}}</p>
     </div>
     <div class="col-12 ctg-modalButton">
-      <button class="btn ctg-siteButton form-control" (click)="DeleteVendor()"><i class="fa fa-remove"></i>Delete</button>
+      <button class="btn ctg-siteButton form-control ctg-link" (click)="DeleteVendor()"><i class="fa fa-remove"></i>Delete</button>
     </div>
   </div>
 </div>
